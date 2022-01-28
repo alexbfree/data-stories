@@ -1,4 +1,4 @@
-# stories
+# Data stories
 
 ## Build Setup
 

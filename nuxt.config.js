@@ -1,13 +1,19 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  // Disable Server-Side Rendering
+  // or else import LeaderLine fails
+  // unless we turn it into a nuxt plugin
+  // https://stackoverflow.com/questions/45691469/how-do-i-add-client-side-js-libraries-in-nuxt
+  // https://nuxtjs.org/docs/directory-structure/plugins/#external-packages
+  ssr: false,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - stories',
-    title: 'stories',
+    titleTemplate: '%s - data stories',
+    title: 'data stories',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -55,6 +61,7 @@ export default {
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    optionsPath: 'vuetify.options.js',
     theme: {
       dark: true,
       themes: {
