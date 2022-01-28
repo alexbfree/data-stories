@@ -12,6 +12,7 @@
 <script>
 import LogoImg from '~/components/base/LogoImg.vue'
 export default {
+  name: 'ErrorLayout',
   components: { LogoImg },
   layout: 'empty',
   props: {

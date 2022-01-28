@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   // Disable Server-Side Rendering
   // or else import LeaderLine fails
