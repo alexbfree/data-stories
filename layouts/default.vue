@@ -1,92 +1,136 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
+  <VApp>
+    <AppHeader />
+    <VMain>
+      <Nuxt />
+      <VAlert
+        :value="alert"
+        border="right"
+        colored-border
+        color="primary"
+        elevation="2"
+        close-text="Not now"
+        dismissible
+        max-width="20%"
+        class="fixedAlert"
+        transition="slide-x-transition"
+        fixed
+        bottom
+        left
+        @input="alertClosed"
+      >
+        Want to know more about our work ?
+        <br />
+        <a :href="newsletterURL" target="_blank" rel="noreferrer noopener">
+          {{ newsletterMessage }}
+        </a>
+      </VAlert>
+    </VMain>
+    <VFooter app absolute color="primary">
+      <div class="lighten-2 py-2 ma-auto white--text" align="center">
+        Educational material developed by
+        <a href="https://hestia.ai" target="_blank" style="color: white"
+          >Hestia.ai</a
         >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
-    </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
-  </v-app>
+        <br />Currently in development |
+        <a :href="newsletterURL" target="_blank" style="color: white">
+          {{ newsletterMessage }}
+        </a>
+      </div>
+    </VFooter>
+  </VApp>
 </template>
 
 <script>
+import AppHeader from '~/components/AppHeader.vue'
 export default {
-  name: 'DefaultLayout',
+  components: { AppHeader },
   data() {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js',
+      // Display offline message if user opens app when offline
+      snackbar: this.$nuxt.isOffline,
+      timeout: 5000,
+      alert: false,
+      newsletterURL: 'www.example.com',
+      newsletterMessage: 'Subscribe to our newsletter'
     }
   },
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.appName
+        },
+        {
+          hid: 'twitter:card',
+          property: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          hid: 'twitter:site',
+          property: 'twitter:site',
+          content: '@HestiaLabs'
+        },
+        {
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          content: this.appName
+        },
+        {
+          hid: 'twitter:image',
+          property: 'twitter:image',
+          content: `${process.env.baseUrl}/ogimg.png`
+        }
+      ]
+    }
+  },
+  watch: {
+    '$nuxt.isOffline'(isOffline) {
+      this.snackbar = true
+      // changing timeout property resets the timeout
+      this.timeout = isOffline ? 5001 : 5000
+    }
+  },
+  mounted() {
+    if (!window.Worker) {
+      this.$nuxt.error({
+        statusCode: 500,
+        message: 'Web Workers are not supported by this browser'
+      })
+    }
+    // Show the newsletter alert once a day
+    if (
+      !this.alert &&
+      (!localStorage.alertNewsletterDismissed ||
+        new Date().getTime() -
+          new Date(localStorage.alertNewsletterDismissed).getTime() >
+          1000 * 3600 * 24) // one day in milliseconds
+    ) {
+      window.setInterval(() => {
+        this.alert = true
+      }, 3000)
+    }
+  },
+  methods: {
+    alertClosed() {
+      localStorage.alertNewsletterDismissed = new Date()
+    }
+  }
 }
 </script>
+
+<style lang="sass">
+@import "./assets/styles"
+
+.v-snack__content.v-snack__content-online-status
+  text-align: center
+</style>
+<style scoped>
+.fixedAlert {
+  position: fixed;
+  bottom: 0px;
+  z-index: 2500;
+}
+</style>

@@ -1,43 +1,37 @@
 <template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/"> Home page </NuxtLink>
-  </v-app>
+  <VContainer fluid>
+    <VRow align="center" justify="center" class="flex-column">
+      <h1 class="h1">{{ title }}</h1>
+      <LogoImg max-width="300" class="my-12" />
+
+      <BaseButton nuxt to="/" icon="mdiHome" text="Home page" />
+    </VRow>
+  </VContainer>
 </template>
 
 <script>
+import LogoImg from '~/components/base/LogoImg.vue'
 export default {
-  name: 'EmptyLayout',
+  components: { LogoImg },
   layout: 'empty',
   props: {
     error: {
       type: Object,
-      default: null,
-    },
-  },
-  data() {
-    return {
-      pageNotFound: '404 Not Found',
-      otherError: 'An error occurred',
+      default: () => ({})
     }
   },
   head() {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
     return {
-      title,
+      title: this.title
     }
   },
+  computed: {
+    title() {
+      return (
+        this.error.message ||
+        (this.error.statusCode === 404 ? '404 Not Found' : 'An error occurred')
+      )
+    }
+  }
 }
 </script>
-
-<style scoped>
-h1 {
-  font-size: 20px;
-}
-</style>
