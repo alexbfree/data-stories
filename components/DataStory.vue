@@ -192,7 +192,7 @@ export default {
         value: 500
       },
       {
-        company: 'Bouygue',
+        company: 'Bouygues',
         value: 480
       },
       {
