@@ -1,9 +1,10 @@
 <template>
   <VContainer>
+    <ProfileBioV1 />
     <VRow>
-      <VContainer>
+      <VCol cols="12">
         <div class="py-4 mt-4">
-          <h2 class="headline font-weight-light mb-4 primary--text">Title</h2>
+          <h2 class="headline font-weight-light mb-4 primary--text">Introduction</h2>
           <div>
             Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
             imperdiet nec ut, sed euismod convenire principes at. Est et nobis
@@ -14,7 +15,7 @@
             voluptatibus, vix an salutandi sententiae.
           </div>
         </div>
-      </VContainer>
+      </VCol>
     </VRow>
     <VRow>
       <FlowItem :inputs="[{ id: 'S', name: 'test5', logo: 'mdiClose' }]">
@@ -26,7 +27,7 @@
         <template #content>
           <div class="py-4">
             <h2 :class="`headline font-weight-light mb-4 primary--text`">
-              Lorem ipsum
+              Paragraph
             </h2>
             <div>
               Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
@@ -56,7 +57,7 @@
         <template #content>
           <div class="py-4">
             <h2 :class="`headline font-weight-light mb-4 primary--text`">
-              Lorem ipsum
+              Paragraph
             </h2>
             <div>
               Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
@@ -91,7 +92,7 @@
         <template #content>
           <div class="py-4">
             <h2 :class="`headline font-weight-light mb-4 primary--text`">
-              Lorem ipsum
+              Paragraph
             </h2>
             <div>
               Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
@@ -118,7 +119,7 @@
         <template #content>
           <div class="py-4">
             <h2 :class="`headline font-weight-light mb-4 primary--text`">
-              Lorem ipsum
+              Paragraph
             </h2>
             <div>
               Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
@@ -163,8 +164,10 @@ import FlowItem from './FlowItem.vue'
 import QuoteBlock from './base/QuoteBlock.vue'
 import CodeBlock from './base/CodeBlock.vue'
 import HozizontalBarChart from './charts/HozizontalBarChart.vue'
+import ProfileBioV1 from './base/ProfileBioV1.vue'
+import ProfileBio from './base/ProfileBio.vue'
 export default {
-  components: { FlowItem, QuoteBlock, CodeBlock, HozizontalBarChart },
+  components: { FlowItem, QuoteBlock, CodeBlock, HozizontalBarChart, ProfileBioV1, ProfileBio },
   data: () => ({
     graphTestValues: [
       {
