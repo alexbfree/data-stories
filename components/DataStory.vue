@@ -6,7 +6,7 @@
         <div class="py-4 mt-4">
           <h2 class="headline font-weight-light mb-4 primary--text">Introduction</h2>
           <div>
-            Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+            Lorem <AnimatedLink url="www.example.com" text="John Doe" /> ipsum dolor sit amet, no nam oblique veritus. Commune
             imperdiet nec ut, sed euismod convenire principes at. Est et nobis
             iisque percipit, an vim zril disputando voluptatibus, vix an
             salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique
@@ -167,8 +167,9 @@ import CodeBlock from './base/CodeBlock.vue'
 import HozizontalBarChart from './charts/HozizontalBarChart.vue'
 import ProfileBio from './base/ProfileBio.vue'
 import LongQuoteBlock from './base/LongQuoteBlock.vue'
+import AnimatedLink from './base/button/AnimatedLink.vue'
 export default {
-  components: { FlowItem, QuoteBlock, CodeBlock, HozizontalBarChart, ProfileBio, LongQuoteBlock },
+  components: { FlowItem, QuoteBlock, CodeBlock, HozizontalBarChart, ProfileBio, LongQuoteBlock, AnimatedLink },
   data: () => ({
     graphTestValues: [
       {
@@ -276,9 +277,8 @@ export default {
           config
         )
       )
+      this.lines.forEach(l => l.hide())
     })
-    this.lines.forEach(l => l.hide())
-    // this.lines.forEach(l => l.show('draw'))
   },
   destroyed() {
     this.lines.forEach(l => l.remove())
