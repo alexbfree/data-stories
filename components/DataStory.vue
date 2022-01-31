@@ -1,6 +1,6 @@
 <template>
   <VContainer>
-    <ProfileBioV1 />
+    <ProfileBio />      
     <VRow>
       <VCol cols="12">
         <div class="py-4 mt-4">
@@ -195,7 +195,7 @@ export default {
         value: 500
       },
       {
-        company: 'Bouygue',
+        company: 'Bouygues',
         value: 480
       },
       {
