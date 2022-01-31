@@ -132,6 +132,7 @@
               amet, no nam oblique veritus. Commune imperdiet nec ut, sed
               euismod convenire principes at. Est et nobis iisque percipit, an
               vim zril disputando voluptatibus, vix an salutandi sententiae.
+              <LongQuoteBlock />
               Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
               imperdiet nec ut, sed euismod convenire principes at. Est et nobis
               iisque percipit, an vim zril disputando voluptatibus, vix an
@@ -164,10 +165,10 @@ import FlowItem from './FlowItem.vue'
 import QuoteBlock from './base/QuoteBlock.vue'
 import CodeBlock from './base/CodeBlock.vue'
 import HozizontalBarChart from './charts/HozizontalBarChart.vue'
-import ProfileBioV1 from './base/ProfileBioV1.vue'
 import ProfileBio from './base/ProfileBio.vue'
+import LongQuoteBlock from './base/LongQuoteBlock.vue'
 export default {
-  components: { FlowItem, QuoteBlock, CodeBlock, HozizontalBarChart, ProfileBioV1, ProfileBio },
+  components: { FlowItem, QuoteBlock, CodeBlock, HozizontalBarChart, ProfileBio, LongQuoteBlock },
   data: () => ({
     graphTestValues: [
       {
