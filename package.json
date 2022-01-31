@@ -1,12 +1,14 @@
 {
-  "name": "vite-data-stories",
+  "name": "data-stories",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cms-proxy": "netlify-cms-proxy-server"
   },
   "dependencies": {
+    "netlify-cms-proxy-server": "^1.3.23",
     "vite-plugin-vue2": "^1.9.3",
     "vue": "^2.6.14"
   },
