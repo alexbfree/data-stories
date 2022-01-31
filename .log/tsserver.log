@@ -1,0 +1,65 @@
+Info 0    [15:03:08.997] Starting TS Server
+Info 1    [15:03:08.999] Version: 4.5.5
+Info 2    [15:03:09.000] Arguments: C:\Program Files\nodejs\node.exe c:\Users\andre\workspace\hestia\vite-data-stories\node_modules\typescript\bin\tsserver --logFile c:\Users\andre\workspace\hestia\vite-data-stories\.log\tsserver.log --logVerbosity info --cancellationPipeName C:\Users\andre\AppData\Local\Temp\0c10a0133fcf52806c4d618a877da795\tscancellation*
+Info 3    [15:03:09.000] Platform: win32 NodeVersion: 14 CaseSensitive: false
+Info 4    [15:03:09.000] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [15:03:09.202] Search path: c:/Users/andre/workspace/hestia/vite-data-stories/src
+Info 6    [15:03:09.205] For info: c:/Users/andre/workspace/hestia/vite-data-stories/src/main.ts :: Config file name: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json
+Info 7    [15:03:09.206] Creating configuration project c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json
+Info 8    [15:03:09.241] Config: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json : {
+ "rootNames": [
+  "c:/Users/andre/workspace/hestia/vite-data-stories/src/env.d.ts",
+  "c:/Users/andre/workspace/hestia/vite-data-stories/src/main.ts"
+ ],
+ "options": {
+  "target": 99,
+  "useDefineForClassFields": true,
+  "module": 99,
+  "moduleResolution": 2,
+  "strict": true,
+  "jsx": 1,
+  "sourceMap": true,
+  "resolveJsonModule": true,
+  "esModuleInterop": true,
+  "lib": [
+   "lib.esnext.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "configFilePath": "c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json"
+ }
+}
+Info 9    [15:03:09.480] Starting updateGraphWorker: Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json
+Info 10   [15:03:11.639] Finishing updateGraphWorker: Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 2159.095899939537ms
+Info 11   [15:03:11.639] Project 'c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json' (Configured)
+Info 12   [15:03:11.639] 	Files (57)
+
+Info 13   [15:03:11.639] -----------------------------------------------
+Info 14   [15:03:11.711] Starting updateGraphWorker: Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json
+Info 15   [15:03:11.838] Finishing updateGraphWorker: Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json Version: 2 structureChanged: true structureIsReused:: SafeModules Elapsed: 127.26030004024506ms
+Info 16   [15:03:11.838] Different program with same set of files
+Info 17   [15:03:26.314] Starting updateGraphWorker: Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json
+Info 18   [15:03:26.707] Finishing updateGraphWorker: Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json Version: 3 structureChanged: true structureIsReused:: SafeModules Elapsed: 393.01809990406036ms
+Info 19   [15:03:26.707] Different program with same set of files
+Info 20   [15:03:27.289] Starting updateGraphWorker: Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json
+Info 21   [15:03:27.295] Finishing updateGraphWorker: Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json Version: 4 structureChanged: false structureIsReused:: Completely Elapsed: 5.3841999769210815ms
+Info 22   [15:03:27.295] Different program with same set of files
+Info 23   [15:05:12.480] DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 24   [15:05:12.481] Elapsed:: 0.18480002880096436ms DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 25   [15:05:12.481] DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
+Info 26   [15:05:12.482] Elapsed:: 0.3325999975204468ms DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
+Info 27   [15:05:12.482] DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/package.json :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 28   [15:05:12.483] Elapsed:: 0.023200035095214844ms DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/package.json :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 29   [15:05:12.484] DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/package.json :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
+Info 30   [15:05:12.484] Elapsed:: 0.05200004577636719ms DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/package.json :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
+Info 31   [15:05:12.600] DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/vue.js.map :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 32   [15:05:12.600] Elapsed:: 0.02609992027282715ms DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/vue.js.map :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 33   [15:05:12.601] DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/vue.js.map :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
+Info 34   [15:05:12.601] Elapsed:: 0.04400002956390381ms DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/vue.js.map :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
+Info 35   [15:05:12.602] DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/vue.js :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 36   [15:05:12.602] Elapsed:: 0.02540004253387451ms DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/vue.js :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 37   [15:05:12.605] DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/vue.js :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
+Info 38   [15:05:12.605] Elapsed:: 0.060700058937072754ms DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/vue.js :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
+Info 39   [15:05:12.608] DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/_metadata.json :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 40   [15:05:12.608] Elapsed:: 0.02910006046295166ms DirectoryWatcher:: Triggered with c:/users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/_metadata.json :: WatchInfo: c:/users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 41   [15:05:12.610] DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/_metadata.json :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
+Info 42   [15:05:12.610] Elapsed:: 0.052900075912475586ms DirectoryWatcher:: Triggered with C:/Users/andre/workspace/hestia/vite-data-stories/node_modules/.vite/_metadata.json :: WatchInfo: C:/Users/andre/workspace/hestia/vite-data-stories/node_modules 1 undefined Project: c:/Users/andre/workspace/hestia/vite-data-stories/tsconfig.json WatchType: Failed Lookup Locations
