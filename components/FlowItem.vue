@@ -31,12 +31,48 @@
   </VRow>
 </template>
 <script>
+import LeaderLine from 'leader-line-new'
 export default {
   props: {
     inputs: {
       type: Array,
       default: () => []
     }
+  },
+  data: () => ({
+    lines: []
+  }),
+  mounted() {
+    // Draw arrows
+    const config = {
+      color: '#58539e',
+      size: 8,
+      path: 'grid',
+      startPlug: 'behind',
+      endPlug: 'arrow',
+      endPlugSize: 0.5,
+      outline: false,
+      outlineColor: '#fff',
+      dash: false, // { animation: true },
+      dropShadow: false
+    }
+    
+    this.$nextTick(() => {
+    })
+
+    document.fonts.ready.then( () => {
+      this.inputs.forEach(i => i.outputNodes.forEach(n =>this.lines.push(new LeaderLine(
+          document.getElementById(i.id),
+          document.getElementById(n),
+          config
+        ))))
+      this.lines.forEach(l => l.hide())
+      this.lines.forEach(l => l.show('draw'))
+    });
+
+  },
+  destroyed() {
+    this.lines.forEach(l => l.remove())
   },
   methods: {
     getIcon(iconName) {

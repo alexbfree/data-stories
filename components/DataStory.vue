@@ -18,7 +18,7 @@
       </VCol>
     </VRow>
     <VRow>
-      <FlowItem :inputs="[{ id: 'S', name: 'test5', logo: 'mdiClose' }]">
+      <FlowItem :inputs="[{ id: 'S', name: 'test5', logo: 'mdiClose', outputNodes: ['A', 'B']}]">
         <template #opposite>
           <span class="overline font-weight-bold primary--text"
             >July 18, 2021</span
@@ -45,8 +45,8 @@
       </FlowItem>
       <FlowItem
         :inputs="[
-          { id: 'A', name: 'test', logo: 'mdiHome' },
-          { id: 'B', name: 'test2', logo: 'mdiClose' }
+          { id: 'A', name: 'test', logo: 'mdiHome', outputNodes: ['C'] },
+          { id: 'B', name: 'test2', logo: 'mdiClose', outputNodes: ['D'] }
         ]"
       >
         <template #opposite>
@@ -80,8 +80,8 @@
       </FlowItem>
       <FlowItem
         :inputs="[
-          { id: 'C', name: 'test3', logo: 'mdiHome' },
-          { id: 'D', name: 'test4', logo: 'mdiClose' }
+          { id: 'C', name: 'test3', logo: 'mdiHome', outputNodes: ['E'] },
+          { id: 'D', name: 'test4', logo: 'mdiClose', outputNodes: ['E'] }
         ]"
       >
         <template #opposite>
@@ -110,7 +110,7 @@
           </div>
         </template>
       </FlowItem>
-      <FlowItem :inputs="[{ id: 'E', name: 'test4', logo: 'mdiClose' }]">
+      <FlowItem :inputs="[{ id: 'E', name: 'test4', logo: 'mdiClose', outputNodes: [] }]">
         <template #opposite>
           <span class="overline font-weight-bold primary--text"
             >December 11, 2021</span
@@ -160,7 +160,6 @@
   </VContainer>
 </template>
 <script>
-import LeaderLine from 'leader-line-new'
 import FlowItem from './FlowItem.vue'
 import QuoteBlock from './base/QuoteBlock.vue'
 import CodeBlock from './base/CodeBlock.vue'
@@ -218,10 +217,11 @@ export default {
   }),
   updated() {
     // update arrows position
-    this.lines.forEach(l => l.position())
+    // this.lines.forEach(l => l.position())
   },
   mounted() {
     // Draw arrows
+    /*
     const config = {
       color: '#58539e',
       size: 8,
@@ -234,6 +234,7 @@ export default {
       dash: false, // { animation: true },
       dropShadow: false
     }
+    
     this.$nextTick(() => {
       this.lines.push(
         new LeaderLine(
@@ -278,10 +279,12 @@ export default {
         )
       )
       this.lines.forEach(l => l.hide())
+      this.lines.forEach(l => l.show())
     })
+    */
   },
   destroyed() {
-    this.lines.forEach(l => l.remove())
+    // this.lines.forEach(l => l.remove())
   }
 }
 </script>
