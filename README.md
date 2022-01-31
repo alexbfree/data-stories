@@ -25,5 +25,11 @@ Run local cms proxy for testing
 npm run cms-proxy
 ```
 
+# Cms
 
+We're using [netlify cms](https://www.netlifycms.org/docs/intro/)
+
+It's configured in [config.yml](./public/admin/config.yml)
+
+It writes data to [cms-data](./public/cms-data)
 

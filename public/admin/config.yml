@@ -3,22 +3,48 @@ backend:
   # branch: master # Branch to update (optional; defaults to master)
   branch: vite # Branch to update (optional; defaults to master)
 
-# Please run "npx netlify-cms-proxy-server" for local backend
+# Please run 'npx netlify-cms-proxy-server' for local backend
 local_backend: true
 
-media_folder: static/media
+media_folder: public/media
 public_folder: /media
 
 collections:
   - name: 'stories'
     label: 'Stories'
-    folder: 'public/stories'
+    folder: 'public/cms-data/stories'
     format: 'json'
     create: true
+    i18n: true
     editor:
       preview: false
+    identifier_field: id
     fields:
+      - {label: 'Id (never change this, only set a unique value at creation)', name: id, widget: string, hint: 'At creation, the id will determine the name of the file where the story is stored.' }
+      - { label: 'Url path', name: 'url-path', widget: 'string', hint: 'the path to this story after the site name datastories.com/[url path]' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'configuration'
+    label: 'Configuration'
+    files:
+      - name: 'visible-stories'
+        label: 'Visible stories'
+        file: public/cms-data/visible.stories.json
+        i18n: false
+        fields:
+          - name: visible-stories-list
+            label: 'Visible Stories'
+            widget: 'list'
+            summary: '{{fields.title}}'
+            fields:
+              - name: story
+                label: Story
+                widget: relation
+                collection: stories
+                value_field: id
+                display_fields: ['title']
+                search_fields: ['title']
+                multiple: false
