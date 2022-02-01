@@ -1,40 +1,55 @@
 <template>
   <VRow align="center" justify="center">
     <VCol cols="2" style="text-align: center">
-      <slot name="opposite"></slot>
+      <span class="overline font-weight-bold primary--text">
+        {{ leftText }}
+      </span>
     </VCol>
     <VCol
       cols="4"
       style="text-align: center"
       :class="{
-        'd-flex': inputs.length > 1,
-        'justify-space-around': inputs.length > 1
+        'd-flex': nodes.length > 1,
+        'justify-space-around': nodes.length > 1
       }"
     >
       <VAvatar
-        v-for="input in inputs"
-        :id="input.id"
-        :key="input.id"
+        v-for="node in nodes"
+        :id="node.id"
+        :key="node.id"
         class="ma-4 pa-4"
         color="primary"
         text-color="white"
         size="48"
       >
         <VIcon large dark>
-          {{ getIcon(input.logo) }}
+          {{ getIcon(node.logo) }}
         </VIcon>
       </VAvatar>
     </VCol>
     <VCol cols="6">
-      <slot name="content"></slot>
+      <div v-for="(elem, index ) in content" :key="index">
+        <ComponentCaller :component-name="elem.component" :component-props="elem.props" />
+      </div>
     </VCol>
   </VRow>
 </template>
 <script>
 import LeaderLine from 'leader-line-new'
+import ComponentCaller from '@/components/ComponentCaller.vue'
 export default {
+  name: 'FlowBlock',
+  components: { ComponentCaller },
   props: {
-    inputs: {
+    leftText: {
+      type: String,
+      default: () => ''
+    },
+    nodes: {
+      type: Array,
+      default: () => []
+    },
+    content: {
       type: Array,
       default: () => []
     }
@@ -61,7 +76,7 @@ export default {
     })
 
     document.fonts.ready.then( () => {
-      this.inputs.forEach(i => i.outputNodes.forEach(n =>this.lines.push(new LeaderLine(
+      this.nodes.forEach(i => i.outputNodes.forEach(n =>this.lines.push(new LeaderLine(
           document.getElementById(i.id),
           document.getElementById(n),
           config

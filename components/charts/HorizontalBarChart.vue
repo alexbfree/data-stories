@@ -7,9 +7,10 @@
 
 <script>
 import * as d3 from 'd3'
-import mixin from './mixin'
+import mixin from '@/components/charts/mixin'
 
 export default {
+  name: 'HorizontalBarChart',
   mixins: [mixin],
   props: {
     xAccessor: {
@@ -128,7 +129,7 @@ export default {
         .attr('width', 0)
         .attr('height', this.yScale.bandwidth())
         .attr('fill', this.barsColor)
-        .on('mouseover', function (evt, d) {
+        .on('mouseover', function (_, d) {
           d3.select(this).style('opacity', 0.7)
           d3.select(this.parentNode)
             .append('text')
@@ -145,7 +146,7 @@ export default {
             .style('font-weight', 'bold')
             .style('fill', '#0A0A0A')
         })
-        .on('mouseleave', function (evt, d) {
+        .on('mouseleave', function () {
           d3.select(this).style('opacity', 1)
           d3.select('.barsLabel').remove()
         })
