@@ -19,13 +19,14 @@
           <VIcon right color="primary"> $vuetify.icons.mdiMinus </VIcon>
           {{ author }}
         </span>
-        <a :href="link"> {{ link }}</a>
+        <a :href="url"> {{ url }}</a>
       </div>
     </VCardText>
   </VCard>
 </template>
 <script>
 export default {
+  name: 'QuoteBlock',
   props: {
     text: {
       type: String,
@@ -35,14 +36,9 @@ export default {
       type: String,
       required: true
     },
-    link: {
+    url: {
       type: String,
       default: () => ''
-    }
-  },
-  methods: {
-    getIcon(iconName) {
-      return this.$vuetify.icons.values[iconName]
     }
   }
 }

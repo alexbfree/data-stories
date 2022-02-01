@@ -30,7 +30,7 @@
 </template>
 <script>
 export default {
-  name: 'ProfileBioV1',
+  name: 'ProfileBlock',
   props: {
     name: {
       type: String,
