@@ -4,7 +4,7 @@ export default {
     { 
       component: 'blocks/ProfileBlock',
       props: {
-        name: 'John Doe', 
+        name: 'MKN', 
         jobTitle: 'Journalist at LeTemps.ch', 
         description: 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
         profilePicture: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
