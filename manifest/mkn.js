@@ -5,7 +5,7 @@ export default {
       component: 'blocks/ProfileBlock',
       props: {
         name: 'MKN', 
-        jobTitle: 'Journalist at LeTemps.ch', 
+        jobTitle: 'Finnish MEP', 
         description: 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
         profilePicture: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
       }
@@ -13,12 +13,12 @@ export default {
     { 
       component: 'blocks/ParagraphBlock',
       props: {
-        title: 'Introduction', 
+        title: 'My Gigantti data', 
         content: [
           {
             component: 'blocks/TextBlock',
             props: {
-              value: 'Lorem Joan Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+              value: 'Gigantti, like many supermarket chains, collects vast amounts of data. I want to show some of the data I have recovered from them through the <a href="">SAR process</a>, to illustrate the different kinds of collection methods used.'
             }
           }
         ]
@@ -27,27 +27,20 @@ export default {
     { 
       component: 'blocks/FlowBlock',
       props: {
-        leftText: 'July 18, 2021', 
-        nodes: [{ id: 'A', label: 'test', logo: 'mdiClose', outputNodes: ['B', 'C']}],
+        leftText: '', 
+        nodes: [{ id: 'A', label: 'test', logo: 'mdiHome', outputNodes: ['B']}],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
             props: {
-              title: 'Paragraph', 
+              title: 'Volunteered', 
               content: [
                 {
                   component: 'blocks/TextBlock',
                   props: {
-                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                    value: 'First off, I *volunteer* a lot of data to them. I have provided them with my address and my phone number for instance, but also of course what I purchase.'
                   }
                 },
-                {
-                  component: 'blocks/QuoteBlock',
-                  props: {
-                    text: 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at.',
-                    author: 'François Quellec'
-                  }
-                }
               ]
             }
           }
@@ -57,34 +50,22 @@ export default {
     { 
       component: 'blocks/FlowBlock',
       props: {
-        leftText: 'August 8, 2021', 
+        leftText: '', 
         nodes: [
-          { id: 'B', name: 'test', logo: 'mdiHome', outputNodes: ['D'] },
-          { id: 'C', name: 'test', logo: 'mdiClose', outputNodes: ['E'] }
+          { id: 'B', name: 'test', logo: 'mdiHome', outputNodes: ['C'] },
         ],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
             props: {
-              title: 'Paragraph', 
+              title: 'Observed', 
               content: [
                 {
                   component: 'blocks/TextBlock',
                   props: {
-                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                    value: 'While I volunteer some data, some is merely observed. I have (had) no conscience of giving it to them, but they nevertheless record it. This would include for instance geotagged newsletter clicks. On 8/20/2021 18:51, apparently, I clicked on a FitBit newsletter ad from location 63.7281,	23.0337. Gigantti saw that, and kept the record.'
                   }
                 },
-                {
-                  component: 'blocks/CodeBlock',
-                  props: {
-                    title: 'Example of code',
-                    value: 'console.log("Hello World");\nconst test = true\nconsole.log("Test: ", test)',
-                    language: "javascript",
-                    sourceText: "Source: ",
-                    sourceLinkText: "HestiaLabs",
-                    sourceLinkURL: "https://digipower.hestialabs.org/"
-                  }
-                }
               ]
             }
           }
@@ -94,74 +75,22 @@ export default {
     { 
       component: 'blocks/FlowBlock',
       props: {
-        leftText: 'October 30, 2021', 
+        leftText: '', 
         nodes: [
-          { id: 'D', name: 'test', logo: 'mdiHome', outputNodes: ['F'] },
-          { id: 'E', name: 'test', logo: 'mdiClose', outputNodes: ['F'] }
+          { id: 'C', name: 'test', logo: 'mdiHome', outputNodes: ['D'] },
         ],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
             props: {
-              title: 'Paragraph', 
+              title: 'Derived', 
               content: [
                 {
                   component: 'blocks/TextBlock',
                   props: {
-                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                    value: 'The next step is derived data, which is built through models on top of the data Gigantti has. Gigantti uses a Recency Frequency Monetary value model, which seeks to assess how frequent and good of a customer I am. For instance apparently I am in a "Mid-Value" segment, in "Frequency Cluster" 2.'
                   }
                 },
-                {
-                  component: 'charts/HorizontalBarChart',
-                  props: {
-                    title: 'Top 10 advertisers',
-                    xAccessor: 'value',
-                    yAccessor: 'company',
-                    barsColor: '#A4A8D0',
-                    values: [
-                      {
-                        company: 'Apple',
-                        value: 1960
-                      },
-                      {
-                        company: 'Facebook',
-                        value: 1360
-                      },
-                      {
-                        company: 'Google',
-                        value: 1060
-                      },
-                      {
-                        company: 'Boeing',
-                        value: 960
-                      },
-                      {
-                        company: 'Amazon',
-                        value: 800
-                      },
-                      {
-                        company: 'Orange',
-                        value: 500
-                      },
-                      {
-                        company: 'Bouygues',
-                        value: 480
-                      },
-                      {
-                        company: 'Twitter',
-                        value: 300
-                      },
-                      {
-                        company: 'Reddit',
-                        value: 280
-                      },
-                      {
-                        company: 'Swisscom',
-                        value: 100
-                      }
-                    ]
-                  }
-                }
               ]
             }
           }
@@ -171,32 +100,18 @@ export default {
     { 
       component: 'blocks/FlowBlock',
       props: {
-        leftText: 'December 11, 2021', 
-        nodes: [{ id: 'F', name: 'test', logo: 'mdiClose', outputNodes: [] }],
+        leftText: '', 
+        nodes: [{ id: 'D', name: 'test', logo: 'mdiClose', outputNodes: [E] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
             props: {
-              title: 'Paragraph', 
+              title: 'Acquired', 
               content: [
                 {
                   component: 'blocks/TextBlock',
                   props: {
-                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
-                  }
-                },
-                {
-                  component: 'blocks/LongQuoteBlock',
-                  props: {
-                    text: 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
-                    author: 'Paul-Olivier Dehaye',
-                    link: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
-                  }
-                },
-                {
-                  component: 'blocks/TextBlock',
-                  props: {
-                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                    value: 'Beyond the data observed or volunteered, Gigantti also bases its analyses on data that they acquire, in this case from two data brokers: Experian through its Mosaic product (I am a C10, which means "second home owner"), and Bisnode (which gets many things wrong, like my education level, family situation, and postal code). '
                   }
                 },
               ]
@@ -208,12 +123,12 @@ export default {
     { 
       component: 'blocks/ParagraphBlock',
       props: {
-        title: 'What did we learn ?', 
+        title: 'Metadata', 
         content: [
           {
             component: 'blocks/TextBlock',
             props: {
-              value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+              value: 'The last kind of data is metadata. This is data relating to my consents, ..., or generally data that is produced by the IT infrastructure used by Gigantti. As we will see during this #digipower study, this is worth thinking about, as it shapes many relationships mediated by data.'
             }
           }
         ]
