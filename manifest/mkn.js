@@ -18,9 +18,22 @@ export default {
           {
             component: 'blocks/TextBlock',
             props: {
-              value: 'Gigantti, like many supermarket chains, collects vast amounts of data. I want to show some of the data I have recovered from them through the <a href="">SAR process</a>, to illustrate the different kinds of collection methods used.'
+              value: 'Gigantti, like many supermarket chains, collects vast amounts of data. I want to show some of the data I have recovered from them through the'
             }
-          }
+          },
+          {
+            component: 'base/button/AnimatedLink',
+            props: {
+              text: 'SAR process',
+              url: ''
+            }
+          },
+          {
+            component: 'blocks/TextBlock',
+            props: {
+              value: ', to illustrate the different kinds of collection methods used.'
+            }
+          },
         ]
       }
     },
@@ -28,7 +41,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: '', 
-        nodes: [{ id: 'A', label: 'test', logo: 'mdiHome', outputNodes: ['B']}],
+        nodes: [{ id: 'volunteered', label: 'test', logo: 'mdiHandExtended', links: [{id: 'observed'}, {id: 'acquired', config: {dash: true, startSocket: 'left', endSocket: 'top'}}]}],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -52,8 +65,9 @@ export default {
       props: {
         leftText: '', 
         nodes: [
-          { id: 'B', name: 'test', logo: 'mdiHome', outputNodes: ['C'] },
+          { id: 'observed', name: 'test', logo: 'mdiEye', links: [{id: 'derived'}] },
         ],
+        dividerTop: true,
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -76,32 +90,8 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: '', 
-        nodes: [
-          { id: 'C', name: 'test', logo: 'mdiHome', outputNodes: [] },
-        ],
-        content: [
-          { 
-            component: 'blocks/ParagraphBlock',
-            props: {
-              title: 'Derived', 
-              content: [
-                {
-                  component: 'blocks/TextBlock',
-                  props: {
-                    value: 'The next step is derived data, which is built through models on top of the data Gigantti has. Gigantti uses a Recency Frequency Monetary value model, which seeks to assess how frequent and good of a customer I am. For instance apparently I am in a "Mid-Value" segment, in "Frequency Cluster" 2.'
-                  }
-                },
-              ]
-            }
-          }
-        ]
-      }
-    },
-    { 
-      component: 'blocks/FlowBlock',
-      props: {
-        leftText: '', 
-        nodes: [{ id: 'D', name: 'test', logo: 'mdiClose', outputNodes: ['C', 'E'] }],
+        nodes: [{ id: 'acquired', name: 'test', logo: 'mdiEmailReceive', links: [{id: 'derived', config: {startSocket: 'bottom', endSocket: 'left'}}] }],
+        nodesAlign: 'start',
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -124,7 +114,33 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: '', 
-        nodes: [{ id: 'E', name: 'test', logo: 'mdiClose', outputNodes: [] }],
+        nodes: [
+          { id: 'derived', name: 'test', logo: 'mdiArrowDecision', links: [{id: 'metadata'}] },
+        ],
+        dividerBottom: true,
+        content: [
+          { 
+            component: 'blocks/ParagraphBlock',
+            props: {
+              title: 'Derived', 
+              content: [
+                {
+                  component: 'blocks/TextBlock',
+                  props: {
+                    value: 'The next step is derived data, which is built through models on top of the data Gigantti has. Gigantti uses a Recency Frequency Monetary value model, which seeks to assess how frequent and good of a customer I am. For instance apparently I am in a "Mid-Value" segment, in "Frequency Cluster" 2.'
+                  }
+                },
+              ]
+            }
+          }
+        ]
+      }
+    },
+    { 
+      component: 'blocks/FlowBlock',
+      props: {
+        leftText: '', 
+        nodes: [{ id: 'metadata', name: 'test', logo: 'mdiFileDocumentMultiple', links: [] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -142,7 +158,8 @@ export default {
           }
         ]
       }
-    },    { 
+    },
+    { 
       component: 'blocks/ParagraphBlock',
       props: {
         title: 'Ending', 

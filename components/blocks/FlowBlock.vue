@@ -1,13 +1,13 @@
 <template>
   <VRow align="center" justify="center">
-    <VCol cols="2" style="text-align: center">
+    <VCol cols="1" style="text-align: center">
       <span class="overline font-weight-bold primary--text">
         {{ leftText }}
       </span>
     </VCol>
     <VCol
-      cols="4"
-      style="text-align: center"
+      cols="5"
+      :style="`text-align:` + nodesAlign"
       :class="{
         'd-flex': nodes.length > 1,
         'justify-space-around': nodes.length > 1
@@ -20,12 +20,12 @@
         class="ma-4 pa-4"
         color="primary"
         text-color="white"
-        size="48"
+        size="64"
       >
         <VIcon large dark>
           {{ getIcon(node.logo) }}
         </VIcon>
-      </VAvatar>
+      </VAvatar>  
     </VCol>
     <VCol cols="6">
       <div v-for="(elem, index ) in content" :key="index">
@@ -52,14 +52,23 @@ export default {
     content: {
       type: Array,
       default: () => []
+    },
+    nodesAlign: {
+      type: String,
+      default: () => 'center'
+    },
+    dividerTop: {
+      type: Boolean,
+      default: () => false
+    },
+    dividerBottom: {
+      type: Boolean,
+      default: () => false
     }
   },
   data: () => ({
-    lines: []
-  }),
-  mounted() {
-    // Draw arrows
-    const config = {
+    lines: [],
+    defaultLinkConfig: {
       color: '#58539e',
       size: 8,
       path: 'grid',
@@ -72,21 +81,29 @@ export default {
       dropShadow: false,
       hide: true
     }
-
+  }),
+  mounted() {
    setTimeout(() => {
-      this.nodes.forEach(i => i.outputNodes.forEach(n =>this.lines.push(
-        new LeaderLine(
-          document.getElementById(i.id),
-          document.getElementById(n),
-          config
-        ).show('draw', {duration: 500})
-      )))
+      this.nodes.forEach(node => {
+        if(Object.prototype.hasOwnProperty.call(node, 'links'))
+          node.links.forEach(link => this.drawLink(node, link))
+      })
     }, 500) 
   },
   destroyed() {
     this.lines.forEach(l => l.remove())
   },
   methods: {
+    drawLink(startNode, link) {
+      // Draw arrows
+      this.lines.push(
+        new LeaderLine(
+          document.getElementById(startNode.id),
+          document.getElementById(link.id),
+          {...this.defaultLinkConfig, ...link.config }
+        ).show('draw', {duration: 500})
+      )
+    },
     getIcon(iconName) {
       return this.$vuetify.icons.values[iconName]
     }
