@@ -77,7 +77,7 @@ export default {
       props: {
         leftText: '', 
         nodes: [
-          { id: 'C', name: 'test', logo: 'mdiHome', outputNodes: ['D'] },
+          { id: 'C', name: 'test', logo: 'mdiHome', outputNodes: [] },
         ],
         content: [
           { 
@@ -101,7 +101,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: '', 
-        nodes: [{ id: 'D', name: 'test', logo: 'mdiClose', outputNodes: [] }],
+        nodes: [{ id: 'D', name: 'test', logo: 'mdiClose', outputNodes: ['C', 'E'] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -121,14 +121,36 @@ export default {
       }
     },
     { 
+      component: 'blocks/FlowBlock',
+      props: {
+        leftText: '', 
+        nodes: [{ id: 'E', name: 'test', logo: 'mdiClose', outputNodes: [] }],
+        content: [
+          { 
+            component: 'blocks/ParagraphBlock',
+            props: {
+              title: 'Metadata', 
+              content: [
+                {
+                  component: 'blocks/TextBlock',
+                  props: {
+                    value: 'The last kind of data is metadata. This is data relating to my consents, ..., or generally data that is produced by the IT infrastructure used by Gigantti. As we will see during this #digipower study, this is worth thinking about, as it shapes many relationships mediated by data.'
+                  }
+                },
+              ]
+            }
+          }
+        ]
+      }
+    },    { 
       component: 'blocks/ParagraphBlock',
       props: {
-        title: 'Metadata', 
+        title: 'Ending', 
         content: [
           {
             component: 'blocks/TextBlock',
             props: {
-              value: 'The last kind of data is metadata. This is data relating to my consents, ..., or generally data that is produced by the IT infrastructure used by Gigantti. As we will see during this #digipower study, this is worth thinking about, as it shapes many relationships mediated by data.'
+              value: 'This is my conclusion'
             }
           }
         ]
