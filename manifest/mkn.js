@@ -101,7 +101,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: '', 
-        nodes: [{ id: 'D', name: 'test', logo: 'mdiClose', outputNodes: [E] }],
+        nodes: [{ id: 'D', name: 'test', logo: 'mdiClose', outputNodes: [] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
