@@ -69,22 +69,19 @@ export default {
       outline: false,
       outlineColor: '#fff',
       dash: false, // { animation: true },
-      dropShadow: false
+      dropShadow: false,
+      hide: true
     }
-    
-    this.$nextTick(() => {
-    })
 
-    document.fonts.ready.then( () => {
-      this.nodes.forEach(i => i.outputNodes.forEach(n =>this.lines.push(new LeaderLine(
+   setTimeout(() => {
+      this.nodes.forEach(i => i.outputNodes.forEach(n =>this.lines.push(
+        new LeaderLine(
           document.getElementById(i.id),
           document.getElementById(n),
           config
-        ))))
-      this.lines.forEach(l => l.hide())
-      this.lines.forEach(l => l.show('draw'))
-    });
-
+        ).show('draw', {duration: 500})
+      )))
+    }, 500) 
   },
   destroyed() {
     this.lines.forEach(l => l.remove())
