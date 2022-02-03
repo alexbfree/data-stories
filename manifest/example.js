@@ -209,7 +209,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: 'December 11, 2021', 
-        nodes: [{ id: 'F', name: 'test', logo: 'mdiClose', links: [] }],
+        nodes: [{ id: 'F', name: 'test', logo: 'mdiClose', links: [{id: 'F'}] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',

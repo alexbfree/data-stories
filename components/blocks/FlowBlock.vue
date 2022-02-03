@@ -25,7 +25,7 @@
         <VIcon large dark>
           {{ getIcon(node.logo) }}
         </VIcon>
-      </VAvatar>  
+      </VAvatar>
     </VCol>
     <VCol cols="6">
       <div v-for="(elem, index ) in content" :key="index">
@@ -95,14 +95,34 @@ export default {
   },
   methods: {
     drawLink(startNode, link) {
-      // Draw arrows
-      this.lines.push(
-        new LeaderLine(
-          document.getElementById(startNode.id),
-          document.getElementById(link.id),
-          {...this.defaultLinkConfig, ...link.config }
-        ).show('draw', {duration: 500})
-      )
+      if (startNode.id !== link.id) {
+        // Draw arrows
+        this.lines.push(
+          new LeaderLine(
+            document.getElementById(startNode.id),
+            document.getElementById(link.id),
+            {...this.defaultLinkConfig, ...link.config }
+          ).show('draw', {duration: 500})
+        )
+      } else {
+        const selfConfig = {
+          path: 'fluid',
+          startSocket: 'left',
+          endSocket: 'left',
+          startSocketGravity: [-100, 100],
+          endSocketGravity: [-100, -100]
+
+        }
+        const element = document.getElementById(startNode.id)
+        // Draw arrows
+        this.lines.push(
+          new LeaderLine(
+            LeaderLine.pointAnchor({element, x: 10, }),
+            LeaderLine.pointAnchor({element, x: 0, }),
+            {...this.defaultLinkConfig, ...link.config, ...selfConfig }
+          ).show('draw', {duration: 500})
+        )
+      }
     },
     getIcon(iconName) {
       return this.$vuetify.icons.values[iconName]
