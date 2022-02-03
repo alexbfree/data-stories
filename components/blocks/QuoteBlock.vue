@@ -6,7 +6,7 @@
           $vuetify.icons.mdiFormatQuoteOpen
         </VIcon>
       </VRow>
-      <blockquote class="blockquote">
+      <blockquote class="blockquote font-italic">
         {{ text }}
       </blockquote>
       <VRow dense style="justify-content: end">

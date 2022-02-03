@@ -28,7 +28,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: 'July 18, 2021', 
-        nodes: [{ id: 'A', label: 'test', logo: 'mdiClose', outputNodes: ['B', 'C']}],
+        nodes: [{ id: 'A', label: 'test', logo: 'mdiClose', links: [{id: 'B'},{id: 'C'}]}],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -59,8 +59,8 @@ export default {
       props: {
         leftText: 'August 8, 2021', 
         nodes: [
-          { id: 'B', name: 'test', logo: 'mdiHome', outputNodes: ['D'] },
-          { id: 'C', name: 'test', logo: 'mdiClose', outputNodes: ['E'] }
+          { id: 'B', name: 'test', logo: 'mdiHome', links: [{id: 'D'}] },
+          { id: 'C', name: 'test', logo: 'mdiClose', links: [{id: 'E'}] }
         ],
         content: [
           { 
@@ -96,8 +96,8 @@ export default {
       props: {
         leftText: 'October 30, 2021', 
         nodes: [
-          { id: 'D', name: 'test', logo: 'mdiHome', outputNodes: ['F'] },
-          { id: 'E', name: 'test', logo: 'mdiClose', outputNodes: ['F'] }
+          { id: 'D', name: 'test', logo: 'mdiHome', links: [{id: 'F'}] },
+          { id: 'E', name: 'test', logo: 'mdiClose', links: [{id: 'F'}] }
         ],
         content: [
           { 
@@ -172,7 +172,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: 'December 11, 2021', 
-        nodes: [{ id: 'F', name: 'test', logo: 'mdiClose', outputNodes: [] }],
+        nodes: [{ id: 'F', name: 'test', logo: 'mdiClose', links: [] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -187,6 +187,43 @@ export default {
                 },
                 {
                   component: 'blocks/LongQuoteBlock',
+                  props: {
+                    text: 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
+                    author: 'Paul-Olivier Dehaye',
+                    link: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
+                  }
+                },
+                {
+                  component: 'blocks/TextBlock',
+                  props: {
+                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                  }
+                },
+              ]
+            }
+          }
+        ]
+      }
+    },
+    { 
+      component: 'blocks/FlowBlock',
+      props: {
+        leftText: 'December 11, 2021', 
+        nodes: [{ id: 'F', name: 'test', logo: 'mdiClose', links: [] }],
+        content: [
+          { 
+            component: 'blocks/ParagraphBlock',
+            props: {
+              title: 'Paragraph', 
+              content: [
+                {
+                  component: 'blocks/TextBlock',
+                  props: {
+                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                  }
+                },
+                {
+                  component: 'blocks/VoiceBlock',
                   props: {
                     text: 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
                     author: 'Paul-Olivier Dehaye',

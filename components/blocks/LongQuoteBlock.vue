@@ -1,5 +1,5 @@
 <template>
-    <div class="quoteBlock pa-3 ma-3">
+    <div class="quoteBlock pa-3 ma-3 font-italic">
       {{ text }}
       <div class="link">
         <a :href="link"> {{ author }} </a>
