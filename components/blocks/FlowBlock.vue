@@ -96,7 +96,7 @@ export default {
   methods: {
     drawLink(startNode, link) {
       if (startNode.id !== link.id) {
-        // Draw arrows
+        // Draw arrow
         this.lines.push(
           new LeaderLine(
             document.getElementById(startNode.id),
@@ -114,7 +114,7 @@ export default {
 
         }
         const element = document.getElementById(startNode.id)
-        // Draw arrows
+        // Draw self arrow
         this.lines.push(
           new LeaderLine(
             LeaderLine.pointAnchor({element, x: 10, }),

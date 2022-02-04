@@ -33,7 +33,7 @@ export default {
           { 
             component: 'blocks/ParagraphBlock',
             props: {
-              title: 'Paragraph', 
+              title: 'QuoteBlock', 
               content: [
                 {
                   component: 'blocks/TextBlock',
@@ -66,7 +66,7 @@ export default {
           { 
             component: 'blocks/ParagraphBlock',
             props: {
-              title: 'Paragraph', 
+              title: 'CodeBlock', 
               content: [
                 {
                   component: 'blocks/TextBlock',
@@ -103,7 +103,7 @@ export default {
           { 
             component: 'blocks/ParagraphBlock',
             props: {
-              title: 'Paragraph', 
+              title: 'HorizontalBarChart', 
               content: [
                 {
                   component: 'blocks/TextBlock',
@@ -177,7 +177,7 @@ export default {
           { 
             component: 'blocks/ParagraphBlock',
             props: {
-              title: 'Paragraph', 
+              title: 'LongQuoteBlock', 
               content: [
                 {
                   component: 'blocks/TextBlock',
@@ -209,12 +209,12 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: 'December 11, 2021', 
-        nodes: [{ id: 'F', name: 'test', logo: 'mdiClose', links: [{id: 'F'}] }],
+        nodes: [{ id: 'G', name: 'test', logo: 'mdiClose', links: [{id: 'G'}] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
             props: {
-              title: 'Paragraph', 
+              title: 'VoiceBlock', 
               content: [
                 {
                   component: 'blocks/TextBlock',
@@ -225,8 +225,56 @@ export default {
                 {
                   component: 'blocks/VoiceBlock',
                   props: {
-                    text: 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
+                    text: 'Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
                     author: 'Paul-Olivier Dehaye',
+                    link: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
+                  }
+                },
+                {
+                  component: 'blocks/TextBlock',
+                  props: {
+                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                  }
+                },
+              ]
+            }
+          }
+        ]
+      }
+    },
+    { 
+      component: 'blocks/FlowBlock',
+      props: {
+        leftText: 'December 11, 2021', 
+        nodes: [{ id: 'H', name: 'test', logo: 'mdiClose', links: [{id: 'H'}] }],
+        content: [
+          { 
+            component: 'blocks/ParagraphBlock',
+            props: {
+              title: 'VoiceBlock multiple', 
+              content: [
+                {
+                  component: 'blocks/TextBlock',
+                  props: {
+                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                  }
+                },
+                {
+                  component: 'blocks/VoiceBlock',
+                  props: {
+                    text: ' Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
+                    author: 'Alex Bowyer',
+                    width: '100%',
+                    color: '#1ba39c',
+                    link: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
+                  }
+                },
+                {
+                  component: 'blocks/VoiceBlock',
+                  props: {
+                    text: ' Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
+                    author: 'Paul-Olivier Dehaye',
+                    width: '100%',
                     link: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
                   }
                 },
