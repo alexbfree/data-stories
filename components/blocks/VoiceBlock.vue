@@ -57,10 +57,6 @@ export default {
 }
 </script>
 <style scoped>
-.quoteBlock {
-  border-left: 1rem #58539d solid;
-  background-color: rgb(88, 83, 157, 0.1);
-}
 .link {
   float: right;
   margin-top: 1em;

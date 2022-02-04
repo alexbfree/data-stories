@@ -291,6 +291,63 @@ export default {
       }
     },
     { 
+      component: 'blocks/FlowBlock',
+      props: {
+        leftText: 'December 11, 2021', 
+        nodes: [{ id: 'I', name: 'test', logo: 'mdiClose', links: [{id: 'I'}] }],
+        content: [
+          { 
+            component: 'blocks/ParagraphBlock',
+            props: {
+              title: 'Chat multiple', 
+              content: [
+                {
+                  component: 'blocks/TextBlock',
+                  props: {
+                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                  }
+                },
+                {
+                  component: 'blocks/ChatBlock',
+                  props: {
+                    text: ' Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
+                    author: 'Paul-Olivier Dehaye',
+                    position: 'left',
+                    color: '#1ba39c',
+                    link: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
+                  }
+                },
+                {
+                  component: 'blocks/ChatBlock',
+                  props: {
+                    text: ' Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
+                    author: 'Alex Bowyer',
+                    position: 'right',
+                    link: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
+                  }
+                },
+                {
+                  component: 'blocks/ChatBlock',
+                  props: {
+                    text: ' Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes',
+                    author: 'Paul-Olivier Dehaye',
+                    position: 'left',
+                    link: 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
+                  }
+                },
+                {
+                  component: 'blocks/TextBlock',
+                  props: {
+                    value: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
+                  }
+                },
+              ]
+            }
+          }
+        ]
+      }
+    },
+    { 
       component: 'blocks/ParagraphBlock',
       props: {
         title: 'What did we learn ?', 
