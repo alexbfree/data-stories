@@ -41,7 +41,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: '', 
-        nodes: [{ id: 'volunteered', label: 'test', logo: 'mdiHandExtended', links: [{id: 'observed'}, {id: 'acquired', config: {dash: true, startSocket: 'left', endSocket: 'top'}}]}],
+        nodes: [{ id: 'volunteered', label: 'Volunteered', logo: 'mdiHandExtended', links: [{id: 'observed'}, {id: 'acquired', config: {dash: true, startSocket: 'left', endSocket: 'top'}}]}],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -65,7 +65,7 @@ export default {
       props: {
         leftText: '', 
         nodes: [
-          { id: 'observed', name: 'test', logo: 'mdiEye', links: [{id: 'derived'}] },
+          { id: 'observed', label: 'Observed', logo: 'mdiEye', links: [{id: 'derived'}] },
         ],
         dividerTop: true,
         content: [
@@ -90,7 +90,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: '', 
-        nodes: [{ id: 'acquired', name: 'test', logo: 'mdiEmailReceive', links: [{id: 'derived', config: {startSocket: 'bottom', endSocket: 'left'}}] }],
+        nodes: [{ id: 'acquired', label: 'Acquired', logo: 'mdiEmailReceive', links: [{id: 'derived', config: {startSocket: 'bottom', endSocket: 'left'}}] }],
         nodesAlign: 'start',
         content: [
           { 
@@ -115,7 +115,7 @@ export default {
       props: {
         leftText: '', 
         nodes: [
-          { id: 'derived', name: 'test', logo: 'mdiArrowDecision', links: [{id: 'metadata'}] },
+          { id: 'derived', label: 'Derived', logo: 'mdiArrowDecision', links: [{id: 'metadata'}] },
         ],
         dividerBottom: true,
         content: [
@@ -140,7 +140,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: '', 
-        nodes: [{ id: 'metadata', name: 'test', logo: 'mdiFileDocumentMultiple', links: [] }],
+        nodes: [{ id: 'metadata', label: 'Metadata', logo: 'mdiFileDocumentMultiple', links: [] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
