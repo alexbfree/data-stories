@@ -12,20 +12,21 @@
         'd-flex': nodes.length > 1,
         'justify-space-around': nodes.length > 1
       }"
-    >
-      <VAvatar
-        v-for="node in nodes"
-        :id="node.id"
-        :key="node.id"
-        class="ma-4 pa-4"
-        color="primary"
-        text-color="white"
-        size="64"
-      >
+    > 
+      <div class="node" v-for="node in nodes" :key="node.id">
+        <VAvatar
+          :id="node.id" 
+          class="ma-4 pa-4"
+          color="primary"
+          text-color="white"
+          size="64"
+        >
         <VIcon large dark>
           {{ getIcon(node.logo) }}
         </VIcon>
       </VAvatar>
+      <span v-if="node.label" class="label overline font-weight-bold primary--text"> {{ node.label }} </span>
+      </div>
     </VCol>
     <VCol cols="6">
       <div v-for="(elem, index ) in content" :key="index">
@@ -111,7 +112,6 @@ export default {
           endSocket: 'left',
           startSocketGravity: [-100, 100],
           endSocketGravity: [-100, -100]
-
         }
         const element = document.getElementById(startNode.id)
         // Draw self arrow
@@ -130,3 +130,12 @@ export default {
   }
 }
 </script>
+<style scoped>
+.label {
+  position: absolute;
+  top: 35%;
+}
+.node {
+  position: relative;
+}
+</style>

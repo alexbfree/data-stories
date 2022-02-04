@@ -28,7 +28,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: 'July 18, 2021', 
-        nodes: [{ id: 'A', label: 'test', logo: 'mdiClose', links: [{id: 'B'},{id: 'C'}]}],
+        nodes: [{ id: 'A', label: 'label', logo: 'mdiClose', links: [{id: 'B'},{id: 'C'}]}],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -59,8 +59,8 @@ export default {
       props: {
         leftText: 'August 8, 2021', 
         nodes: [
-          { id: 'B', name: 'test', logo: 'mdiHome', links: [{id: 'D'}] },
-          { id: 'C', name: 'test', logo: 'mdiClose', links: [{id: 'E'}] }
+          { id: 'B', label: '', logo: 'mdiHome', links: [{id: 'D'}] },
+          { id: 'C', label: '', logo: 'mdiClose', links: [{id: 'E'}] }
         ],
         content: [
           { 
@@ -96,8 +96,8 @@ export default {
       props: {
         leftText: 'October 30, 2021', 
         nodes: [
-          { id: 'D', name: 'test', logo: 'mdiHome', links: [{id: 'F'}] },
-          { id: 'E', name: 'test', logo: 'mdiClose', links: [{id: 'F'}] }
+          { id: 'D', label: '', logo: 'mdiHome', links: [{id: 'F'}] },
+          { id: 'E', label: 'label', logo: 'mdiClose', links: [{id: 'F'}] }
         ],
         content: [
           { 
@@ -172,7 +172,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: 'December 11, 2021', 
-        nodes: [{ id: 'F', name: 'test', logo: 'mdiClose', links: [] }],
+        nodes: [{ id: 'F', label: 'label', logo: 'mdiClose', links: [] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -209,7 +209,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: 'December 11, 2021', 
-        nodes: [{ id: 'G', name: 'test', logo: 'mdiClose', links: [{id: 'G'}] }],
+        nodes: [{ id: 'G', label: 'label', logo: 'mdiClose', links: [{id: 'G'}] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -246,7 +246,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: 'December 11, 2021', 
-        nodes: [{ id: 'H', name: 'test', logo: 'mdiClose', links: [{id: 'H'}] }],
+        nodes: [{ id: 'H', label: 'label', logo: 'mdiClose', links: [{id: 'H'}] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
@@ -294,7 +294,7 @@ export default {
       component: 'blocks/FlowBlock',
       props: {
         leftText: 'December 11, 2021', 
-        nodes: [{ id: 'I', name: 'test', logo: 'mdiClose', links: [{id: 'I'}] }],
+        nodes: [{ id: 'I', label: 'label', logo: 'mdiClose', links: [{id: 'I'}] }],
         content: [
           { 
             component: 'blocks/ParagraphBlock',
