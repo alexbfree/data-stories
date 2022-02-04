@@ -13,7 +13,7 @@
         'justify-space-around': nodes.length > 1
       }"
     > 
-      <div class="node" v-for="node in nodes" :key="node.id">
+      <div v-for="node in nodes" :key="node.id" class="node">
         <VAvatar
           :id="node.id" 
           class="ma-4 pa-4"

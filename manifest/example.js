@@ -361,5 +361,11 @@ export default {
         ]
       }
     },
+    { 
+      component: 'blocks/ReadAlsoBlock',
+      props: {
+       pages: ['Twitter', 'Facebook', 'Apple']
+      }
+    }
   ]
 }
