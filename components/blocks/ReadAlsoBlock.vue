@@ -9,30 +9,9 @@
             :key="page"
             :cols="4"
           >
-            <VCard
-              class="ma-3 pa-3"
-            >
-              <VImg
-                height="200px"
-                src="/hestialabs-logo.svg"
-                contain
-              >
-              </VImg>
-              <VCardTitle>Lorem ipsum</VCardTitle>
-              <VCardText class="text--primary">
-                <div>Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipi</div>
-              </VCardText>
-
-              <VCardActions>
-                <v-spacer></v-spacer>
-                <VBtn
-                  color="primary"
-                  text
-                >
-                  Read more
-                </VBtn>
-              </VCardActions>
-            </VCard>
+            <PagePreviewBlock
+              class="ma-3" flat
+            />
           </v-col>
         </v-row>
       </v-container>
@@ -40,8 +19,10 @@
   </div>
 </template>
 <script>
+import PagePreviewBlock from '~/components/blocks/PagePreviewBlock.vue'
 export default {
   name: 'ReadAlsoBlock',
+  components: { PagePreviewBlock },
   props: {
     pages: {
       type: Array,

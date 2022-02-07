@@ -22,7 +22,7 @@ export default {
             }
           },
           {
-            component: 'base/button/AnimatedLink',
+            component: 'base/button/PagePreviewLink',
             props: {
               text: 'SAR process',
               url: ''
@@ -173,5 +173,11 @@ export default {
         ]
       }
     },
+    { 
+      component: 'blocks/ReadAlsoBlock',
+      props: {
+       pages: ['Twitter', 'Facebook', 'Apple']
+      }
+    }
   ]
 }
