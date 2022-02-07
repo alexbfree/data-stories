@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import manifest from '@/manifest/example'
+import manifest from '@/manifest/example.json'
 export default {
   name: 'IndexPage',
   data() {
