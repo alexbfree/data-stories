@@ -35,6 +35,49 @@ collections:
     identifier_field: id
     fields:
       - {label: 'Id (never change this, only set a unique value at creation)', name: id, widget: string, hint: 'At creation, the id will determine the name of the file where the story is stored.' }
+      - { label: 'Title', name: 'title', widget: 'string', i18n: true }
+      - label: 'Building blocks'
+        name: 'buildingBlocks'
+        widget: 'list'
+        summary: '{{fields.type}}'
+        i18n: true
+        types:
+          - label: 'Profile block'
+            name: blocks/ProfileBlock
+            fields:
+              - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+              - label: 'Properties'
+                name: props
+                widget: 'object'
+                fields:
+                  - { label: 'Name', name: name, required: false, i18n: true, widget: 'string'}
+                  - { label: 'JobTitle', name: jobTitle, required: false, i18n: true, widget: 'string'}
+                  - { label: 'Description', name: description, required: false, i18n: true, widget: 'string'}
+          - label: 'Paragraph block'
+            name: blocks/ParagraphBlock
+            fields:
+              - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+          - label: 'Flow block'
+            name: blocks/FlowBlock
+            fields:
+              - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+          - label: 'Read also block'
+            name: blocks/ReadAlsoBlock
+            fields:
+              - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+
+
+  - name: 'stories0'
+    label: 'Stories (old)'
+    folder: 'static/cms-data/stories0'
+    format: 'json'
+    create: true
+    i18n: true
+    editor:
+      preview: false
+    identifier_field: id
+    fields:
+      - {label: 'Id (never change this, only set a unique value at creation)', name: id, widget: string, hint: 'At creation, the id will determine the name of the file where the story is stored.' }
       - { label: 'Url path', name: 'url-path', widget: 'string', hint: 'the path to this story after the site name datastories.com/en/[url path]' }
       - { label: 'Title', name: 'title', widget: 'string', i18n: true }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', i18n: true }
