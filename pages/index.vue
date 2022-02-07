@@ -3,13 +3,17 @@
 </template>
 
 <script>
-import manifest from '@/manifest/mkn.json'
 export default {
   name: 'IndexPage',
   data() {
     return {
-      manifest
+      manifest: {}
     };
-  }
+  },
+  created() {
+        fetch('/manifest/mkn.json')
+          .then(response => response.json())
+            .then(data => (this.manifest = data))
+    }
 }
 </script>
