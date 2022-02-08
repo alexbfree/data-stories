@@ -1,6 +1,4 @@
 {
-  "en": {
-    "id": "toto",
     "title": "Example Page",
     "buildingBlocks": [
       {
@@ -348,4 +346,3 @@
       }
     ]
   }
-}

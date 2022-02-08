@@ -86,15 +86,13 @@ export default {
     }
   }),
   mounted() {
-    // Wait for HTML document to be ready then wait a few milliseconds to let the user see the transitions
-    window.addEventListener('load', () => {
+    // Wait a few milliseconds to let the user see the transitions
       setTimeout(() => {
       this.nodes.forEach(node => {
         if(Object.prototype.hasOwnProperty.call(node, 'links'))
           node.links.forEach(link => this.drawLink(node, link))
       })
-    }, 100) 
-    })
+    }, 300) 
   },
   destroyed() {
     this.lines.forEach(l => l.remove())
