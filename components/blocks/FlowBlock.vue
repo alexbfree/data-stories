@@ -30,7 +30,7 @@
     </VCol>
     <VCol cols="6">
       <div v-for="(elem, index ) in content" :key="index">
-        <ComponentCaller :component-name="elem.component" :component-props="elem.props" />
+        <ComponentCaller v-bind="elem" />
       </div>
     </VCol>
   </VRow>

@@ -1,25 +1,22 @@
 <template>
   <component
     :is="component"
-    v-bind="{ ...componentProps }"
+    v-bind="$attrs"
   />
 </template>
 
 <script>
 export default {
   props: {
-    componentName: {
+    type: {
       type: String,
       required: true
-    },
-    componentProps: {
-      type: Object,
-      default: () => {}
     }
   },
   computed: {
     component() {
-      return () => import(`@/components/${this.componentName}`)
+      console.log(this.$attrs)
+      return () => import(`@/components/${this.type}`)
     }
   }
 }
