@@ -45,7 +45,6 @@
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.2.0",
     "jest": "^27.4.4",
-    "netlify-cms-proxy-server": "^1.3.23",
     "prettier": "^2.5.1",
     "ts-jest": "^27.1.1",
     "vue-jest": "^3.0.4"
