@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="appHeader">
     <VAppBar fixed app color="white" height="60" style="z-index: 2500">
       <VAppBarNavIcon
         aria-label="Open navigation menu"
