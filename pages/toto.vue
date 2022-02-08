@@ -11,9 +11,9 @@ export default {
     }
   },
   async created() {
-    const resp = await fetch('/manifest/example.json')
+    const resp = await fetch('/cms-data/stories/toto.json')
     const data = await resp.json()
-    this.manifest = data
-  }
+    this.manifest = data.en
+  },
 }
 </script>
