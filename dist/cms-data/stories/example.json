@@ -329,6 +329,38 @@
         ]
       },
       {
+        "type": "blocks/FlowBlock",
+        "leftText": "December 11, 2021",
+        "nodes": [
+          {
+            "id": "J",
+            "label": "label",
+            "logo": "mdiClose",
+            "links": [
+              {
+                "id": "J"
+              }
+            ]
+          }
+        ],
+        "title": "Link to other pages",
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus."
+          },
+          {
+            "type": "base/button/PagePreviewLink",
+            "text": "SAR process",
+            "link": ""
+          },
+          {
+            "type": "blocks/TextBlock",
+            "text": " lorem John Doe ipsum dolor sit amet, no nam oblique veritus."
+          }
+        ]
+      },
+      {
         "type": "blocks/ParagraphBlock",
         "title": "What did we learn ?",
         "content": [

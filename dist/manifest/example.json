@@ -1,6 +1,4 @@
 {
-  "en": {
-    "id": "toto",
     "title": "Example Page",
     "buildingBlocks": [
       {
@@ -329,6 +327,38 @@
         ]
       },
       {
+        "type": "blocks/FlowBlock",
+        "leftText": "December 11, 2021",
+        "nodes": [
+          {
+            "id": "J",
+            "label": "label",
+            "logo": "mdiClose",
+            "links": [
+              {
+                "id": "J"
+              }
+            ]
+          }
+        ],
+        "title": "Link to other pages",
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae."
+          },
+          {
+            "type": "base/button/PagePreviewLink",
+            "text": "SAR process",
+            "link": ""
+          },
+          {
+            "type": "blocks/TextBlock",
+            "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae."
+          }
+        ]
+      },
+      {
         "type": "blocks/ParagraphBlock",
         "title": "What did we learn ?",
         "content": [
@@ -348,4 +378,3 @@
       }
     ]
   }
-}
