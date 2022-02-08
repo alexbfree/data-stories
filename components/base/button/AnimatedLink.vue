@@ -1,36 +1,11 @@
 <template>
-  <v-menu
-      open-on-hover
-      offset-x
-      offset-y
-      left
-      max-width="300px"
-    >
-      <template #activator="{ on, attrs }">
-        <a
-          :href="url" 
-          v-bind="attrs"
-          class="link animate" 
-          v-on="on">
-          {{ text }}
-        </a>
-      </template>
-
-      <VCard
-        class="pa-3"
-      >
-        <VImg
-          height="100px"
-          src="/hestialabs-logo.svg"
-          contain
-        >
-        </VImg>
-        <VCardTitle>Lorem ipsum</VCardTitle>
-        <VCardText class="text--primary">
-          <div>Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipi <a> [Read more] </a></div>
-        </VCardText>
-      </VCard>
-    </v-menu>
+  <a
+    v-bind="$attrs"
+    class="link"
+    v-on="$listeners"
+  >
+    {{ text }}
+  </a>
 </template>
 
 <script>
@@ -39,10 +14,6 @@ export default {
     text: {
       type: String,
       default: 'See also'
-    },
-    url: {
-      type: String,
-      default: 'true'
     }
   }
 }
