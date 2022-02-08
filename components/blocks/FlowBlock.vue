@@ -29,20 +29,22 @@
       </div>
     </VCol>
     <VCol cols="6">
-      <div v-for="(elem, index ) in content" :key="index">
-        <ComponentCaller v-bind="elem" />
-      </div>
+      <ParagraphBlock v-bind="{ title, content }"/>
     </VCol>
   </VRow>
 </template>
 <script>
 import LeaderLine from 'leader-line-new'
-import ComponentCaller from '@/components/ComponentCaller.vue'
+import ParagraphBlock from '@/components/blocks/ParagraphBlock.vue'
 export default {
   name: 'FlowBlock',
-  components: { ComponentCaller },
+  components: { ParagraphBlock },
   props: {
     leftText: {
+      type: String,
+      default: () => ''
+    },
+    title: {
       type: String,
       default: () => ''
     },

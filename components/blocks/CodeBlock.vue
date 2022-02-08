@@ -32,7 +32,7 @@ export default {
     PrismEditor
   },
   props: {
-    value: {
+    text: {
       type: String,
       default: ''
     },
@@ -67,7 +67,7 @@ export default {
   },
   data() {
     return {
-      code: this.value
+      code: this.text
     }
   },
   methods: {

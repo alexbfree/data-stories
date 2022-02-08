@@ -15,7 +15,6 @@ export default {
   },
   computed: {
     component() {
-      console.log(this.$attrs)
       return () => import(`@/components/${this.type}`)
     }
   }

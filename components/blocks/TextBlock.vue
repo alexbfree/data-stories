@@ -1,11 +1,11 @@
 <template>
-  <span>{{ value }}</span>
+  <span>{{ text }}</span>
 </template>
 <script>
 export default {
   name: 'TextBlock',
   props: {
-    value: {
+    text: {
       type: String,
       default: () => ''
     }

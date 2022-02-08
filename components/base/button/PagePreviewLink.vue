@@ -7,7 +7,7 @@
       max-width="300px"
     >
       <template #activator="{ on, attrs }">
-        <AnimatedLink v-bind="{text, attrs}" v-on="on" />
+        <AnimatedLink v-bind="{text, link, attrs}" v-on="on" />
       </template>
       <PagePreviewBlock image-height="100px" />
     </v-menu>
@@ -23,7 +23,7 @@ export default {
       type: String,
       default: 'See also'
     },
-    url: {
+    link: {
       type: String,
       default: 'true'
     }

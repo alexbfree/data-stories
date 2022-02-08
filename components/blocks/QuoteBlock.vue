@@ -19,7 +19,7 @@
           <VIcon right color="primary"> $vuetify.icons.mdiMinus </VIcon>
           {{ author }}
         </span>
-        <a :href="url"> {{ url }}</a>
+        <a :href="link"> {{ link }}</a>
       </div>
     </VCardText>
   </VCard>
@@ -36,7 +36,7 @@ export default {
       type: String,
       required: true
     },
-    url: {
+    link: {
       type: String,
       default: () => ''
     }

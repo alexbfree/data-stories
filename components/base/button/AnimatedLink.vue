@@ -2,6 +2,7 @@
   <a
     v-bind="$attrs"
     class="link"
+    :href="link"
     v-on="$listeners"
   >
     {{ text }}
@@ -14,6 +15,10 @@ export default {
     text: {
       type: String,
       default: 'See also'
+    },
+    link: {
+      type: String,
+      default: '#'
     }
   }
 }
