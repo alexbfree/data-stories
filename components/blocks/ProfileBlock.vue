@@ -16,7 +16,7 @@
         </VAvatar>
         <div class="py-0 ml-6">
           <div class="text-h4 font-weight-bold">
-                {{ name }}
+                {{ title }}
           </div>
           <div class="text-subtitle-1">
                 {{ jobTitle }}
@@ -32,7 +32,7 @@
 export default {
   name: 'ProfileBlock',
   props: {
-    name: {
+    title: {
       type: String,
       default: () => 'John Doe'
     },
