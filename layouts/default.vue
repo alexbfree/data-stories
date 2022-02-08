@@ -53,7 +53,7 @@ export default {
       timeout: 5000,
       alert: false,
       newsletterURL: 'www.example.com',
-      newsletterMessage: 'Subscribe to our newsletter'
+      newsletterMessage: 'Subscribe to our newsletter',
     }
   },
   head() {
@@ -62,29 +62,35 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.appName
+          content: this.appName,
         },
         {
           hid: 'twitter:card',
           property: 'twitter:card',
-          content: 'summary'
+          content: 'summary',
         },
         {
           hid: 'twitter:site',
           property: 'twitter:site',
-          content: '@HestiaLabs'
+          content: '@HestiaLabs',
         },
         {
           hid: 'twitter:title',
           property: 'twitter:title',
-          content: this.appName
+          content: this.appName,
         },
         {
           hid: 'twitter:image',
           property: 'twitter:image',
-          content: `${process.env.baseUrl}/ogimg.png`
-        }
-      ]
+          content: `${process.env.baseUrl}/ogimg.png`,
+        },
+      ],
+      script: [
+        {
+          // we only really need this on the index page
+          src: 'https://identity.netlify.com/v1/netlify-identity-widget.js',
+        },
+      ],
     }
   },
   watch: {
@@ -92,13 +98,13 @@ export default {
       this.snackbar = true
       // changing timeout property resets the timeout
       this.timeout = isOffline ? 5001 : 5000
-    }
+    },
   },
   mounted() {
     if (!window.Worker) {
       this.$nuxt.error({
         statusCode: 500,
-        message: 'Web Workers are not supported by this browser'
+        message: 'Web Workers are not supported by this browser',
       })
     }
     // Show the newsletter alert once a day
@@ -117,8 +123,8 @@ export default {
   methods: {
     alertClosed() {
       localStorage.alertNewsletterDismissed = new Date()
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -17,10 +17,10 @@
   # Default build command.
   command = "echo no build for now"
 
-[build.environment]
-  # overrides variables in the Site settings
-  NODE_VERSION = "14"
-  NPM_VERSION = "7"
+# [build.environment]
+#   # overrides variables in the Site settings
+#   NODE_VERSION = "14"
+#   NPM_VERSION = "7"
 
 [[redirects]]
   from = "/admin/*"
