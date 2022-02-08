@@ -2,6 +2,7 @@
   <a
     v-bind="$attrs"
     class="link"
+    title=""
     :href="link"
     v-on="$listeners"
   >
