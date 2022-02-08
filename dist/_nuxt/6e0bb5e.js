@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{433:function(t,n,e){"use strict";e.r(n),n.default={props:{values:{type:Array,default:function(){return[]}},title:{type:String,default:function(){return""}}},data:function(){return{graphId:"graph_"+this._uid}},mounted:function(){this.initViz()},watch:{values:function(){this.updateViz()}}}}}]);
