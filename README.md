@@ -1,4 +1,16 @@
-# Data stories
+# Netlify cms
+
+The cms is configured in **static/admin/config.yml**. 
+
+It writes data in **static/cms-data**
+
+Cms user management is done with netlify identity. See [our documentation](https://github.com/hestiaAI/website.docs/blob/main/website-new/SETUP-NETLIFY.md)
+or [netlify's](https://docs.netlify.com/visitor-access/identity/)
+
+# Deployment
+
+
+# Nuxt commands and dir structure
 
 ## Build Setup
 

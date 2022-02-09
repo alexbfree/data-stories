@@ -5,7 +5,10 @@
     "buildingBlocks": [
       {
         "type": "blocks/ProfileBlock",
-        "person": "john-dowe"
+        "title": "John Doe",
+        "jobTitle": "Journalist at LeTemps.ch",
+        "description": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
+        "profilePicture": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
       },
       {
         "type": "blocks/ParagraphBlock",
@@ -326,6 +329,38 @@
         ]
       },
       {
+        "type": "blocks/FlowBlock",
+        "leftText": "December 11, 2021",
+        "nodes": [
+          {
+            "id": "J",
+            "label": "label",
+            "logo": "mdiClose",
+            "links": [
+              {
+                "id": "J"
+              }
+            ]
+          }
+        ],
+        "title": "Link to other pages",
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus."
+          },
+          {
+            "type": "base/button/PagePreviewLink",
+            "text": "SAR process",
+            "link": ""
+          },
+          {
+            "type": "blocks/TextBlock",
+            "text": " lorem John Doe ipsum dolor sit amet, no nam oblique veritus."
+          }
+        ]
+      },
+      {
         "type": "blocks/ParagraphBlock",
         "title": "What did we learn ?",
         "content": [
@@ -344,6 +379,5 @@
         ]
       }
     ]
-  },
-  "fr": {}
+  }
 }

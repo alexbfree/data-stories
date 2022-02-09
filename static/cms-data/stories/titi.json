@@ -1,11 +1,14 @@
 {
   "en": {
-    "id": "toto",
-    "title": "Example Page",
+    "id": "titi",
+    "title": "titi example",
     "buildingBlocks": [
       {
         "type": "blocks/ProfileBlock",
-        "person": "john-dowe"
+        "title": "John Doe Junior",
+        "jobTitle": "Journalist at LeTemps.ch",
+        "description": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
+        "profilePicture": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
       },
       {
         "type": "blocks/ParagraphBlock",
@@ -232,115 +235,6 @@
             "type": "blocks/TextBlock",
             "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae."
           }
-        ]
-      },
-      {
-        "type": "blocks/FlowBlock",
-        "leftText": "December 11, 2021",
-        "nodes": [
-          {
-            "id": "H",
-            "label": "label",
-            "logo": "mdiClose",
-            "links": [
-              {
-                "id": "H"
-              }
-            ]
-          }
-        ],
-        "title": "VoiceBlock multiple",
-        "content": [
-          {
-            "type": "blocks/TextBlock",
-            "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae."
-          },
-          {
-            "type": "blocks/VoiceBlock",
-            "text": " Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "Alex Bowyer",
-            "width": "100%",
-            "color": "#1ba39c",
-            "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-          },
-          {
-            "type": "blocks/VoiceBlock",
-            "text": " Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "Paul-Olivier Dehaye",
-            "width": "100%",
-            "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-          },
-          {
-            "type": "blocks/TextBlock",
-            "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae."
-          }
-        ]
-      },
-      {
-        "type": "blocks/FlowBlock",
-        "leftText": "December 11, 2021",
-        "nodes": [
-          {
-            "id": "I",
-            "label": "label",
-            "logo": "mdiClose",
-            "links": [
-              {
-                "id": "I"
-              }
-            ]
-          }
-        ],
-        "title": "Chat multiple",
-        "content": [
-          {
-            "type": "blocks/TextBlock",
-            "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae."
-          },
-          {
-            "type": "blocks/ChatBlock",
-            "text": " Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "Paul-Olivier Dehaye",
-            "position": "left",
-            "color": "#1ba39c",
-            "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-          },
-          {
-            "type": "blocks/ChatBlock",
-            "text": " Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "Alex Bowyer",
-            "position": "right",
-            "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-          },
-          {
-            "type": "blocks/ChatBlock",
-            "text": " Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "Paul-Olivier Dehaye",
-            "position": "left",
-            "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-          },
-          {
-            "type": "blocks/TextBlock",
-            "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae."
-          }
-        ]
-      },
-      {
-        "type": "blocks/ParagraphBlock",
-        "title": "What did we learn ?",
-        "content": [
-          {
-            "type": "blocks/TextBlock",
-            "text": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae."
-          }
-        ]
-      },
-      {
-        "type": "blocks/ReadAlsoBlock",
-        "pages": [
-          "Twitter",
-          "Facebook",
-          "Apple"
         ]
       }
     ]
