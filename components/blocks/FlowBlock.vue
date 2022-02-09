@@ -106,7 +106,7 @@ export default {
             document.getElementById(startNode.id),
             document.getElementById(link.id),
             {...this.defaultLinkConfig, ...link.config }
-          ).show('draw', {duration: 500})
+          ).show('draw', {duration: 2500})
         )
       } else {
         const selfConfig = {
