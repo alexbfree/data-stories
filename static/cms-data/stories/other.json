@@ -1,7 +1,7 @@
 {
   "en": {
-    "id": "alexb",
-    "title": "What is my personal data? And how do companies get it?",
+    "id": "other",
+    "title": "Another cool title",
     "buildingBlocks": [
       {
         "type": "blocks/ProfileBlock",
