@@ -2,7 +2,7 @@
   <VContainer v-if="manifest">
     <VRow v-for="(block, index) in manifest.buildingBlocks" :key="index" >
       <VCol cols="12">
-        <ComponentCaller v-bind="block" />
+        <ComponentCaller v-bind="{ block }" />
       </VCol>
     </VRow>
   </VContainer>

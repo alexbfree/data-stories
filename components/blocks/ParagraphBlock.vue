@@ -2,7 +2,7 @@
     <div class="py-4 mt-4">
       <h2 class="headline font-weight-light mb-4 primary--text">{{ title }}</h2>
       <span v-for="(elem, index ) in content" :key="index">
-        <ComponentCaller v-bind="elem" />
+        <ComponentCaller :block="elem" />
       </span>
     </div>
 </template>

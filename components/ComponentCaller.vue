@@ -1,21 +1,25 @@
 <template>
   <component
     :is="component"
-    v-bind="$attrs"
+    v-bind="componentInfos.props"
   />
 </template>
 
 <script>
 export default {
   props: {
-    type: {
-      type: String,
+    block: {
+      type: Object,
       required: true
     }
   },
   computed: {
     component() {
-      return () => import(`@/components/${this.type}`)
+      return () => import(`@/components/${this.componentInfos.type}`)
+    },
+    componentInfos(){
+      const {type, ...props} = this.block
+      return { type, props}
     }
   }
 }
