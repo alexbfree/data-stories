@@ -9,6 +9,20 @@ or [netlify's](https://docs.netlify.com/visitor-access/identity/)
 
 # Deployment
 
+To update the website:
+
+```bash
+$ rm -rf dist
+$ npm run generate
+$ git add dist
+$ git commit -m 'updated generated site'
+```
+
+Push it to the cms branch to trigger a build.
+
+Builds are also triggered by changes in cms-data, where the cms writes.
+
+Other changes don't trigger a build
 
 # Nuxt commands and dir structure
 
