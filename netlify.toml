@@ -78,10 +78,10 @@
   status = 302
   force = true
 
-# https://stackoverflow.com/questions/49566059/service-worker-registration-error-unsupported-mime-type-text-html
-[[redirects]]
-  from = "/sw.js"
-  to = "/sw.js"
+# # https://stackoverflow.com/questions/49566059/service-worker-registration-error-unsupported-mime-type-text-html
+# [[redirects]]
+#   from = "/sw.js"
+#   to = "/sw.js"
 
   status = 200
 [[redirects]]

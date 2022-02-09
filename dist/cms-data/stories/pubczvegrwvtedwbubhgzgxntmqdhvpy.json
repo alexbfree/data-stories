@@ -1,0 +1,160 @@
+{
+  "en": {
+    "id": "PUBczvegRWVteDWbuBHGzgxnTmqDHvPY",
+    "title": "MKN",
+    "buildingBlocks": [
+      {
+        "type": "blocks/ProfileBlock",
+        "title": "MKN",
+        "jobTitle": "Finnish MEP",
+        "description": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
+        "profilePicture": "/media/mkn.jpeg"
+      },
+      {
+        "type": "blocks/ParagraphBlock",
+        "title": "My Gigantti data",
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "Gigantti, like many supermarket chains, collects vast amounts of data. I want to show some of the data I have recovered from them through the "
+          },
+          {
+            "type": "base/button/PagePreviewLink",
+            "text": "SAR process",
+            "link": ""
+          },
+          {
+            "type": "blocks/TextBlock",
+            "text": ", to illustrate the different kinds of collection methods used."
+          }
+        ]
+      },
+      {
+        "type": "blocks/FlowBlock",
+        "title": "Volunteered",
+        "nodes": [
+          {
+            "id": "volunteered",
+            "label": "VOLUNTEERED",
+            "logo": "mdiHandExtended",
+            "links": [
+              {
+                "id": "observed"
+              },
+              {
+                "id": "acquired",
+                "config": {"dash": true, "startSocket": "left", "endSocket": "top"}
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "First off, I *volunteer* a lot of data to them. I have provided them with my address and my phone number for instance, but also of course what I purchase."
+          }
+        ]
+      },
+      {
+        "type": "blocks/FlowBlock",
+        "title": "Observed",
+        "nodes": [
+          {
+            "id": "observed",
+            "label": "Observed",
+            "logo": "mdiEye",
+            "links": [
+              {
+                "id": "derived"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "While I volunteer some data, some is merely observed. I have (had) no conscience of giving it to them, but they nevertheless record it. This would include for instance geotagged newsletter clicks. On 8/20/2021 18:51, apparently, I clicked on a FitBit newsletter ad from location 63.7281, 23.0337. Gigantti saw that, and kept the record."
+          }
+        ]
+      },
+      {
+        "type": "blocks/FlowBlock",
+        "title": "Acquired",
+        "nodes": [
+          {
+            "id": "acquired",
+            "label": "Acquired",
+            "logo": "mdiEmailReceive",
+            "links": [
+              {
+                "id": "derived",
+                "config": {"startSocket": "bottom", "endSocket": "left"}
+              }
+            ]
+          }
+        ],
+        "nodesAlign": "start",
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "Beyond the data observed or volunteered, Gigantti also bases its analyses on data that they acquire, in this case from two data brokers: Experian through its Mosaic product (I am a C10, which means \\\"second home owner\\\"), and Bisnode (which gets many things wrong, like my education level, family situation, and postal code). "
+          }
+        ]
+      },
+      {
+        "type": "blocks/FlowBlock",
+        "title": "Derived",
+        "nodes": [
+          {
+            "label": "Derived",
+            "id": "derived",
+            "logo": "mdiArrowDecision",
+            "links": [
+              {
+                "id": "metadata"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "The next step is derived data, which is built through models on top of the data Gigantti has. Gigantti uses a Recency Frequency Monetary value model, which seeks to assess how frequent and good of a customer I am. For instance apparently I am in a \"Mid-Value\" segment, in \"Frequency Cluster\" 2."
+          }
+        ]
+      },
+      {
+        "type": "blocks/FlowBlock",
+        "title": "Metadata",
+        "nodes": [
+          {
+            "label": "Metadata",
+            "id": "metadata",
+            "logo": "mdiFileDocumentMultiple"
+          }
+        ],
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "The last kind of data is metadata. This is data relating to my consents, ..., or generally data that is produced by the IT infrastructure used by Gigantti. As we will see during this #digipower study, this is worth thinking about, as it shapes many relationships mediated by data."
+          }
+        ]
+      },
+      {
+        "type": "blocks/ParagraphBlock",
+        "title": "Ending",
+        "content": [
+          {
+            "type": "blocks/TextBlock",
+            "text": "This is my conclusion"
+          }
+        ]
+      },
+      {
+        "type": "blocks/ReadAlsoBlock",
+        "pages": ["Twitter", "Facebook", "Apple"]
+      }
+    ]
+  },
+  "fr": {}
+}

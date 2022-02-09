@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{437:function(e,n,t){"use strict";t.r(n);var r={props:["grumf"]},l=t(54),component=Object(l.a)(r,(function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("article",[t("h1",[e._v(e._s(e.grumf))]),e._v(" "),e._t("gigi")],2)}),[],!1,null,null,null);n.default=component.exports}}]);
