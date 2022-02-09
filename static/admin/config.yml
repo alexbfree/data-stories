@@ -45,7 +45,7 @@ collections:
           - label: 'Profile block'
             name: blocks/ProfileBlock
             fields:
-              - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ProfileBlock}
               - { label: 'Name', name: title, required: false, i18n: true, widget: 'string'}
               - { label: 'JobTitle', name: jobTitle, required: false, i18n: true, widget: 'string'}
               - { label: 'Description', name: description, required: false, i18n: true, widget: 'text'}
@@ -61,7 +61,7 @@ collections:
           - label: 'Paragraph block'
             name: blocks/ParagraphBlock
             fields:
-              - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ParagraphBlock}
               - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
               # copy/paste this to flow block
               - name: content
@@ -72,31 +72,31 @@ collections:
                   - label: 'Text block'
                     name: blocks/TextBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/TextBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                   - label: 'Page view link block'
                     name: base/button/PagePreviewLink
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/PagePreviewLink}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
                   - label: 'Quote block'
                     name: blocks/QuoteBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/QuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                   - label: 'Long quote block'
                     name: blocks/LongQuoteBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/LongQuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
                   - label: 'Voice block'
                     name: blocks/VoiceBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/VoiceBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
@@ -105,7 +105,7 @@ collections:
                   - label: 'Chat block'
                     name: blocks/ChatBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ChatBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
@@ -119,7 +119,7 @@ collections:
                   - label: 'Code block'
                     name: blocks/CodeBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/CodeBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
                       - { label: 'Language', name: language, required: false, i18n: true, widget: 'string'}
@@ -127,9 +127,9 @@ collections:
                       - { label: 'SourceLinkText', name: sourceLinkText, required: false, i18n: true, widget: 'string'}
                       - { label: 'SourceLinkURL', name: sourceLinkURL, required: false, i18n: true, widget: 'file'}
                   - label: 'Horizontal bar chart'
-                    name: charts/HorizontalBarChart
+                    name: blocks/HorizontalBarChart
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/HorizontalBarChart}
                       - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'hidden', default: 'Graph'}
 
@@ -162,31 +162,31 @@ collections:
                   - label: 'Text block'
                     name: blocks/TextBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/TextBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                   - label: 'Page view link block'
                     name: base/button/PagePreviewLink
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/PagePreviewLink}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
                   - label: 'Quote block'
                     name: blocks/QuoteBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/QuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                   - label: 'Long quote block'
                     name: blocks/LongQuoteBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/LongQuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
                   - label: 'Voice block'
                     name: blocks/VoiceBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/VoiceBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
@@ -195,7 +195,7 @@ collections:
                   - label: 'Chat block'
                     name: blocks/ChatBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ChatBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
@@ -209,7 +209,7 @@ collections:
                   - label: 'Code block'
                     name: blocks/CodeBlock
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/CodeBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
                       - { label: 'Language', name: language, required: false, i18n: true, widget: 'string'}
@@ -217,9 +217,9 @@ collections:
                       - { label: 'SourceLinkText', name: sourceLinkText, required: false, i18n: true, widget: 'string'}
                       - { label: 'SourceLinkURL', name: sourceLinkURL, required: false, i18n: true, widget: 'file'}
                   - label: 'Horizontal bar chart'
-                    name: charts/HorizontalBarChart
+                    name: blocks/HorizontalBarChart
                     fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/HorizontalBarChart}
                       - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'hidden', default: 'Graph'}
           - label: 'Read also block'
