@@ -30,30 +30,30 @@
 #     Content-Type = "application/javascript"
 
 # headers used by https://github.com/juliomrqz/nuxt-netlify
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Referrer-Policy = "origin"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    Access-Control-Allow-Origin = "*"
-    X-Build = "1.0.1"
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     Referrer-Policy = "origin"
+#     X-Content-Type-Options = "nosniff"
+#     X-Frame-Options = "DENY"
+#     X-XSS-Protection = "1; mode=block"
+#     Access-Control-Allow-Origin = "*"
+#     X-Build = "1.0.1"
 
-[[headers]]
-  for = "/_nuxt/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+# [[headers]]
+#   for = "/_nuxt/*"
+#   [headers.values]
+#     Cache-Control = "public, max-age=31536000, immutable"
 
-[[headers]]
-  for = "/sw.js"
-  [headers.values]
-    Cache-Control = "no-cache"
+# [[headers]]
+#   for = "/sw.js"
+#   [headers.values]
+#     Cache-Control = "no-cache"
 
-[[headers]]
-  for = "/favicon.ico"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"
+# [[headers]]
+#   for = "/favicon.ico"
+#   [headers.values]
+#     Cache-Control = "public, max-age=86400"
 
 # [build.environment]
 #   # overrides variables in the Site settings
@@ -78,9 +78,15 @@
   status = 302
   force = true
 
+# https://stackoverflow.com/questions/49566059/service-worker-registration-error-unsupported-mime-type-text-html
+[[redirects]]
+  from = "/sw.js"
+  to = "/sw.js"
+
+  status = 200
 [[redirects]]
   from = "/*"
-  to = "index.html"
+  to = "/index.html"
   status = 200
 
 # eof
