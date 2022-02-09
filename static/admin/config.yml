@@ -74,6 +74,12 @@ collections:
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
+                  - label: 'Page view link block'
+                    name: base/button/PagePreviewLink
+                    fields:
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
+                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
                   - label: 'Quote block'
                     name: blocks/QuoteBlock
                     fields:
@@ -158,6 +164,12 @@ collections:
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
+                  - label: 'Page view link block'
+                    name: base/button/PagePreviewLink
+                    fields:
+                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
+                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
                   - label: 'Quote block'
                     name: blocks/QuoteBlock
                     fields:
