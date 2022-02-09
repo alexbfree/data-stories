@@ -42,22 +42,26 @@ collections:
         summary: '{{fields.title}}'
         i18n: true
         types:
-          - label: 'Profile block'
-            name: blocks/ProfileBlock
+          - label: 'old Profile block'
+            name: blocks/OldProfileBlock
             fields:
-              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ProfileBlock}
+              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/OldProfileBlock}
               - { label: 'Name', name: title, required: false, i18n: true, widget: 'string'}
               - { label: 'JobTitle', name: jobTitle, required: false, i18n: true, widget: 'string'}
               - { label: 'Description', name: description, required: false, i18n: true, widget: 'text'}
               - { label: 'Profile picture', name: profilePicture, required: false, i18n: true, widget: image}
-              # - name: title
-              #   label: 'Person'
-              #   widget: relation
-              #   collection: persons
-              #   value_field: id
-              #   display_fields: ['name']
-              #   search_fields: ['name']
-              #   multiple: false
+          - label: 'Profile block'
+            name: blocks/ProfileBlock
+            fields:
+              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ProfileBlock}
+              - name: title
+                label: 'Person'
+                widget: relation
+                collection: persons
+                value_field: id
+                display_fields: ['name']
+                search_fields: ['name']
+                multiple: false
           - label: 'Paragraph block'
             name: blocks/ParagraphBlock
             fields:
@@ -85,31 +89,61 @@ collections:
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/QuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: author
+                        label: 'Author'
+                        widget: relation
+                        collection: persons
+                        value_field: id
+                        display_fields: ['name']
+                        search_fields: ['name']
+                        multiple: false
                   - label: 'Long quote block'
                     name: blocks/LongQuoteBlock
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/LongQuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
+                      - name: author
+                        label: 'Author'
+                        widget: relation
+                        collection: persons
+                        value_field: id
+                        display_fields: ['name']
+                        search_fields: ['name']
+                        multiple: false
+
                   - label: 'Voice block'
                     name: blocks/VoiceBlock
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/VoiceBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
                       - { label: 'Width', name: width, required: false, i18n: true, widget: 'string'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
+                      - name: author
+                        label: 'Author'
+                        widget: relation
+                        collection: persons
+                        value_field: id
+                        display_fields: ['name']
+                        search_fields: ['name']
+                        multiple: false
+
                   - label: 'Chat block'
                     name: blocks/ChatBlock
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ChatBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
+                      - name: author
+                        label: 'Author'
+                        widget: relation
+                        collection: persons
+                        value_field: id
+                        display_fields: ['name']
+                        search_fields: ['name']
+                        multiple: false
                       - label: 'Position'
                         name: position
                         required: false
@@ -175,31 +209,62 @@ collections:
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/QuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: author
+                        label: 'Author'
+                        widget: relation
+                        collection: persons
+                        value_field: id
+                        display_fields: ['name']
+                        search_fields: ['name']
+                        multiple: false
+
                   - label: 'Long quote block'
                     name: blocks/LongQuoteBlock
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/LongQuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
+                      - name: author
+                        label: 'Author'
+                        widget: relation
+                        collection: persons
+                        value_field: id
+                        display_fields: ['name']
+                        search_fields: ['name']
+                        multiple: false
+
                   - label: 'Voice block'
                     name: blocks/VoiceBlock
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/VoiceBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
                       - { label: 'Width', name: width, required: false, i18n: true, widget: 'string'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
+                      - name: author
+                        label: 'Author'
+                        widget: relation
+                        collection: persons
+                        value_field: id
+                        display_fields: ['name']
+                        search_fields: ['name']
+                        multiple: false
+
                   - label: 'Chat block'
                     name: blocks/ChatBlock
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ChatBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
+                      - name: author
+                        label: 'Author'
+                        widget: relation
+                        collection: persons
+                        value_field: id
+                        display_fields: ['name']
+                        search_fields: ['name']
+                        multiple: false
                       - label: 'Position'
                         name: position
                         required: false
@@ -272,6 +337,7 @@ collections:
     folder: 'static/cms-data/persons'
     format: 'json'
     create: true
+    identifier_field: id
     i18n: true
     fields:
       - {label: 'Id (never change this, only set a unique value at creation)', name: id, widget: string, hint: 'At creation, the id will determine the name of the file where the person is stored.' }

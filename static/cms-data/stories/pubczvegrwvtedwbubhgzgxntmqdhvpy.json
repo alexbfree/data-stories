@@ -5,10 +5,7 @@
     "buildingBlocks": [
       {
         "type": "blocks/ProfileBlock",
-        "title": "MKN",
-        "jobTitle": "Finnish MEP",
-        "description": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-        "profilePicture": "/media/mkn.jpeg"
+        "title": "mkn"
       },
       {
         "type": "blocks/ParagraphBlock",
@@ -43,7 +40,11 @@
               },
               {
                 "id": "acquired",
-                "config": {"dash": true, "startSocket": "left", "endSocket": "top"}
+                "config": {
+                  "dash": true,
+                  "startSocket": "left",
+                  "endSocket": "top"
+                }
               }
             ]
           }
@@ -88,7 +89,10 @@
             "links": [
               {
                 "id": "derived",
-                "config": {"startSocket": "bottom", "endSocket": "left"}
+                "config": {
+                  "startSocket": "bottom",
+                  "endSocket": "left"
+                }
               }
             ]
           }
@@ -152,7 +156,11 @@
       },
       {
         "type": "blocks/ReadAlsoBlock",
-        "pages": ["Twitter", "Facebook", "Apple"]
+        "pages": [
+          "Twitter",
+          "Facebook",
+          "Apple"
+        ]
       }
     ]
   },
