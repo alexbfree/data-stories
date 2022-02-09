@@ -2,7 +2,7 @@
     <div class="pa-3 ma-3" :style="`width: ${ width }; float:${ position }; border-left: 1rem solid ${ color }; background-color:${ hexToRgbA }`">
       {{ text }}
       <div class="link">
-        <a :href="link"> {{ author }} </a>
+        <a :href="linkSrc"> {{ linkTxt }} </a>
       </div>
     </div>
 </template>
@@ -18,9 +18,13 @@ export default {
       type: String,
       default: () => 'Paul-Olivier Dehaye'
     },
-    link: {
+    linkTxt: {
       type: String,
-      default: () => 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
+      default: () => ''
+    },
+    linkSrc: {
+      type: String,
+      default: () => ''
     },
     width: {
       type: String,
