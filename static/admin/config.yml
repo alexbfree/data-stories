@@ -43,16 +43,16 @@ collections:
         summary: '{{fields.title}}'
         i18n: true
         types:
-          - label: 'old Profile block'
-            name: blocks/OldProfileBlock
+          - label: 'Profile block'
+            name: blocks/ProfileBlock
             fields:
-              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/OldProfileBlock}
+              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ProfileBlock}
               - { label: 'Name', name: title, required: false, i18n: true, widget: 'string'}
               - { label: 'JobTitle', name: jobTitle, required: false, i18n: true, widget: 'string'}
               - { label: 'Description', name: description, required: false, i18n: true, widget: 'text'}
               - { label: 'Profile picture', name: profilePicture, required: false, i18n: true, widget: image}
-          - label: 'Profile block'
-            name: blocks/ProfileBlock
+          - label: 'Link profile block'
+            name: blocks/LinkProfileBlock
             fields:
               - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ProfileBlock}
               - name: title
@@ -90,7 +90,8 @@ collections:
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/QuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - name: author
+                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: authorlink
                         label: 'Author'
                         widget: relation
                         collection: persons
@@ -105,7 +106,8 @@ collections:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/LongQuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - name: author
+                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: authorlink
                         label: 'Author'
                         widget: relation
                         collection: persons
@@ -123,7 +125,8 @@ collections:
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
                       - { label: 'Width', name: width, required: false, i18n: true, widget: 'string'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - name: author
+                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: authorlink
                         label: 'Author'
                         widget: relation
                         collection: persons
@@ -140,7 +143,8 @@ collections:
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - name: author
+                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: authorlink
                         label: 'Author'
                         widget: relation
                         collection: persons
@@ -229,7 +233,8 @@ collections:
                     fields:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/QuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - name: author
+                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: authorlink
                         label: 'Author'
                         widget: relation
                         collection: persons
@@ -245,7 +250,8 @@ collections:
                       - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/LongQuoteBlock}
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - name: author
+                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: authorlink
                         label: 'Author'
                         widget: relation
                         collection: persons
@@ -263,7 +269,8 @@ collections:
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
                       - { label: 'Width', name: width, required: false, i18n: true, widget: 'string'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - name: author
+                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: authorlink
                         label: 'Author'
                         widget: relation
                         collection: persons
@@ -280,7 +287,8 @@ collections:
                       - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
                       - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
                       - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - name: author
+                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
+                      - name: authorlink
                         label: 'Author'
                         widget: relation
                         collection: persons

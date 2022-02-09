@@ -5,7 +5,10 @@
     "buildingBlocks": [
       {
         "type": "blocks/ProfileBlock",
-        "title": "john-dowe"
+        "title": "John Doe",
+        "jobTitle": "Journalist at LeTemps.ch",
+        "description": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
+        "profilePicture": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
       },
       {
         "type": "blocks/ParagraphBlock",
@@ -44,7 +47,7 @@
           {
             "type": "blocks/QuoteBlock",
             "text": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at.",
-            "author": "francois-quellec"
+            "author": "François Quellec"
           }
         ]
       },
@@ -192,7 +195,7 @@
           {
             "type": "blocks/LongQuoteBlock",
             "text": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "paul-olivier-dehaye",
+            "author": "Paul-Olivier Dehaye",
             "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
           },
           {
@@ -225,7 +228,7 @@
           {
             "type": "blocks/VoiceBlock",
             "text": "Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "paul-olivier-dehaye",
+            "author": "Paul-Olivier Dehaye",
             "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
           },
           {
@@ -266,7 +269,7 @@
           {
             "type": "blocks/VoiceBlock",
             "text": " Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "paul-olivier-dehaye",
+            "author": "Paul-Olivier Dehaye",
             "width": "100%",
             "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
           },
@@ -300,7 +303,7 @@
           {
             "type": "blocks/ChatBlock",
             "text": " Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "paul-olivier-dehaye",
+            "author": "Paul-Olivier Dehaye",
             "position": "left",
             "color": "#1ba39c",
             "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
@@ -315,7 +318,7 @@
           {
             "type": "blocks/ChatBlock",
             "text": " Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-            "author": "paul-olivier-dehaye",
+            "author": "Paul-Olivier Dehaye",
             "position": "left",
             "link": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
           },
