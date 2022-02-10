@@ -12,7 +12,7 @@
 export default {
   name: 'ImageBlock',
   props: {
-    title: {
+    text: {
       type: String,
       default: () => ''
     },
@@ -29,6 +29,10 @@ export default {
       default: () => '700'
     },
     source: {
+      type: String,
+      default: () => ''
+    },
+    caption: {
       type: String,
       default: () => ''
     }

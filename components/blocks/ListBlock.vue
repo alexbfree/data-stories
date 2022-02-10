@@ -1,5 +1,7 @@
 <template>
-    <VList dense>
+  <div class="d-flex flex-column align-center ma-6">
+    <v-subheader class="font-weight-bold text-subtitle-1 primary--text">{{ text }}</v-subheader>
+    <VList dense >  
         <VListItem
           v-for="(item, i) in items"
           :key="i"
@@ -12,11 +14,16 @@
           </VListItemContent>
         </VListItem>
     </VList>
+  </div>
 </template>
 <script>
 export default {
   name: 'ListBlock',
   props: {
+    text: {
+      type: String,
+      default: () => ''
+    },
     items: {
       type: Array,
       default: () => []

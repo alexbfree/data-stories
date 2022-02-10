@@ -14,7 +14,7 @@
             <VImg :src="profilePicture"></VImg>
           </VAvatar>
         </VAvatar>
-        <div class="py-0 ml-6">
+        <div class="ml-6 ma-4 pr-3">
           <div class="text-h4 font-weight-bold">
                 {{ title }}
           </div>
