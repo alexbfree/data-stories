@@ -9,6 +9,8 @@ or [netlify's](https://docs.netlify.com/visitor-access/identity/)
 
 # Deployment
 
+To deploy, push to the branch **netlify-test**
+
 We want to build the project locally to reduce netlify build times. We almost have a working process for that, but until then we continue to let netlify do the build.
 
 The build is configured by netlify.toml. It is currently a copy of netlify-nuxt-build.toml. To use the local build copy netlify-no-build.toml to netlify.toml
