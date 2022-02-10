@@ -1,5 +1,16 @@
 <template>
-  <DataStory :manifest="manifest" />
+  <v-container fill-height fluid>
+    <v-row v-if="!manifest" align="center" justify="center" class="text-center">
+      <v-col>
+        <VProgressCircular
+          :size="50"
+          color="primary"
+          indeterminate
+        />
+      </v-col>
+    </v-row>
+    <DataStory v-else :manifest="manifest" />
+  </v-container>
 </template>
 
 <script>

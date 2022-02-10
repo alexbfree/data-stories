@@ -67,6 +67,10 @@ export default {
     dividerBottom: {
       type: Boolean,
       default: () => false
+    },
+    drawLinks: {
+      type: Boolean,
+      default: () => false
     }
   },
   data: () => ({
@@ -85,14 +89,15 @@ export default {
       hide: true
     }
   }),
-  mounted() {
+  async mounted() {
     // Wait a few milliseconds to let the user see the transitions
-      setTimeout(() => {
+    await this.$nextTick()
+    setTimeout(() => {
       this.nodes.forEach(node => {
         if(Object.prototype.hasOwnProperty.call(node, 'links'))
           node.links.forEach(link => this.drawLink(node, link))
       })
-    }, 300) 
+    }, 1000)
   },
   destroyed() {
     this.lines.forEach(l => l.remove())
