@@ -11,9 +11,11 @@ export default {
     };
   },
   created() {
-        fetch('/manifest/mkn.json')
-          .then(response => response.json())
-            .then(data => (this.manifest = data))
+      /*
+      fetch('/manifest/mkn.json')
+        .then(response => response.json())
+          .then(data => (this.manifest = data))
+      */
     }
 }
 </script>
