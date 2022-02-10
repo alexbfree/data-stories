@@ -9,6 +9,16 @@ or [netlify's](https://docs.netlify.com/visitor-access/identity/)
 
 # Deployment
 
+We want to build the project locally to reduce netlify build times. We almost have a working process for that, but until then we continue to let netlify do the build.
+
+The build is configured by netlify.toml. It is currently a copy of netlify-nuxt-build.toml. To use the local build copy netlify-no-build.toml to netlify.toml
+
+## build on netlify
+## local build (incomplete)
+
+The only missing thing is a script that copies static/cms-data to dist/cms-data. This script then needs to be called by netlify at every commit. That can be configured in netlify.toml
+
+
 To update the website:
 
 ```bash
