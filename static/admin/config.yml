@@ -537,8 +537,8 @@ collections:
                           default: 'Graph',
                         }
 
-          - label: 'Flow block'
-            name: blocks/FlowBlock
+          - label: 'Flow block list'
+            name: blocks/FlowBlockList
             fields:
               - {
                   label: 'Type',
@@ -546,85 +546,90 @@ collections:
                   required: false,
                   i18n: true,
                   widget: 'hidden',
-                  default: blocks/FlowBlock,
+                  default: blocks/FlowBlockList,
                 }
-              - {
-                  label: 'Title',
-                  name: title,
-                  required: false,
-                  i18n: true,
-                  widget: 'string',
-                }
-              - {
-                  label: 'Text on the left',
-                  name: leftText,
-                  required: false,
-                  i18n: true,
-                  widget: 'string',
-                }
-              - label: 'Nodes align'
-                name: nodesAlign
-                required: false
-                widget: 'select'
-                options: ['left', 'right', 'center', 'justify']
-                multiple: false
-              - name: nodes
-                label: 'Nodes'
+              - name: list
+                label: 'Flow blocks'
                 widget: 'list'
-                summary: '{{fields.id}}'
+                summary: '{{fields.title}}'
                 fields:
-                  - { label: 'Id', name: id, widget: 'string' }
                   - {
-                      label: 'Label',
-                      name: label,
-                      required: false,
-                      i18n: true,
-                      widget: 'string',
-                    }
+                    label: 'Title',
+                    name: title,
+                    required: false,
+                    i18n: true,
+                    widget: 'string',
+                  }
                   - {
-                      label: 'Logo',
-                      name: logo,
-                      required: false,
-                      i18n: true,
-                      widget: 'string',
-                    }
-                  - name: links
-                    label: 'Links'
+                    label: 'Text on the left',
+                    name: leftText,
+                    required: false,
+                    i18n: true,
+                    widget: 'string',
+                  }
+                  - label: 'Nodes align'
+                    name: nodesAlign
+                    required: false
+                    widget: 'select'
+                    options: ['left', 'right', 'center', 'justify']
+                    multiple: false
+                  - name: nodes
+                    label: 'Nodes'
                     widget: 'list'
                     summary: '{{fields.id}}'
                     fields:
                       - { label: 'Id', name: id, widget: 'string' }
-                      - label: 'Config'
-                        name: config
-                        widget: 'object'
+                      - {
+                          label: 'Label',
+                          name: label,
+                          required: false,
+                          i18n: true,
+                          widget: 'string',
+                        }
+                      - {
+                          label: 'Logo',
+                          name: logo,
+                          required: false,
+                          i18n: true,
+                          widget: 'string',
+                        }
+                      - name: links
+                        label: 'Links'
+                        widget: 'list'
+                        summary: '{{fields.id}}'
                         fields:
-                          - {
-                              label: 'Dash',
-                              name: dash,
-                              required: false,
-                              widget: 'boolean',
-                            }
-                          - {
-                              label: 'Start socket',
-                              name: startSocket,
-                              required: false,
-                              widget: 'select',
-                              options:
-                                ['top', 'right', 'bottom', 'left', 'auto'],
-                            }
-                          - {
-                              label: 'End socket',
-                              name: endSocket,
-                              required: false,
-                              widget: 'select',
-                              options:
-                                ['top', 'right', 'bottom', 'left', 'auto'],
-                            }
-              - name: content
-                label: 'Content'
-                widget: 'list'
-                summary: '{{fields.text}}'
-                types: *paragraph-contents
+                          - { label: 'Id', name: id, widget: 'string' }
+                          - label: 'Config'
+                            name: config
+                            widget: 'object'
+                            fields:
+                              - {
+                                  label: 'Dash',
+                                  name: dash,
+                                  required: false,
+                                  widget: 'boolean',
+                                }
+                              - {
+                                  label: 'Start socket',
+                                  name: startSocket,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    ['top', 'right', 'bottom', 'left', 'auto'],
+                                }
+                              - {
+                                  label: 'End socket',
+                                  name: endSocket,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    ['top', 'right', 'bottom', 'left', 'auto'],
+                                }
+                  - name: content
+                    label: 'Content'
+                    widget: 'list'
+                    summary: '{{fields.text}}'
+                    types: *paragraph-contents
           - label: 'Read also block'
             name: blocks/ReadAlsoBlock
             fields:
