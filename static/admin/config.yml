@@ -439,7 +439,7 @@ collections:
                           label: 'Author',
                           name: author,
                           required: false,
-                          i18n: true,
+                          i18n: true,
                           widget: 'string',
                         }
                       - name: authorlink
@@ -541,26 +541,6 @@ collections:
             name: blocks/Rail
             fields:
               - {label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/Rail,}
-
-              # # flow blocks as typed list (too much nesting...)
-              # - name: template
-              #   widget: list
-              #   types:
-              #    -
-              #      name: empty
-              #      label: 'Empty rail'
-              #      fields:
-              #         - &rail-src
-              #           label: "Source"
-              #           name: "src"
-              #           widget: "string"
-              #           default: 'hohoh'
-              #    - label: 'Big X'
-              #      name: bigX
-              #      fields:
-              #        - <<: *rail-src
-              #          default: 'eehe'
-
               - &flow-blocks
                 name: list
                 label: 'Flow blocks'
@@ -635,58 +615,68 @@ collections:
                     summary: '{{fields.text}}'
                     types: *paragraph-contents
 
-          - label: 'Rail bigX'
-            name: blocks/RailBigX
+          - label: 'Rail Alex 5'
+            name: blocks/RailBigAlex5
             fields:
               - {label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/Rail}
               # merge alias with <<: , see https://blog.jasonhee.com/how-to-use-yaml-aliases
               - <<: *flow-blocks
                 default: [
                   {
-                    "type": "blocks/FlowBlock",
-                    "leftText": "July 18, 2021",
+                    "title": "Source",
                     "nodes": [
                       {
                         "id": "A",
-                        "label": "label",
-                        "logo": "mdiClose",
+                        "label": "A",
+                        "logo": "mdiHome",
                         "links": [
                           {
                             "id": "B"
-                          },
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "Volunteered",
+                    "nodes": [
+                      {
+                        "id": "B",
+                        "label": "B",
+                        "logo": "mdiHome",
+                        "links": [
                           {
                             "id": "C"
                           }
                         ]
                       }
                     ],
-                    "title": "QuoteBlock",
-                    "content": [
-                      {
-                        "type": "blocks/QuoteBlock",
-                        "text": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at.",
-                        "author": "François Quellec"
-                      }
-                    ]
+                    "nodesAlign": "right"
                   },
                   {
-                    "type": "blocks/FlowBlock",
-                    "leftText": "August 8, 2021",
+                    "title": "Observed",
                     "nodes": [
                       {
-                        "id": "B",
-                        "label": "",
+                        "id": "C",
+                        "label": "C",
                         "logo": "mdiHome",
                         "links": [
                           {
-                            "id": "D"
+                            "id": "F"
                           }
                         ]
-                      },
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "Third",
+                    "nodes": [
                       {
-                        "id": "C",
-                        "label": "",
-                        "logo": "mdiClose",
+                        "id": "D",
+                        "label": "D",
+                        "logo": "mdiHome",
                         "links": [
                           {
                             "id": "E"
@@ -694,14 +684,429 @@ collections:
                         ]
                       }
                     ],
-                    "title": "CodeBlock",
-                    "content": [
+                    "nodesAlign": "left"
+                  },
+                  {
+                    "title": "Acquired",
+                    "nodes": [
                       {
-                        "type": "blocks/TextBlock",
-                        "text": "Lorem"
+                        "id": "E",
+                        "label": "E",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "F"
+                          }
+                        ]
                       }
-                    ]
-                  }]
+                    ],
+                    "nodesAlign": "left"
+                  },
+                  {
+                    "title": "Target",
+                    "nodes": [
+                      {
+                        "id": "F",
+                        "label": "F",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "G"
+                          },
+                          {
+                            "id": "H",
+                            "config": {
+                              "dash": true
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "center"
+                  },
+                  {
+                    "title": "Derived",
+                    "nodes": [
+                      {
+                        "id": "G",
+                        "label": "G",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "F"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "left"
+                  },
+                  {
+                    "title": "Metadata",
+                    "nodes": [
+                      {
+                        "id": "H",
+                        "label": "H",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "I"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "left"
+                  },
+                  {
+                    "title": "Infrastructure",
+                    "nodes": [
+                      {
+                        "id": "I",
+                        "label": "I",
+                        "logo": "mdiHome"
+                      }
+                    ],
+                    "nodesAlign": "left"
+                  }
+                ]
+          - label: 'Rail big X'
+            name: blocks/RailBigX
+            fields:
+              - {label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/Rail}
+              # merge alias with <<: , see https://blog.jasonhee.com/how-to-use-yaml-aliases
+              - <<: *flow-blocks
+                default: [
+                  {
+                    "title": "H6",
+                    "nodes": [
+                      {
+                        "id": "H6L",
+                        "label": "H6L",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H5L"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H6C",
+                        "label": "H6C",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H5C"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H6R",
+                        "label": "H6R",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H5R"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "H5",
+                    "nodes": [
+                      {
+                        "id": "H5L",
+                        "label": "H5L",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H4L"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H5C",
+                        "label": "H5C",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H4C"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H5R",
+                        "label": "H5R",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H4R"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "H4",
+                    "nodes": [
+                      {
+                        "id": "H4L",
+                        "label": "H4L",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H3L"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H4C",
+                        "label": "H4C",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H3C"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H4R",
+                        "label": "H4R",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H3R"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "H3",
+                    "nodes": [
+                      {
+                        "id": "H3L",
+                        "label": "H3L",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H2L"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H3C",
+                        "label": "H3C",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H2C"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H3R",
+                        "label": "H3R",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H2R"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "H2",
+                    "nodes": [
+                      {
+                        "id": "H2L",
+                        "label": "H2L",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H1L"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H2C",
+                        "label": "H2C",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H1C"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H2R",
+                        "label": "H2R",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "H1R"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "H1",
+                    "nodes": [
+                      {
+                        "id": "H1L",
+                        "label": "H1L",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "X"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H1C",
+                        "label": "H1C",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "X"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "H1R",
+                        "label": "H1R",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "X"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "X",
+                    "nodes": [
+                      {
+                        "id": "X",
+                        "label": "X",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "T1L"
+                          },
+                          {
+                            "id": "T1C"
+                          },
+                          {
+                            "id": "T1L"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "center"
+                  },
+                  {
+                    "title": "T1",
+                    "nodes": [
+                      {
+                        "id": "T1L",
+                        "label": "T1L",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "T2L"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "T1C",
+                        "label": "T1C",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "T2C"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "T1R",
+                        "label": "T1R",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "T2R"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "T2",
+                    "nodes": [
+                      {
+                        "id": "T2L",
+                        "label": "T2L",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "T3L"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "T2C",
+                        "label": "T2C",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "T3C"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "T2R",
+                        "label": "T2R",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "T3R"
+                          }
+                        ]
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  },
+                  {
+                    "title": "T3",
+                    "nodes": [
+                      {
+                        "id": "T3L",
+                        "label": "T3L",
+                        "logo": "mdiHome"
+                      },
+                      {
+                        "id": "T3C",
+                        "label": "T3C",
+                        "logo": "mdiHome"
+                      },
+                      {
+                        "id": "T3R",
+                        "label": "T3R",
+                        "logo": "mdiHome"
+                      }
+                    ],
+                    "nodesAlign": "right"
+                  }
+                      ]
           - label: 'Read also block'
             name: blocks/ReadAlsoBlock
             fields:
