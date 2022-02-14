@@ -537,36 +537,40 @@ collections:
                           default: 'Graph',
                         }
 
-          - label: 'Flow block list'
-            name: blocks/FlowBlockList
+          - label: 'Rail (empty)'
+            name: blocks/Rail
             fields:
-              - {
-                  label: 'Type',
-                  name: type,
-                  required: false,
-                  i18n: true,
-                  widget: 'hidden',
-                  default: blocks/FlowBlockList,
-                }
-              - name: list
+              - {label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/Rail,}
+
+              # # flow blocks as typed list (too much nesting...)
+              # - name: template
+              #   widget: list
+              #   types:
+              #    -
+              #      name: empty
+              #      label: 'Empty rail'
+              #      fields:
+              #         - &rail-src
+              #           label: "Source"
+              #           name: "src"
+              #           widget: "string"
+              #           default: 'hohoh'
+              #    - label: 'Big X'
+              #      name: bigX
+              #      fields:
+              #        - <<: *rail-src
+              #          default: 'eehe'
+
+              - &flow-blocks
+                name: list
                 label: 'Flow blocks'
                 widget: 'list'
                 summary: '{{fields.title}}'
                 fields:
-                  - {
-                    label: 'Title',
-                    name: title,
-                    required: false,
-                    i18n: true,
-                    widget: 'string',
-                  }
-                  - {
-                    label: 'Text on the left',
-                    name: leftText,
-                    required: false,
-                    i18n: true,
-                    widget: 'string',
-                  }
+                  - {label: 'Title', name: title, required: false, i18n: true,
+                    widget: 'string',}
+                  - {label: 'Text on the left', name: leftText, required: false,
+                    i18n: true, widget: 'string',}
                   - label: 'Nodes align'
                     name: nodesAlign
                     required: false
@@ -630,6 +634,74 @@ collections:
                     widget: 'list'
                     summary: '{{fields.text}}'
                     types: *paragraph-contents
+
+          - label: 'Rail bigX'
+            name: blocks/RailBigX
+            fields:
+              - {label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/Rail}
+              # merge alias with <<: , see https://blog.jasonhee.com/how-to-use-yaml-aliases
+              - <<: *flow-blocks
+                default: [
+                  {
+                    "type": "blocks/FlowBlock",
+                    "leftText": "July 18, 2021",
+                    "nodes": [
+                      {
+                        "id": "A",
+                        "label": "label",
+                        "logo": "mdiClose",
+                        "links": [
+                          {
+                            "id": "B"
+                          },
+                          {
+                            "id": "C"
+                          }
+                        ]
+                      }
+                    ],
+                    "title": "QuoteBlock",
+                    "content": [
+                      {
+                        "type": "blocks/QuoteBlock",
+                        "text": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at.",
+                        "author": "François Quellec"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "blocks/FlowBlock",
+                    "leftText": "August 8, 2021",
+                    "nodes": [
+                      {
+                        "id": "B",
+                        "label": "",
+                        "logo": "mdiHome",
+                        "links": [
+                          {
+                            "id": "D"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "C",
+                        "label": "",
+                        "logo": "mdiClose",
+                        "links": [
+                          {
+                            "id": "E"
+                          }
+                        ]
+                      }
+                    ],
+                    "title": "CodeBlock",
+                    "content": [
+                      {
+                        "type": "blocks/TextBlock",
+                        "text": "Lorem"
+                      }
+                    ]
+                  }]
           - label: 'Read also block'
             name: blocks/ReadAlsoBlock
             fields:
