@@ -1,7 +1,7 @@
 <template>
     <div class="message">
       <p :class="position">
-        {{ text }}
+        <TextBlock :text="text" />
       </p>
       <span :class="position">
         {{ author }}
@@ -9,8 +9,12 @@
     </div>
 </template>
 <script>
+import TextBlock from '@/components/blocks/TextBlock.vue'
 export default {
   name: 'ChatBlock',
+  components: {
+    TextBlock
+  },
   props: {
     text: {
       type: String,

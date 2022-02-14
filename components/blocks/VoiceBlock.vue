@@ -1,14 +1,18 @@
 <template>
     <div class="ma-3 pa-3" :class="classes" :style="`width: ${ width }; float:${ position }; border-left: 1rem solid ${ color }; background-color:${ hexToRgbA }`">
-      {{ text }}
+      <TextBlock :text="text" />
       <div class="link">
         <a :href="linkSrc"> {{ linkTxt }} </a>
       </div>
     </div>
 </template>
 <script>
+import TextBlock from '@/components/blocks/TextBlock.vue'
 export default {
   name: 'VoiceBlock',
+  components: {
+    TextBlock
+  },
   props: {
     text: {
       type: String,

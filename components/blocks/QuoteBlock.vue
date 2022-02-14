@@ -7,7 +7,7 @@
         </VIcon>
       </VRow>
       <blockquote class="blockquote font-italic">
-        {{ text }}
+        <TextBlock :text="text" />
       </blockquote>
       <VRow dense style="justify-content: end">
         <VIcon large right color="primary">
@@ -25,8 +25,12 @@
   </VCard>
 </template>
 <script>
+import TextBlock from '@/components/blocks/TextBlock.vue'
 export default {
   name: 'QuoteBlock',
+  components: {
+    TextBlock
+  },
   props: {
     text: {
       type: String,

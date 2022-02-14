@@ -78,7 +78,7 @@ collections:
                   name: description,
                   required: false,
                   i18n: true,
-                  widget: 'text',
+                  widget: 'markdown',
                 }
               - {
                   label: 'Profile picture',
@@ -146,7 +146,7 @@ collections:
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'markdown',
                         }
                   - label: 'List block'
                     name: blocks/ListBlock
@@ -281,7 +281,7 @@ collections:
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'markdown',
                         }
                       - {
                           label: 'Author',
@@ -315,7 +315,7 @@ collections:
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'markdown',
                         }
                       - {
                           label: 'Link',
@@ -357,7 +357,7 @@ collections:
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'markdown',
                         }
                       - {
                           label: 'Color',
@@ -420,7 +420,7 @@ collections:
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'markdown',
                         }
                       - {
                           label: 'Color',
@@ -686,7 +686,7 @@ collections:
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'markdown',
                         }
                       - {
                           label: 'Author',
@@ -721,7 +721,7 @@ collections:
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'markdown',
                         }
                       - {
                           label: 'Link',
@@ -763,7 +763,7 @@ collections:
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'markdown',
                         }
                       - {
                           label: 'Color',
@@ -819,7 +819,7 @@ collections:
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'markdown',
                         }
                       - {
                           label: 'Color',

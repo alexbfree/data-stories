@@ -22,15 +22,19 @@
                 {{ jobTitle }}
           </div>
           <p class="text-subtitle-2 mt-4">
-            {{ description }}
+            <TextBlock :text="description" />
           </p>
         </div>
       </div>
     </VCard>
 </template>
 <script>
+import TextBlock from '@/components/blocks/TextBlock.vue'
 export default {
   name: 'ProfileBlock',
+  components: {
+    TextBlock
+  },
   props: {
     title: {
       type: String,

@@ -1,14 +1,18 @@
 <template>
     <div class="quoteBlock pa-3 ma-3 font-italic">
-      {{ text }}
+      <TextBlock :text="text" />
       <div class="link">
         <a :href="link"> {{ author }} </a>
       </div>
     </div>
 </template>
 <script>
+import TextBlock from '@/components/blocks/TextBlock.vue'
 export default {
   name: 'LongQuoteBlock',
+  components: {
+    TextBlock
+  },
   props: {
     text: {
       type: String,

@@ -1,28 +1,27 @@
 <template>
-  <span
-    :class="[{
-      'font-weight-bold': fontStyle === 'bold', 
-      'font-italic': fontStyle === 'italic',
-      'font-weight-regular': fontStyle === 'normal' ,
-    }, customClasses]"
-  >{{ text }}</span>
+  <VueMarkdown :linkify="false" :prerender="preRender" :postrender="postRender">{{ text }}</VueMarkdown>
 </template>
 <script>
+import VueMarkdown from 'vue-markdown'
 export default {
   name: 'TextBlock',
+  components: {
+    VueMarkdown
+  },
   props: {
     text: {
       type: String,
       default: () => ''
+    }
+  },
+  methods: {
+    postRender(html){
+      console.log(html.replaceAll("<p>", "").replaceAll("</p>", ""))
+      return html.replaceAll("<p>", "").replaceAll("</p>", "")
     },
-    fontStyle: {
-      type: String,
-      default: 'normal',
-      validator: value => ['normal', 'italic', 'bold'].includes(value)
-    },
-    customClasses: {
-      type: String,
-      default: () => ''
+    preRender(markdown){
+      console.log(markdown)
+      return markdown
     }
   }
 }
