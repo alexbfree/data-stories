@@ -22,11 +22,11 @@ export default {
     },
     maxWidth: {
       type: String,
-      default: () => '753'
+      default: () => '877'
     },
     maxHeight: {
       type: String,
-      default: () => '700'
+      default: () => '492'
     },
     source: {
       type: String,

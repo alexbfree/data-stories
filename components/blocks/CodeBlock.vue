@@ -6,7 +6,7 @@
       class="my-editor"
       :highlight="highlighter"
       :line-numbers="lineNumbers"
-      :aria-readonly="readonly"
+      :readonly="readonly"
     ></PrismEditor>
     <div style="text-align: end; margin-top: 0px; font-size: 12px">
       {{ sourceText }}
@@ -38,7 +38,8 @@ export default {
     },
     language: {
       type: String,
-      default: 'text'
+      default: 'javascript',
+      validator: value => ['text', 'javascript', 'json'].includes(value)
     },
     lineNumbers: {
       type: Boolean,

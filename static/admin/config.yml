@@ -157,14 +157,14 @@ collections:
                           required: false,
                           i18n: true,
                           widget: 'hidden',
-                          default: blocks/TextBlock,
+                          default: blocks/ListBlock,
                         }
                       - {
                           label: 'Title',
                           name: text,
                           required: false,
                           i18n: true,
-                          widget: 'text',
+                          widget: 'string',
                         }
                       - label: 'Items'
                         name: items
