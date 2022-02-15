@@ -157,7 +157,7 @@ collections:
                   widget: 'hidden',
                   default: 'Graph',
                 }
-          - label: 'Rail (empty)'
+          - label: 'Rail'
             name: blocks/RailBlock
             fields:
               - {
@@ -191,7 +191,7 @@ collections:
                   - {
                       name: content,
                       label: 'Content',
-                      required: true,
+                      required: false,
                       i18n: true,
                       widget: 'markdown',
                     }
@@ -253,8 +253,80 @@ collections:
                                   options:
                                     ['top', 'right', 'bottom', 'left', 'auto'],
                                 }
+                              - {
+                                  label: 'Color',
+                                  name: color,
+                                  required: false,
+                                  widget: 'color',
+                                }
+                              - {
+                                  label: 'Path',
+                                  name: path,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    [
+                                      'grid',
+                                      'straight',
+                                      'arc',
+                                      'fluid',
+                                      'magnet',
+                                    ],
+                                }
+                              - {
+                                  label: 'Start Socket Gravity',
+                                  name: startSocketGravity,
+                                  required: false,
+                                  widget: 'number',
+                                }
+                              - {
+                                  label: 'End Socket Gravity',
+                                  name: endSocketGravity,
+                                  required: false,
+                                  widget: 'number',
+                                }
+                              - {
+                                  label: 'Line width',
+                                  name: size,
+                                  required: false,
+                                  widget: 'number',
+                                }
+                              - {
+                                  label: 'Start Plug',
+                                  name: startPlug,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    [
+                                      'disc',
+                                      'square',
+                                      'arrow1',
+                                      'arrow2',
+                                      'arrow3',
+                                      'hand',
+                                      'crosshair',
+                                      'behind',
+                                    ],
+                                }
+                              - {
+                                  label: 'End Plug',
+                                  name: endPlug,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    [
+                                      'disc',
+                                      'square',
+                                      'arrow1',
+                                      'arrow2',
+                                      'arrow3',
+                                      'hand',
+                                      'crosshair',
+                                      'behind',
+                                    ],
+                                }
 
-          - label: 'Rail Alex 5'
+          - label: 'Rail Alex5'
             name: blocks/RailBigAlex5
             fields:
               - {
@@ -271,51 +343,53 @@ collections:
                   [
                     {
                       'title': 'Source',
+                      'leftText': '',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
                       'nodes':
                         [
                           {
                             'id': 'A',
-                            'label': 'A',
-                            'logo': 'mdiHome',
+                            'label': 'Source',
+                            'logo': 'mdiAccount',
                             'links': [{ 'id': 'B' }],
                           },
                         ],
-                      'nodesAlign': 'right',
                     },
                     {
                       'title': 'Volunteered',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
                       'nodes':
                         [
                           {
                             'id': 'B',
-                            'label': 'B',
-                            'logo': 'mdiHome',
+                            'label': 'Volunteered',
+                            'logo': 'mdiHandExtended',
                             'links': [{ 'id': 'C' }],
                           },
                         ],
-                      'nodesAlign': 'right',
                     },
                     {
                       'title': 'Observed',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
                       'nodes':
                         [
                           {
                             'id': 'C',
-                            'label': 'C',
-                            'logo': 'mdiHome',
+                            'label': 'Observed',
+                            'logo': 'mdiEye',
                             'links': [{ 'id': 'F' }],
                           },
                         ],
-                      'nodesAlign': 'right',
                     },
                     {
-                      'title': 'Third',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'title': 'Third Party',
                       'nodes':
                         [
                           {
+                            'logo': 'mdiBank',
                             'id': 'D',
-                            'label': 'D',
-                            'logo': 'mdiHome',
+                            'label': 'Third parties',
                             'links': [{ 'id': 'E' }],
                           },
                         ],
@@ -323,12 +397,13 @@ collections:
                     },
                     {
                       'title': 'Acquired',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
                       'nodes':
                         [
                           {
                             'id': 'E',
-                            'label': 'E',
-                            'logo': 'mdiHome',
+                            'label': 'Acquired',
+                            'logo': 'mdiEmailReceive',
                             'links': [{ 'id': 'F' }],
                           },
                         ],
@@ -336,42 +411,72 @@ collections:
                     },
                     {
                       'title': 'Target',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
                       'nodes':
                         [
                           {
                             'id': 'F',
-                            'label': 'F',
-                            'logo': 'mdiHome',
+                            'label': 'Target',
+                            'logo': 'mdiBullseyeArrow',
                             'links':
                               [
-                                { 'id': 'G' },
-                                { 'id': 'H', 'config': { 'dash': true } },
+                                {
+                                  'id': 'G',
+                                  'config':
+                                    {
+                                      'path': 'arc',
+                                      'startSocketGravity': -1,
+                                      'endPlug': 'behind',
+                                      'startSocket': 'right',
+                                      'endSocket': 'right',
+                                    },
+                                },
+                                {
+                                  'id': 'H',
+                                  'config':
+                                    {
+                                      'dash': true,
+                                      'startSocket': 'left',
+                                      'endSocket': 'top',
+                                    },
+                                },
                               ],
                           },
                         ],
-                      'nodesAlign': 'center',
                     },
                     {
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
                       'title': 'Derived',
                       'nodes':
                         [
                           {
                             'id': 'G',
-                            'label': 'G',
-                            'logo': 'mdiHome',
-                            'links': [{ 'id': 'F' }],
+                            'label': 'Derived',
+                            'logo': 'mdiArrowDecision',
+                            'links':
+                              [
+                                {
+                                  'id': 'F',
+                                  'config':
+                                    {
+                                      'path': 'arc',
+                                      'startSocket': 'left',
+                                      'endSocket': 'left',
+                                    },
+                                },
+                              ],
                           },
                         ],
-                      'nodesAlign': 'left',
                     },
                     {
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
                       'title': 'Metadata',
                       'nodes':
                         [
                           {
                             'id': 'H',
-                            'label': 'H',
-                            'logo': 'mdiHome',
+                            'logo': 'mdiFileDocumentMultiple',
+                            'label': 'Metadata',
                             'links': [{ 'id': 'I' }],
                           },
                         ],
@@ -379,7 +484,15 @@ collections:
                     },
                     {
                       'title': 'Infrastructure',
-                      'nodes': [{ 'id': 'I', 'label': 'I', 'logo': 'mdiHome' }],
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'nodes':
+                        [
+                          {
+                            'id': 'I',
+                            'label': 'Infrastructure',
+                            'logo': 'mdiHome',
+                          },
+                        ],
                       'nodesAlign': 'left',
                     },
                   ]

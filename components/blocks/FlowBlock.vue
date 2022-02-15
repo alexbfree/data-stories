@@ -91,7 +91,6 @@ export default {
   }),
   async mounted() {
     // Wait a few milliseconds to let the user see the transitions
-    console.log(this.$props)
     await this.$nextTick()
     setTimeout(() => {
       this.nodes.forEach(node => {
@@ -114,6 +113,7 @@ export default {
             {...this.defaultLinkConfig, ...link.config }
           ).show('draw', {duration: 2500})
         )
+        // console.log('Drawing: ', startNode.id, link.id, {...this.defaultLinkConfig, ...link.config })
       } else {
         const selfConfig = {
           path: 'fluid',
