@@ -1,7 +1,10 @@
 import {
+  mdiAccount,
   mdiAlert,
   mdiArrowDecision,
   mdiAutorenew,
+  mdiBank,
+  mdiBullseyeArrow,
   mdiCheckboxBlankOutline,
   mdiCheckCircle,
   mdiChevronLeft,
@@ -39,9 +42,12 @@ export default {
   icons: {
     iconfont: 'mdiSvg',
     values: {
+      mdiAccount,
       mdiAlert,
       mdiArrowDecision,
       mdiAutorenew,
+      mdiBank,
+      mdiBullseyeArrow,
       mdiCheckboxBlankOutline,
       mdiCheckCircle,
       mdiChevronLeft,

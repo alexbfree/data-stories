@@ -1,6 +1,6 @@
 <template>
-    <div class="pa-3 ma-3" :style="`width: ${ width }; float:${ position }; border-left: 1rem solid ${ color }; background-color:${ hexToRgbA }`">
-      {{ text }}
+    <div class="ma-3 pa-3" :class="classes" :style="`width: ${ width }; float:${ position }; border-left: 1rem solid ${ color }; background-color:${ hexToRgbA }`">
+      <TextBlock :text="text" />
       <div class="link">
         <a :href="linkSrc"> {{ linkTxt }} </a>
       </div>
@@ -9,6 +9,9 @@
 <script>
 export default {
   name: 'VoiceBlock',
+  components: {
+    TextBlock: () => import('@/components/blocks/TextBlock.vue')
+  },
   props: {
     text: {
       type: String,
@@ -29,6 +32,10 @@ export default {
     width: {
       type: String,
       default: () => '50%'
+    },
+    classes: {
+      type: String,
+      default: () => ''
     },
     position: {
       type: String,

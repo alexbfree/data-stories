@@ -14,7 +14,7 @@
             <VImg :src="profilePicture"></VImg>
           </VAvatar>
         </VAvatar>
-        <div class="py-0 ml-6">
+        <div class="ml-6 ma-4 pr-3">
           <div class="text-h4 font-weight-bold">
                 {{ title }}
           </div>
@@ -22,15 +22,19 @@
                 {{ jobTitle }}
           </div>
           <p class="text-subtitle-2 mt-4">
-            {{ description }}
+            <TextBlock :text="description" />
           </p>
         </div>
       </div>
     </VCard>
 </template>
 <script>
+import TextBlock from '@/components/blocks/TextBlock.vue'
 export default {
   name: 'ProfileBlock',
+  components: {
+    TextBlock
+  },
   props: {
     title: {
       type: String,

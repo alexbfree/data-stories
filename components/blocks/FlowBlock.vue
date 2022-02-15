@@ -53,8 +53,8 @@ export default {
       default: () => []
     },
     content: {
-      type: Array,
-      default: () => []
+      type: String,
+      default: () => ''
     },
     nodesAlign: {
       type: String,
@@ -113,6 +113,7 @@ export default {
             {...this.defaultLinkConfig, ...link.config }
           ).show('draw', {duration: 2500})
         )
+        // console.log('Drawing: ', startNode.id, link.id, {...this.defaultLinkConfig, ...link.config })
       } else {
         const selfConfig = {
           path: 'fluid',

@@ -35,7 +35,12 @@ collections:
       preview: false
     identifier_field: id
     fields:
-      - {label: 'Id (never change this, only set a unique value at creation)', name: id, widget: string, hint: 'At creation, the id will determine the name of the file where the story is stored.' }
+      - {
+          label: 'Id (never change this, only set a unique value at creation)',
+          name: id,
+          widget: string,
+          hint: 'At creation, the id will determine the name of the file where the story is stored.',
+        }
       - { label: 'Title', name: 'title', widget: 'string', i18n: true }
       - label: 'Building blocks'
         name: 'buildingBlocks'
@@ -46,15 +51,53 @@ collections:
           - label: 'Profile block'
             name: blocks/ProfileBlock
             fields:
-              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ProfileBlock}
-              - { label: 'Name', name: title, required: false, i18n: true, widget: 'string'}
-              - { label: 'JobTitle', name: jobTitle, required: false, i18n: true, widget: 'string'}
-              - { label: 'Description', name: description, required: false, i18n: true, widget: 'text'}
-              - { label: 'Profile picture', name: profilePicture, required: false, i18n: true, widget: image}
+              - {
+                  label: 'Type',
+                  name: type,
+                  required: false,
+                  i18n: true,
+                  widget: 'hidden',
+                  default: blocks/ProfileBlock,
+                }
+              - {
+                  label: 'Name',
+                  name: title,
+                  required: false,
+                  i18n: true,
+                  widget: 'string',
+                }
+              - {
+                  label: 'JobTitle',
+                  name: jobTitle,
+                  required: false,
+                  i18n: true,
+                  widget: 'string',
+                }
+              - {
+                  label: 'Description',
+                  name: description,
+                  required: false,
+                  i18n: true,
+                  widget: 'markdown',
+                }
+              - {
+                  label: 'Profile picture',
+                  name: profilePicture,
+                  required: false,
+                  i18n: true,
+                  widget: image,
+                }
           - label: 'Link profile block'
             name: blocks/LinkProfileBlock
             fields:
-              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ProfileBlock}
+              - {
+                  label: 'Type',
+                  name: type,
+                  required: false,
+                  i18n: true,
+                  widget: 'hidden',
+                  default: blocks/ProfileBlock,
+                }
               - name: title
                 label: 'Person'
                 widget: relation
@@ -66,263 +109,647 @@ collections:
           - label: 'Paragraph block'
             name: blocks/ParagraphBlock
             fields:
-              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ParagraphBlock}
-              - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
-              # copy/paste this to flow block
-              - name: content
-                label: 'Content'
-                widget: 'list'
-                summary: '{{fields.text}}'
-                types:
-                  - label: 'Text block'
-                    name: blocks/TextBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/TextBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                  - label: 'Page view link block'
-                    name: base/button/PagePreviewLink
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/PagePreviewLink}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                  - label: 'Quote block'
-                    name: blocks/QuoteBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/QuoteBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
-                      - name: authorlink
-                        label: 'Author'
-                        widget: relation
-                        collection: persons
-                        value_field: id
-                        display_fields: ['name']
-                        search_fields: ['name']
-                        multiple: false
-                        required: false
-                  - label: 'Long quote block'
-                    name: blocks/LongQuoteBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/LongQuoteBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
-                      - name: authorlink
-                        label: 'Author'
-                        widget: relation
-                        collection: persons
-                        value_field: id
-                        display_fields: ['name']
-                        search_fields: ['name']
-                        multiple: false
-                        required: false
-
-                  - label: 'Voice block'
-                    name: blocks/VoiceBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/VoiceBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
-                      - { label: 'Width', name: width, required: false, i18n: true, widget: 'string'}
-                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
-                      - name: authorlink
-                        label: 'Author'
-                        widget: relation
-                        collection: persons
-                        value_field: id
-                        display_fields: ['name']
-                        search_fields: ['name']
-                        multiple: false
-                        required: false
-
-                  - label: 'Chat block'
-                    name: blocks/ChatBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ChatBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
-                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
-                      - name: authorlink
-                        label: 'Author'
-                        widget: relation
-                        collection: persons
-                        value_field: id
-                        display_fields: ['name']
-                        search_fields: ['name']
-                        multiple: false
-                        required: false
-                      - label: 'Position'
-                        name: position
-                        required: false
-                        widget: 'select'
-                        options: ['left', 'right']
-                        multiple: false
-                  - label: 'Code block'
-                    name: blocks/CodeBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/CodeBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
-                      - { label: 'Language', name: language, required: false, i18n: true, widget: 'string'}
-                      - { label: 'SourceText', name: sourceText, required: false, i18n: true, widget: 'text'}
-                      - { label: 'SourceLinkText', name: sourceLinkText, required: false, i18n: true, widget: 'string'}
-                      - { label: 'SourceLinkURL', name: sourceLinkURL, required: false, i18n: true, widget: 'file'}
-                  - label: 'Horizontal bar chart'
-                    name: blocks/HorizontalBarChart
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/HorizontalBarChart}
-                      - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'hidden', default: 'Graph'}
-
-          - label: 'Flow block'
-            name: blocks/FlowBlock
+              - {
+                  label: 'Type',
+                  name: type,
+                  required: false,
+                  i18n: true,
+                  widget: 'hidden',
+                  default: blocks/ParagraphBlock,
+                }
+              - {
+                  label: 'Title',
+                  name: title,
+                  required: true,
+                  i18n: true,
+                  widget: 'string',
+                }
+              - {
+                  label: 'Content',
+                  name: content,
+                  required: true,
+                  i18n: true,
+                  widget: 'markdown',
+                }
+          - label: 'Horizontal bar chart'
+            name: blocks/HorizontalBarChart
             fields:
-              - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/FlowBlock}
-              - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
-              - { label: 'Text on the left', name: leftText, required: false, i18n: true, widget: 'string'}
-              - label: 'Nodes align'
-                name: nodesAlign
-                required: false
-                widget: 'select'
-                options: ['left', 'right', 'center', 'justify']
-                multiple: false
-              - name: nodes
-                label: 'Nodes'
+              - {
+                  label: 'Type',
+                  name: type,
+                  required: false,
+                  i18n: true,
+                  widget: 'hidden',
+                  default: blocks/HorizontalBarChart,
+                }
+              - {
+                  label: 'Title',
+                  name: title,
+                  required: false,
+                  i18n: true,
+                  widget: 'string',
+                }
+              - {
+                  label: 'Text',
+                  name: text,
+                  required: false,
+                  i18n: true,
+                  widget: 'hidden',
+                  default: 'Graph',
+                }
+          - label: 'Rail'
+            name: blocks/RailBlock
+            fields:
+              - {
+                  label: 'Type',
+                  name: type,
+                  required: false,
+                  i18n: true,
+                  widget: 'hidden',
+                  default: blocks/RailBlock,
+                }
+              - &flow-blocks
+                name: list
+                label: 'Flow blocks'
                 widget: 'list'
-                summary: '{{fields.id}}'
+                summary: '{{fields.title}}'
                 fields:
-                  - { label: 'Id', name: id, widget: 'string'}
-                  - { label: 'Label', name: label, required: false, i18n: true, widget: 'string'}
-                  - { label: 'Logo', name: logo, required: false, i18n: true, widget: 'string'}
-                  - name: links
-                    label: 'Links'
+                  - {
+                      label: 'Title',
+                      name: title,
+                      required: false,
+                      i18n: true,
+                      widget: 'string',
+                    }
+                  - {
+                      label: 'Text on the left',
+                      name: leftText,
+                      required: false,
+                      i18n: true,
+                      widget: 'string',
+                    }
+                  - {
+                      name: content,
+                      label: 'Content',
+                      required: false,
+                      i18n: true,
+                      widget: 'markdown',
+                    }
+                  - label: 'Nodes align'
+                    name: nodesAlign
+                    required: false
+                    widget: 'select'
+                    options: ['left', 'right', 'center', 'justify']
+                    multiple: false
+                  - name: nodes
+                    label: 'Nodes'
                     widget: 'list'
                     summary: '{{fields.id}}'
                     fields:
-                      - { label: 'Id', name: id, widget: 'string'}
-                      - label: 'Config'
-                        name: config
-                        widget: 'object'
+                      - { label: 'Id', name: id, widget: 'string' }
+                      - {
+                          label: 'Label',
+                          name: label,
+                          required: false,
+                          i18n: true,
+                          widget: 'string',
+                        }
+                      - {
+                          label: 'Logo',
+                          name: logo,
+                          required: false,
+                          i18n: true,
+                          widget: 'string',
+                        }
+                      - name: links
+                        label: 'Links'
+                        widget: 'list'
+                        summary: '{{fields.id}}'
                         fields:
-                          - { label: 'Dash', name: dash, required: false, widget: 'boolean'}
-                          - { label: 'Start socket', name: startSocket, required: false,  widget: 'select',
-                              options: ['top', 'right', 'bottom', 'left', 'auto']}
-                          - { label: 'End socket', name: endSocket, required: false,  widget: 'select',
-                              options: ['top', 'right', 'bottom', 'left', 'auto']}
-              # copy/paste this from paragraph block
-              - name: content
-                label: 'Content'
-                widget: 'list'
-                summary: '{{fields.text}}'
-                types:
-                  - label: 'Text block'
-                    name: blocks/TextBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/TextBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                  - label: 'Page view link block'
-                    name: base/button/PagePreviewLink
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/PagePreviewLink}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                  - label: 'Quote block'
-                    name: blocks/QuoteBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/QuoteBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
-                      - name: authorlink
-                        label: 'Author'
-                        widget: relation
-                        collection: persons
-                        value_field: id
-                        display_fields: ['name']
-                        search_fields: ['name']
-                        multiple: false
-                        required: false
+                          - { label: 'Id', name: id, widget: 'string' }
+                          - label: 'Config'
+                            name: config
+                            widget: 'object'
+                            fields:
+                              - {
+                                  label: 'Dash',
+                                  name: dash,
+                                  required: false,
+                                  widget: 'boolean',
+                                }
+                              - {
+                                  label: 'Start socket',
+                                  name: startSocket,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    ['top', 'right', 'bottom', 'left', 'auto'],
+                                }
+                              - {
+                                  label: 'End socket',
+                                  name: endSocket,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    ['top', 'right', 'bottom', 'left', 'auto'],
+                                }
+                              - {
+                                  label: 'Color',
+                                  name: color,
+                                  required: false,
+                                  widget: 'color',
+                                }
+                              - {
+                                  label: 'Path',
+                                  name: path,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    [
+                                      'grid',
+                                      'straight',
+                                      'arc',
+                                      'fluid',
+                                      'magnet',
+                                    ],
+                                }
+                              - {
+                                  label: 'Start Socket Gravity',
+                                  name: startSocketGravity,
+                                  required: false,
+                                  widget: 'number',
+                                }
+                              - {
+                                  label: 'End Socket Gravity',
+                                  name: endSocketGravity,
+                                  required: false,
+                                  widget: 'number',
+                                }
+                              - {
+                                  label: 'Line width',
+                                  name: size,
+                                  required: false,
+                                  widget: 'number',
+                                }
+                              - {
+                                  label: 'Start Plug',
+                                  name: startPlug,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    [
+                                      'disc',
+                                      'square',
+                                      'arrow1',
+                                      'arrow2',
+                                      'arrow3',
+                                      'hand',
+                                      'crosshair',
+                                      'behind',
+                                    ],
+                                }
+                              - {
+                                  label: 'End Plug',
+                                  name: endPlug,
+                                  required: false,
+                                  widget: 'select',
+                                  options:
+                                    [
+                                      'disc',
+                                      'square',
+                                      'arrow1',
+                                      'arrow2',
+                                      'arrow3',
+                                      'hand',
+                                      'crosshair',
+                                      'behind',
+                                    ],
+                                }
 
-                  - label: 'Long quote block'
-                    name: blocks/LongQuoteBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/LongQuoteBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
-                      - name: authorlink
-                        label: 'Author'
-                        widget: relation
-                        collection: persons
-                        value_field: id
-                        display_fields: ['name']
-                        search_fields: ['name']
-                        multiple: false
-                        required: false
-
-                  - label: 'Voice block'
-                    name: blocks/VoiceBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/VoiceBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
-                      - { label: 'Width', name: width, required: false, i18n: true, widget: 'string'}
-                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
-                      - name: authorlink
-                        label: 'Author'
-                        widget: relation
-                        collection: persons
-                        value_field: id
-                        display_fields: ['name']
-                        search_fields: ['name']
-                        multiple: false
-                        required: false
-
-                  - label: 'Chat block'
-                    name: blocks/ChatBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/ChatBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Color', name: color, required: false, i18n: true, widget: 'color'}
-                      - { label: 'Link', name: link, required: false, i18n: true, widget: 'file'}
-                      - { label: 'Author', name: author, required: false, i18n: true, widget: 'string'}
-                      - name: authorlink
-                        label: 'Author'
-                        widget: relation
-                        collection: persons
-                        value_field: id
-                        display_fields: ['name']
-                        search_fields: ['name']
-                        multiple: false
-                        required: false
-                      - label: 'Position'
-                        name: position
-                        required: false
-                        widget: 'select'
-                        options: ['left', 'right']
-                        multiple: false
-                  - label: 'Code block'
-                    name: blocks/CodeBlock
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/CodeBlock}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'text'}
-                      - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
-                      - { label: 'Language', name: language, required: false, i18n: true, widget: 'string'}
-                      - { label: 'SourceText', name: sourceText, required: false, i18n: true, widget: 'text'}
-                      - { label: 'SourceLinkText', name: sourceLinkText, required: false, i18n: true, widget: 'string'}
-                      - { label: 'SourceLinkURL', name: sourceLinkURL, required: false, i18n: true, widget: 'file'}
-                  - label: 'Horizontal bar chart'
-                    name: blocks/HorizontalBarChart
-                    fields:
-                      - { label: 'Type', name: type, required: false, i18n: true, widget: 'hidden', default: blocks/HorizontalBarChart}
-                      - { label: 'Title', name: title, required: false, i18n: true, widget: 'string'}
-                      - { label: 'Text', name: text, required: false, i18n: true, widget: 'hidden', default: 'Graph'}
+          - label: 'Rail Alex5'
+            name: blocks/RailBigAlex5
+            fields:
+              - {
+                  label: 'Type',
+                  name: type,
+                  required: false,
+                  i18n: true,
+                  widget: 'hidden',
+                  default: blocks/RailBlock,
+                }
+              # merge alias with <<: , see https://blog.jasonhee.com/how-to-use-yaml-aliases
+              - <<: *flow-blocks
+                default:
+                  [
+                    {
+                      'title': 'Source',
+                      'leftText': '',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'nodes':
+                        [
+                          {
+                            'id': 'A',
+                            'label': 'Source',
+                            'logo': 'mdiAccount',
+                            'links': [{ 'id': 'B' }],
+                          },
+                        ],
+                    },
+                    {
+                      'title': 'Volunteered',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'nodes':
+                        [
+                          {
+                            'id': 'B',
+                            'label': 'Volunteered',
+                            'logo': 'mdiHandExtended',
+                            'links': [{ 'id': 'C' }],
+                          },
+                        ],
+                    },
+                    {
+                      'title': 'Observed',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'nodes':
+                        [
+                          {
+                            'id': 'C',
+                            'label': 'Observed',
+                            'logo': 'mdiEye',
+                            'links': [{ 'id': 'F' }],
+                          },
+                        ],
+                    },
+                    {
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'title': 'Third Party',
+                      'nodes':
+                        [
+                          {
+                            'logo': 'mdiBank',
+                            'id': 'D',
+                            'label': 'Third parties',
+                            'links': [{ 'id': 'E' }],
+                          },
+                        ],
+                      'nodesAlign': 'left',
+                    },
+                    {
+                      'title': 'Acquired',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'nodes':
+                        [
+                          {
+                            'id': 'E',
+                            'label': 'Acquired',
+                            'logo': 'mdiEmailReceive',
+                            'links': [{ 'id': 'F' }],
+                          },
+                        ],
+                      'nodesAlign': 'left',
+                    },
+                    {
+                      'title': 'Target',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'nodes':
+                        [
+                          {
+                            'id': 'F',
+                            'label': 'Target',
+                            'logo': 'mdiBullseyeArrow',
+                            'links':
+                              [
+                                {
+                                  'id': 'G',
+                                  'config':
+                                    {
+                                      'path': 'arc',
+                                      'startSocketGravity': -1,
+                                      'endPlug': 'behind',
+                                      'startSocket': 'right',
+                                      'endSocket': 'right',
+                                    },
+                                },
+                                {
+                                  'id': 'H',
+                                  'config':
+                                    {
+                                      'dash': true,
+                                      'startSocket': 'left',
+                                      'endSocket': 'top',
+                                    },
+                                },
+                              ],
+                          },
+                        ],
+                    },
+                    {
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'title': 'Derived',
+                      'nodes':
+                        [
+                          {
+                            'id': 'G',
+                            'label': 'Derived',
+                            'logo': 'mdiArrowDecision',
+                            'links':
+                              [
+                                {
+                                  'id': 'F',
+                                  'config':
+                                    {
+                                      'path': 'arc',
+                                      'startSocket': 'left',
+                                      'endSocket': 'left',
+                                    },
+                                },
+                              ],
+                          },
+                        ],
+                    },
+                    {
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'title': 'Metadata',
+                      'nodes':
+                        [
+                          {
+                            'id': 'H',
+                            'logo': 'mdiFileDocumentMultiple',
+                            'label': 'Metadata',
+                            'links': [{ 'id': 'I' }],
+                          },
+                        ],
+                      'nodesAlign': 'left',
+                    },
+                    {
+                      'title': 'Infrastructure',
+                      'content': 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.',
+                      'nodes':
+                        [
+                          {
+                            'id': 'I',
+                            'label': 'Infrastructure',
+                            'logo': 'mdiHome',
+                          },
+                        ],
+                      'nodesAlign': 'left',
+                    },
+                  ]
+          - label: 'Rail big X'
+            name: blocks/RailBigX
+            fields:
+              - {
+                  label: 'Type',
+                  name: type,
+                  required: false,
+                  i18n: true,
+                  widget: 'hidden',
+                  default: blocks/RailBlock,
+                }
+              # merge alias with <<: , see https://blog.jasonhee.com/how-to-use-yaml-aliases
+              - <<: *flow-blocks
+                default:
+                  [
+                    {
+                      'title': 'H6',
+                      'nodes':
+                        [
+                          {
+                            'id': 'H6L',
+                            'label': 'H6L',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H5L' }],
+                          },
+                          {
+                            'id': 'H6C',
+                            'label': 'H6C',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H5C' }],
+                          },
+                          {
+                            'id': 'H6R',
+                            'label': 'H6R',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H5R' }],
+                          },
+                        ],
+                      'nodesAlign': 'right',
+                    },
+                    {
+                      'title': 'H5',
+                      'nodes':
+                        [
+                          {
+                            'id': 'H5L',
+                            'label': 'H5L',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H4L' }],
+                          },
+                          {
+                            'id': 'H5C',
+                            'label': 'H5C',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H4C' }],
+                          },
+                          {
+                            'id': 'H5R',
+                            'label': 'H5R',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H4R' }],
+                          },
+                        ],
+                      'nodesAlign': 'right',
+                    },
+                    {
+                      'title': 'H4',
+                      'nodes':
+                        [
+                          {
+                            'id': 'H4L',
+                            'label': 'H4L',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H3L' }],
+                          },
+                          {
+                            'id': 'H4C',
+                            'label': 'H4C',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H3C' }],
+                          },
+                          {
+                            'id': 'H4R',
+                            'label': 'H4R',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H3R' }],
+                          },
+                        ],
+                      'nodesAlign': 'right',
+                    },
+                    {
+                      'title': 'H3',
+                      'nodes':
+                        [
+                          {
+                            'id': 'H3L',
+                            'label': 'H3L',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H2L' }],
+                          },
+                          {
+                            'id': 'H3C',
+                            'label': 'H3C',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H2C' }],
+                          },
+                          {
+                            'id': 'H3R',
+                            'label': 'H3R',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H2R' }],
+                          },
+                        ],
+                      'nodesAlign': 'right',
+                    },
+                    {
+                      'title': 'H2',
+                      'nodes':
+                        [
+                          {
+                            'id': 'H2L',
+                            'label': 'H2L',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H1L' }],
+                          },
+                          {
+                            'id': 'H2C',
+                            'label': 'H2C',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H1C' }],
+                          },
+                          {
+                            'id': 'H2R',
+                            'label': 'H2R',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'H1R' }],
+                          },
+                        ],
+                      'nodesAlign': 'right',
+                    },
+                    {
+                      'title': 'H1',
+                      'nodes':
+                        [
+                          {
+                            'id': 'H1L',
+                            'label': 'H1L',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'X' }],
+                          },
+                          {
+                            'id': 'H1C',
+                            'label': 'H1C',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'X' }],
+                          },
+                          {
+                            'id': 'H1R',
+                            'label': 'H1R',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'X' }],
+                          },
+                        ],
+                      'nodesAlign': 'right',
+                    },
+                    {
+                      'title': 'X',
+                      'nodes':
+                        [
+                          {
+                            'id': 'X',
+                            'label': 'X',
+                            'logo': 'mdiHome',
+                            'links':
+                              [
+                                { 'id': 'T1L' },
+                                { 'id': 'T1C' },
+                                { 'id': 'T1L' },
+                              ],
+                          },
+                        ],
+                      'nodesAlign': 'center',
+                    },
+                    {
+                      'title': 'T1',
+                      'nodes':
+                        [
+                          {
+                            'id': 'T1L',
+                            'label': 'T1L',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'T2L' }],
+                          },
+                          {
+                            'id': 'T1C',
+                            'label': 'T1C',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'T2C' }],
+                          },
+                          {
+                            'id': 'T1R',
+                            'label': 'T1R',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'T2R' }],
+                          },
+                        ],
+                      'nodesAlign': 'right',
+                    },
+                    {
+                      'title': 'T2',
+                      'nodes':
+                        [
+                          {
+                            'id': 'T2L',
+                            'label': 'T2L',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'T3L' }],
+                          },
+                          {
+                            'id': 'T2C',
+                            'label': 'T2C',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'T3C' }],
+                          },
+                          {
+                            'id': 'T2R',
+                            'label': 'T2R',
+                            'logo': 'mdiHome',
+                            'links': [{ 'id': 'T3R' }],
+                          },
+                        ],
+                      'nodesAlign': 'right',
+                    },
+                    {
+                      'title': 'T3',
+                      'nodes':
+                        [
+                          { 'id': 'T3L', 'label': 'T3L', 'logo': 'mdiHome' },
+                          { 'id': 'T3C', 'label': 'T3C', 'logo': 'mdiHome' },
+                          { 'id': 'T3R', 'label': 'T3R', 'logo': 'mdiHome' },
+                        ],
+                      'nodesAlign': 'right',
+                    },
+                  ]
           - label: 'Read also block'
             name: blocks/ReadAlsoBlock
             fields:
-              - { label: 'Type', name: type, required: false, i18n: true, widget: 'string'}
+              - {
+                  label: 'Type',
+                  name: type,
+                  required: false,
+                  i18n: true,
+                  widget: 'string',
+                }
 
   - name: 'configuration'
     label: 'Configuration'
@@ -354,8 +781,37 @@ collections:
     identifier_field: id
     i18n: true
     fields:
-      - {label: 'Id (never change this, only set a unique value at creation)', name: id, widget: string, hint: 'At creation, the id will determine the name of the file where the person is stored.' }
-      - { label: 'Name', name: name, required: false, i18n: true, widget: 'string'}
-      - { label: 'JobTitle', name: jobTitle, required: false, i18n: true, widget: 'string'}
-      - { label: 'Description', name: description, required: false, i18n: true, widget: 'text'}
-      - { label: 'Profile picture', name: profilePicture, required: false, i18n: true, widget: image}
+      - {
+          label: 'Id (never change this, only set a unique value at creation)',
+          name: id,
+          widget: string,
+          hint: 'At creation, the id will determine the name of the file where the person is stored.',
+        }
+      - {
+          label: 'Name',
+          name: name,
+          required: false,
+          i18n: true,
+          widget: 'string',
+        }
+      - {
+          label: 'JobTitle',
+          name: jobTitle,
+          required: false,
+          i18n: true,
+          widget: 'string',
+        }
+      - {
+          label: 'Description',
+          name: description,
+          required: false,
+          i18n: true,
+          widget: 'text',
+        }
+      - {
+          label: 'Profile picture',
+          name: profilePicture,
+          required: false,
+          i18n: true,
+          widget: image,
+        }

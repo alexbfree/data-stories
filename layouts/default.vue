@@ -28,14 +28,15 @@
     </VMain>
     <VFooter app absolute color="primary">
       <div class="lighten-2 py-2 ma-auto white--text" align="center">
-        Educational material developed by
-        <a href="https://hestia.ai" target="_blank" style="color: white"
-          >Hestia.ai</a
-        >
-        <br />Currently in development |
-        <a :href="newsletterURL" target="_blank" style="color: white">
-          {{ newsletterMessage }}
-        </a>
+        This study has been funded by SITRA and has benefited from software concurrently developed by 
+        <a href="https://hestia.ai" target="_blank" style="color: white">Hestia.ai</a>, as part of projects called 
+        <a href="https://hestialabs.org/" target="_blank" style="color: white">HestiaLabs</a> and 
+        <a href="https://eyeballs.hestialabs.org/" target="_blank" style="color: white">The Eyeballs</a>
+        , both powered by the <a href="https://www.migros-engagement.ch/en/pioneer-fund" target="_blank" style="color: white">Migros Pioneer Fund</a>. 
+        <br />Additionally it has benefited from extensive collaboration with 
+        <a href="https://wiki.personaldata.io/" target="_blank" style="color: white">PersonalData.IO</a> 
+        and Konrad Kolling's <a href="https://trackercontrol.org/" target="_blank" style="color: white">TrackerControl project</a>
+        <br /> | Currently in development |
       </div>
     </VFooter>
   </VApp>
