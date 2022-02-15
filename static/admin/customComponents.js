@@ -213,7 +213,7 @@ CMS.registerEditorComponent({
       widget: 'string',
     }
   ],
-  pattern: /<span data-component data-name='ImageBlock' data-props='{(?:"caption":"(.*?)")?(?:,"imageSrc":"(.*?)")?(?:,"maxHeight":"(.*?)")?(?:,"maxWidth":"(.*)")?(?:,"source":"(.*)")?(?:,"text":"(.*)")?}'><\/span>/,
+  pattern: /<span data-component data-name='ImageBlock' data-props='{(?:"caption":"(.*?)")?(?:,?"imageSrc":"(.*?)")?(?:,?"maxHeight":"(.*?)")?(?:,?"maxWidth":"(.*)")?(?:,?"source":"(.*)")?(?:,?"text":"(.*)")?}'><\/span>/,
   fromBlock (match) { // must respect alphabetical order
     return {
       caption: match[1],
@@ -314,7 +314,8 @@ CMS.registerEditorComponent({
       name: 'width',
       required: false,
       i18n: true,
-      widget: 'string',
+      widget: 'select',
+      options: ['25%', '40%', '50%', '60%', '75%', '100%'],
     },
     {
       label: 'CSS classes',
@@ -324,15 +325,15 @@ CMS.registerEditorComponent({
       widget: 'string',
     },
     {
-      label: 'Link',
-      name: 'link',
+      label: 'Link URL',
+      name: 'linkSrc',
       required: false,
       i18n: true,
-      widget: 'file',
+      widget: 'string',
     },
     {
-      label: 'Author Name',
-      name: 'author',
+      label: 'Link Text',
+      name: 'linkTxt',
       required: false,
       i18n: true,
       widget: 'string',
@@ -349,14 +350,14 @@ CMS.registerEditorComponent({
       required: false
     }
   ],
-  pattern: /<span data-component data-name='VoiceBlock' data-props='{(?:"author":"(.*?)")?(?:,"authorLink":"(.*?)")?(?:,"classes":"(.*?)")?(?:,"color":"(.*?)")?(?:,"link":"(.*?)")?(?:,"text":"(.*?)")?(?:,"width":"(.*?)")?}'><\/span>/,
+  pattern: /<span data-component data-name='VoiceBlock' data-props='{(?:"authorLink":"(.*?)")?(?:,?"classes":"(.*?)")?(?:,?"color":"(.*?)")?(?:,?"linkSrc":"(.*?)")?(?:,?"linkTxt":"(.*?)")?(?:,?"text":"(.*?)")?(?:,?"width":"(.*?)")?}'><\/span>/,
   fromBlock (match) {
     return {
-      author: match[1],
-      authorLink: match[2],
-      classes: match[3],
-      color: match[4],
-      link: match[5],
+      authorLink: match[1],
+      classes: match[2],
+      color: match[3],
+      linkSrc: match[4],
+      linkTxt: match[5],
       text: match[6],
       width: match[7]
     };

@@ -158,7 +158,7 @@ collections:
                   default: 'Graph',
                 }
           - label: 'Rail (empty)'
-            name: blocks/Rail
+            name: blocks/RailBlock
             fields:
               - {
                   label: 'Type',
@@ -166,7 +166,7 @@ collections:
                   required: false,
                   i18n: true,
                   widget: 'hidden',
-                  default: blocks/Rail,
+                  default: blocks/RailBlock,
                 }
               - &flow-blocks
                 name: list
@@ -187,6 +187,13 @@ collections:
                       required: false,
                       i18n: true,
                       widget: 'string',
+                    }
+                  - {
+                      name: content,
+                      label: 'Content',
+                      required: true,
+                      i18n: true,
+                      widget: 'markdown',
                     }
                   - label: 'Nodes align'
                     name: nodesAlign
@@ -246,11 +253,6 @@ collections:
                                   options:
                                     ['top', 'right', 'bottom', 'left', 'auto'],
                                 }
-                  - name: content
-                    label: 'Content'
-                    widget: 'markdown'
-                    required: true,
-                    i18n: true,
 
           - label: 'Rail Alex 5'
             name: blocks/RailBigAlex5
@@ -261,7 +263,7 @@ collections:
                   required: false,
                   i18n: true,
                   widget: 'hidden',
-                  default: blocks/Rail,
+                  default: blocks/RailBlock,
                 }
               # merge alias with <<: , see https://blog.jasonhee.com/how-to-use-yaml-aliases
               - <<: *flow-blocks
@@ -390,7 +392,7 @@ collections:
                   required: false,
                   i18n: true,
                   widget: 'hidden',
-                  default: blocks/Rail,
+                  default: blocks/RailBlock,
                 }
               # merge alias with <<: , see https://blog.jasonhee.com/how-to-use-yaml-aliases
               - <<: *flow-blocks

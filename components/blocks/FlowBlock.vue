@@ -91,6 +91,7 @@ export default {
   }),
   async mounted() {
     // Wait a few milliseconds to let the user see the transitions
+    console.log(this.$props)
     await this.$nextTick()
     setTimeout(() => {
       this.nodes.forEach(node => {

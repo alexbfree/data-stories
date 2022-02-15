@@ -28,7 +28,6 @@ export default {
     }
   },
   mounted(){
-    console.log(this.text)
     const vuetify = new Vuetify(vuetifyOptions)
     this.$el.querySelectorAll('span[data-component]').forEach(el => {
       const name = el.getAttribute('data-name')
