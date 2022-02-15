@@ -53,8 +53,8 @@ export default {
       default: () => []
     },
     content: {
-      type: Array,
-      default: () => []
+      type: String,
+      default: () => ''
     },
     nodesAlign: {
       type: String,
