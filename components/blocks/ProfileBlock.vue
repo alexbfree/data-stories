@@ -29,11 +29,10 @@
     </VCard>
 </template>
 <script>
-import TextBlock from '@/components/blocks/TextBlock.vue'
 export default {
   name: 'ProfileBlock',
   components: {
-    TextBlock
+    TextBlock: () => import('@/components/blocks/TextBlock.vue')
   },
   props: {
     title: {
