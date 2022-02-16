@@ -1,11 +1,18 @@
 <template>
     <div class="pa-3 ma-3 d-flex justify-center">
-      <v-img
-        :max-height="maxHeight"
-        :max-width="maxWidth"
-        :src="imageSrc"
-        contain
-      ></v-img>
+      <div>
+        <div class="overline">{{ text }}</div>
+        <v-img
+          :max-height="maxHeight"
+          :max-width="maxWidth"
+          :src="imageSrc"
+          :alt="caption"
+          contain
+        ></v-img>
+        <div style="text-align: end; margin-top: 0px; font-size: 12px">
+          <a target="_blank" :href="linkSrc">{{ linkTxt }}</a>
+        </div>
+      </div>
     </div>
 </template>
 <script>
@@ -28,7 +35,11 @@ export default {
       type: String,
       default: () => '492'
     },
-    source: {
+    linkSrc: {
+      type: String,
+      default: () => ''
+    },
+    linkTxt: {
       type: String,
       default: () => ''
     },

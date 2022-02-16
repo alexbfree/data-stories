@@ -2,7 +2,7 @@
     <div class="quoteBlock pa-3 ma-3 font-italic">
       <TextBlock :text="text" />
       <div class="link">
-        <a :href="link"> {{ author }} </a>
+        <a :href="linkSrc"> {{ linkTxt }} </a>
       </div>
     </div>
 </template>
@@ -17,13 +17,13 @@ export default {
       type: String,
       default: () => 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes'
     },
-    author: {
+    linkSrc: {
       type: String,
-      default: () => 'Paul-Olivier Dehaye'
+      default: () => ''
     },
-    link: {
+    linkTxt: {
       type: String,
-      default: () => 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
+      default: () => ''
     }
   }
 }

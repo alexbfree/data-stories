@@ -23,12 +23,19 @@
             "content": "First off, I *volunteer* a lot of data to them. I have provided them with my address and my phone number for instance, but also of course what I purchase.",
             "nodes": [
               {
-                "id": "B",
+                "id": "volunteered",
                 "label": "Volunteered",
                 "logo": "mdiHandExtended",
                 "links": [
                   {
-                    "id": "C"
+                    "id": "observed"
+                  },
+                  {
+                    "id": "acquired",
+                    "config": {
+                      "dash": true,
+                      "startSocket": "left"
+                    }
                   }
                 ]
               }
@@ -39,12 +46,12 @@
             "content": "While I volunteer some data, some is merely observed. I have (had) no conscience of giving it to them, but they nevertheless record it. This would include for instance geotagged newsletter clicks. On 8/20/2021 18:51, apparently, I clicked on a FitBit newsletter ad from location 63.7281, 23.0337. Gigantti saw that, and kept the record.",
             "nodes": [
               {
-                "id": "C",
+                "id": "observed",
                 "label": "Observed",
                 "logo": "mdiEye",
                 "links": [
                   {
-                    "id": "F"
+                    "id": "derived"
                   }
                 ]
               }
@@ -55,12 +62,15 @@
             "content": "Beyond the data observed or volunteered, Gigantti also bases its analyses on data that they acquire, in this case from two data brokers: Experian through its Mosaic product (I am a C10, which means \\\"second home owner\\\"), and Bisnode (which gets many things wrong, like my education level, family situation, and postal code).",
             "nodes": [
               {
-                "id": "E",
+                "id": "acquired",
                 "label": "Acquired",
                 "logo": "mdiEmailReceive",
                 "links": [
                   {
-                    "id": "F"
+                    "id": "derived",
+                    "config": {
+                      "endSocket": "left"
+                    }
                   }
                 ]
               }
@@ -72,16 +82,16 @@
             "title": "Derived",
             "nodes": [
               {
-                "id": "G",
+                "id": "derived",
                 "label": "Derived",
                 "logo": "mdiArrowDecision",
                 "links": [
                   {
-                    "id": "F",
+                    "id": "metadata",
                     "config": {
-                      "path": "arc",
-                      "startSocket": "left",
-                      "endSocket": "left"
+                      "path": "grid",
+                      "startSocket": "bottom",
+                      "endSocket": "top"
                     }
                   }
                 ]
@@ -93,17 +103,13 @@
             "title": "Metadata",
             "nodes": [
               {
-                "id": "H",
+                "id": "metadata",
                 "logo": "mdiFileDocumentMultiple",
                 "label": "Metadata",
-                "links": [
-                  {
-                    "id": "I"
-                  }
-                ]
+                "links": []
               }
             ],
-            "nodesAlign": "left"
+            "nodesAlign": "center"
           }
         ]
       },
