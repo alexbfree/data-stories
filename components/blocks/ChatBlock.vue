@@ -1,7 +1,7 @@
 <template>
     <div class="message">
       <p :class="position">
-        <TextBlock :text="text" />
+        {{ text }}
       </p>
       <span :class="position">
         <a :href="linkSrc">{{ linkTxt }}</a>
@@ -11,9 +11,6 @@
 <script>
 export default {
   name: 'ChatBlock',
-  components: {
-    TextBlock: () => import('@/components/blocks/TextBlock.vue')
-  },
   props: {
     text: {
       type: String,
