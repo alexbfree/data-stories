@@ -4,7 +4,7 @@
         <TextBlock :text="text" />
       </p>
       <span :class="position">
-        {{ author }}
+        <a :href="linkSrc">{{ linkTxt }}</a>
       </span>
     </div>
 </template>
@@ -20,9 +20,13 @@ export default {
       type: String,
       default: () => 'Commune imperdiet nec ut, sed euismod convenire principes'
     },
-    author: {
+    linkTxt: {
       type: String,
       default: () => 'Paul-Olivier Dehaye'
+    },
+    linkSrc: {
+      type: String,
+      default: () => ''
     },
     position: {
       type: String,

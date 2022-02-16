@@ -1,72 +1,3 @@
-// Register PagePreviewLink component in markdown editor
-CMS.registerEditorComponent({
-  id: "PagePreviewLink",
-  label: "Link with preview",
-  fields: [{
-    name: "link",
-    label: "link",
-    widget: "string"
-  },
-  {
-    name: "text",
-    label: "text",
-    widget: "string"
-  }],
-  pattern: /<span data-component data-name='PagePreviewLink' data-props='{"link":"(.*)","text":"(.*)"}'><\/span>/,
-  fromBlock (match) {
-    return {
-      link: match[1],
-      text: match[2]
-    };
-  },
-  toBlock: (props) => stringify('PagePreviewLink', props),
-  toPreview: (props) => stringify('PagePreviewLink', props)
-})
-
-// Register ListBlock component in markdown editor
-CMS.registerEditorComponent({
-  id: "ListBlock",
-  label: "List with Icons",
-  fields:[
-    {
-      label: 'Title',
-      name: "text",
-      required: false,
-      widget: 'string',
-    },
-    {
-      label: 'Items',
-      name: "items",
-      widget: 'list',
-      summary: '{{fields.text}}',
-      fields: [
-        {
-          label: 'Icon',
-          name: "icon",
-          widget: 'string',
-        },
-        {
-          label: 'Text',
-          name: "text",
-          widget: 'string'
-        }
-      ]
-    }
-  ],
-  pattern: /<span data-component data-name='ListBlock' data-props='{"items": (.*), "text": "(.*)"}'><\/span>/,
-  fromBlock (match) {
-    return {
-      items: JSON.parse(match[1]),
-      text: match[2]
-    };
-  },
-  toBlock: ({ items, text }) =>
-    `<span data-component data-name='ListBlock' data-props='{"items": ${JSON.stringify(items)}, "text": "${text}"}'></span>`,
-
-  toPreview: ({ items, text }) => {
-    return `<span data-component data-name='ListBlock' data-props='{"items": ${JSON.stringify(items)}, "text": "${text}"}'></span>`
-  }
-})
 
 // Register ChatBlock component in markdown editor
 CMS.registerEditorComponent({
@@ -75,26 +6,40 @@ CMS.registerEditorComponent({
   fields: [{
     name: "text",
     label: "Message",
-    widget: "string"
+    widget: "string",
+    required: false,
+    i18n: true
   },
   {
-    name: "author",
-    label: "Author",
-    widget: "string"
+    name: "linkTxt",
+    label: "Link Text",
+    widget: "string",
+    required: false,
+    i18n: true
+  },
+  {
+    name: "linkSrc",
+    label: "Link URL",
+    widget: "string",
+    required: false,
+    i18n: true
   },
   {
     name: "position",
     label: "Position",
     widget: 'select',
     options: ['left', 'right'],
-    multiple: false
+    multiple: false,
+    required: false,
+    i18n: true
   }],
-  pattern: /<span data-component data-name='ChatBlock' data-props='{"author":"(.*)","position":"(.*)","text":"(.*)"}'><\/span>/,
+  pattern: /<span data-component data-name='ChatBlock' data-props='{(?:"linkSrc":"(.*?)")?(?:,?"linkTxt":"(.*?)")(?:,?"position":"(.*?)")(?:,?"text":"(.*?)")}'><\/span>/,
   fromBlock (match) {
     return {
-      author: match[1],
-      position: match[2],
-      text: match[3]
+      linkSrc: match[1],
+      linkTxt: match[2],
+      position: match[3],
+      text: match[4]
     };
   },
   toBlock: (props) => stringify('ChatBlock', props),
@@ -130,36 +75,36 @@ CMS.registerEditorComponent({
       options: ['text', 'javascript', 'json'],
     },
     {
-      label: 'SourceText',
-      name: 'sourceText',
-      required: false,
-      i18n: true,
-      widget: 'text',
-    },
-    {
-      label: 'SourceLinkText',
-      name: 'sourceLinkText',
+      label: 'Text before the link to source',
+      name: 'beforeLinkTxt',
       required: false,
       i18n: true,
       widget: 'string',
     },
     {
-      label: 'SourceLinkURL',
-      name: 'sourceLinkURL',
+      label: 'Source Link Text',
+      name: 'linkTxt',
       required: false,
       i18n: true,
-      widget: 'file',
+      widget: 'string',
+    },
+    {
+      label: 'Source Link URL',
+      name: 'linkSrc',
+      required: false,
+      i18n: true,
+      widget: 'string',
     }
   ],
-  pattern: /<span data-component data-name='CodeBlock' data-props='{(?:"text":"(.*?)")?(?:,"title":"(.*?)")?(?:,"language":"(.*?)")?(?:,"sourceLinkText":"(.*)")?(?:,"sourceLinkURL":"(.*)")?(?:,"sourceText":"(.*)")?}'><\/span>/,
+  pattern: /<span data-component data-name='CodeBlock' data-props='{(?:"beforeLinkTxt":"(.*?)")?(?:,?"language":"(.*?)")?(?:,"linkSrc":"(.*?)")?(?:,"linkTxt":"(.*?)")?(?:,"text":"(.*?)")?(?:,"title":"(.*?)")?}'><\/span>/,
   fromBlock (match) { // must respect alphabetical order
     return {
-      text: match[1],
-      title: match[2],
-      language: match[3],
-      sourceLinkText: match[4],
-      sourceLinkURL: match[5],
-      sourceText: match[6]
+      beforeLinkTxt: match[1],
+      language: match[2],
+      linkSrc: match[3],
+      linkTxt: match[4],
+      text: match[5],
+      title: match[6]
     };
   },
   toBlock: (props) => stringify('CodeBlock', props),
@@ -185,22 +130,29 @@ CMS.registerEditorComponent({
       widget: 'image',
     },
     {
-      label: 'Max Width',
+      label: 'Max Width (pixels)',
       name: 'maxWidth',
       required: false,
       i18n: true,
-      widget: 'string'
+      widget: 'number'
     },
     {
-      label: 'Max Height',
+      label: 'Max Height (pixels)',
       name: 'maxHeight',
+      required: false,
+      i18n: true,
+      widget: 'number',
+    },
+    {
+      label: 'Source link URL',
+      name: 'linkSrc',
       required: false,
       i18n: true,
       widget: 'string',
     },
     {
-      label: 'Source',
-      name: 'source',
+      label: 'Source link Text',
+      name: 'linkTxt',
       required: false,
       i18n: true,
       widget: 'string',
@@ -213,19 +165,67 @@ CMS.registerEditorComponent({
       widget: 'string',
     }
   ],
-  pattern: /<span data-component data-name='ImageBlock' data-props='{(?:"caption":"(.*?)")?(?:,?"imageSrc":"(.*?)")?(?:,?"maxHeight":"(.*?)")?(?:,?"maxWidth":"(.*)")?(?:,?"source":"(.*)")?(?:,?"text":"(.*)")?}'><\/span>/,
+  pattern: /<span data-component data-name='ImageBlock' data-props='{(?:"caption":"(.*?)")?(?:,?"imageSrc":"(.*?)")?(?:,?"linkSrc":"(.*?)")?(?:,?"linkTxt":"(.*?)")?(?:,?"maxHeight":"(.*?)")?(?:,?"maxWidth":"(.*?)")?(?:,?"text":"(.*?)")?}'><\/span>/,
   fromBlock (match) { // must respect alphabetical order
     return {
       caption: match[1],
       imageSrc: match[2],
-      maxHeight: match[3],
-      maxWidth: match[4],
-      source: match[5],
-      text: match[6]
+      linkSrc: match[3],
+      linkTxt: match[4],
+      maxHeight: match[5],
+      maxWidth: match[6],
+      text: match[7]
     };
   },
   toBlock: (props) => stringify('ImageBlock', props),
   toPreview: (props) => stringify('ImageBlock', props)
+})
+
+// Register ListBlock component in markdown editor
+CMS.registerEditorComponent({
+  id: "ListBlock",
+  label: "List with Icons",
+  fields:[
+    {
+      label: 'Title',
+      name: "text",
+      required: false,
+      widget: 'string',
+      i18n: true
+    },
+    {
+      label: 'Items',
+      name: "items",
+      widget: 'list',
+      summary: '{{fields.text}}',
+      i18n: true,
+      fields: [
+        {
+          label: 'Icon',
+          name: "icon",
+          widget: 'string',
+        },
+        {
+          label: 'Text',
+          name: "text",
+          widget: 'string'
+        }
+      ]
+    }
+  ],
+  pattern: /<span data-component data-name='ListBlock' data-props='{"items": (.*), "text": "(.*)"}'><\/span>/,
+  fromBlock (match) {
+    return {
+      items: JSON.parse(match[1]),
+      text: match[2]
+    };
+  },
+  toBlock: ({ items, text }) =>
+    `<span data-component data-name='ListBlock' data-props='{"items": ${JSON.stringify(items)}, "text": "${text}"}'></span>`,
+
+  toPreview: ({ items, text }) => {
+    return `<span data-component data-name='ListBlock' data-props='{"items": ${JSON.stringify(items)}, "text": "${text}"}'></span>`
+  }
 })
 
 // Register LongQuoteBlock component in markdown editor
@@ -235,23 +235,29 @@ CMS.registerEditorComponent({
   fields: [{
     name: "text",
     label: "Text",
-    widget: "string"
+    widget: "markdown",
+    required: false,
+    i18n: true
   },
   {
-    name: "author",
-    label: "Author",
-    widget: "string"
+    name: "linkSrc",
+    label: "Source link URL",
+    widget: "string",
+    required: false,
+    i18n: true
   },
   {
-    name: "link",
-    label: "Link",
-    widget: 'string'
+    name: "linkTxt",
+    label: "Source link Text",
+    widget: 'string',
+    required: false,
+    i18n: true
   }],
-  pattern: /<span data-component data-name='LongQuoteBlock' data-props='{"author":"(.*)","link":"(.*)","text":"(.*)"}'><\/span>/,
+  pattern: /<span data-component data-name='LongQuoteBlock' data-props='{(?:"linkSrc":"(.*?)")?(?:,?"linkTxt":"(.*?)")?(?:,?"text":"(.*?)")?}'><\/span>/,
   fromBlock (match) {
     return {
-      author: match[1],
-      link: match[2],
+      linkSrc: match[1],
+      linkTxt: match[2],
       text: match[3]
     };
   },
@@ -259,30 +265,67 @@ CMS.registerEditorComponent({
   toPreview: (props) => stringify('LongQuoteBlock', props)
 })
 
+// Register PagePreviewLink component in markdown editor
+CMS.registerEditorComponent({
+  id: "PagePreviewLink",
+  label: "Link with preview",
+  fields: [{
+    name: "link",
+    label: "link",
+    widget: "string",
+    required: false,
+    i18n: true
+  },
+  {
+    name: "text",
+    label: "text",
+    widget: "string",
+    required: false,
+    i18n: true
+  }],
+  pattern: /<span data-component data-name='PagePreviewLink' data-props='{"link":"(.*)","text":"(.*)"}'><\/span>/,
+  fromBlock (match) {
+    return {
+      link: match[1],
+      text: match[2]
+    };
+  },
+  toBlock: (props) => stringify('PagePreviewLink', props),
+  toPreview: (props) => stringify('PagePreviewLink', props)
+})
+
 // Register QuoteBlock component in markdown editor
 CMS.registerEditorComponent({
   id: "QuoteBlock",
   label: "Quote Block",
-  fields: [{
-    name: "text",
-    label: "Text",
-    widget: "string"
-  },
-  {
-    name: "author",
-    label: "Author",
-    widget: "string"
-  },
-  {
-    name: "link",
-    label: "Link",
-    widget: 'string'
-  }],
-  pattern: /<span data-component data-name='QuoteBlock' data-props='{"author":"(.*)","link":"(.*)","text":"(.*)"}'><\/span>/,
+  fields: [
+    {
+      name: "text",
+      label: "Text",
+      widget: "markdown",
+      required: false,
+      i18n: true
+    },
+    {
+      name: "linkSrc",
+      label: "Source link URL",
+      widget: "string",
+      required: false,
+      i18n: true
+    },
+    {
+      name: "linkTxt",
+      label: "Source link Text",
+      widget: "string",
+      required: false,
+      i18n: true
+    }
+  ],
+  pattern: /<span data-component data-name='QuoteBlock' data-props='{(?:"linkSrc":"(.*?)")?(?:,?"linkTxt":"(.*?)")?(?:,?"text":"(.*?)")?}'><\/span>/,
   fromBlock (match) {
     return {
-      author: match[1],
-      link: match[2],
+      linkSrc: match[1],
+      linkTxt: match[2],
       text: match[3]
     };
   },
@@ -339,6 +382,14 @@ CMS.registerEditorComponent({
       widget: 'string',
     },
     {
+      label: 'Position',
+      name: 'position',
+      required: false,
+      i18n: true,
+      widget: 'select',
+      options: ['left', 'right'],
+    },
+    {
       name: 'authorlink',
       label: 'Author',
       widget: 'relation',
@@ -350,7 +401,7 @@ CMS.registerEditorComponent({
       required: false
     }
   ],
-  pattern: /<span data-component data-name='VoiceBlock' data-props='{(?:"authorLink":"(.*?)")?(?:,?"classes":"(.*?)")?(?:,?"color":"(.*?)")?(?:,?"linkSrc":"(.*?)")?(?:,?"linkTxt":"(.*?)")?(?:,?"text":"(.*?)")?(?:,?"width":"(.*?)")?}'><\/span>/,
+  pattern: /<span data-component data-name='VoiceBlock' data-props='{(?:"authorLink":"(.*?)")?(?:,?"classes":"(.*?)")?(?:,?"color":"(.*?)")?(?:,?"linkSrc":"(.*?)")?(?:,?"linkTxt":"(.*?)")?(?:,?"position":"(.*?)")?(?:,?"text":"(.*?)")?(?:,?"width":"(.*?)")?}'><\/span>/,
   fromBlock (match) {
     return {
       authorLink: match[1],
@@ -358,8 +409,9 @@ CMS.registerEditorComponent({
       color: match[3],
       linkSrc: match[4],
       linkTxt: match[5],
-      text: match[6],
-      width: match[7]
+      position: match[6],
+      text: match[7],
+      width: match[8]
     };
   },
   toBlock: (props) => stringify('VoiceBlock', props),

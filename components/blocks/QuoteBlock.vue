@@ -14,33 +14,35 @@
           $vuetify.icons.mdiFormatQuoteClose
         </VIcon>
       </VRow>
-      <div class="d-flex justify-space-between font-italic font-weight-thin">
-        <span>
+      <div v-if="linkTxt !== ''" class="d-flex justify-space-between font-italic font-weight-thin">
+        <span v-if="linkSrc === ''">
           <VIcon right color="primary"> $vuetify.icons.mdiMinus </VIcon>
-          {{ author }}
+          {{ linkTxt }}
         </span>
-        <a :href="link"> {{ link }}</a>
+        <span v-else>
+          <VIcon right color="primary"> $vuetify.icons.mdiMinus </VIcon>
+          <a :href="linkSrc">{{ linkTxt }}</a>
+        </span>
       </div>
     </VCardText>
   </VCard>
 </template>
 <script>
-import TextBlock from '@/components/blocks/TextBlock.vue'
 export default {
   name: 'QuoteBlock',
   components: {
-    TextBlock
+    TextBlock: () => import('@/components/blocks/TextBlock.vue')
   },
   props: {
     text: {
       type: String,
       required: true
     },
-    author: {
+    linkSrc: {
       type: String,
-      required: true
+      default: () => ''
     },
-    link: {
+    linkTxt: {
       type: String,
       default: () => ''
     }

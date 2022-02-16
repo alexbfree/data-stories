@@ -9,8 +9,8 @@
       :readonly="readonly"
     ></PrismEditor>
     <div style="text-align: end; margin-top: 0px; font-size: 12px">
-      {{ sourceText }}
-      <a target="_blank" :href="sourceLinkURL">{{ sourceLinkText }}</a>
+      {{ beforeLinkTxt }}
+      <a target="_blank" :href="linkSrc">{{ linkTxt }}</a>
     </div>
   </VContainer>
 </template>
@@ -53,15 +53,15 @@ export default {
       type: String,
       default: ''
     },
-    sourceText: {
+    beforeLinkTxt: {
       type: String,
       default: ''
     },
-    sourceLinkURL: {
+    linkSrc: {
       type: String,
       default: ''
     },
-    sourceLinkText: {
+    linkTxt: {
       type: String,
       default: ''
     }
