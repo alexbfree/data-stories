@@ -9,11 +9,10 @@
     </div>
 </template>
 <script>
-import TextBlock from '@/components/blocks/TextBlock.vue'
 export default {
   name: 'ChatBlock',
   components: {
-    TextBlock
+    TextBlock: () => import('@/components/blocks/TextBlock.vue')
   },
   props: {
     text: {
