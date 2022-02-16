@@ -97,7 +97,7 @@
                       "startSocket": "left",
                       "endSocket": "top",
                       "startPlug": "disc",
-                      "endPlug": "crosshair"
+                      "endPlug": "arrow1"
                     }
                   }
                 ]
