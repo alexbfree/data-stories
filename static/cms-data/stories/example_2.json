@@ -1,0 +1,184 @@
+{
+  "en": {
+    "id": "example_2",
+    "title": "Example",
+    "buildingBlocks": [
+      {
+        "type": "blocks/ProfileBlock",
+        "title": "John ",
+        "jobTitle": "Doe",
+        "description": "**Teststs**tstst2s*tsts*"
+      },
+      {
+        "type": "blocks/RailBlock",
+        "list": [
+          {
+            "title": "Source",
+            "leftText": "",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an [salutand](txtgdw)i sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. ",
+            "nodes": [
+              {
+                "id": "A",
+                "label": "Source",
+                "logo": "mdiAccount",
+                "links": [
+                  {
+                    "id": "B"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Volunteered",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.",
+            "nodes": [
+              {
+                "id": "B",
+                "label": "Volunteered",
+                "logo": "mdiHandExtended",
+                "links": [
+                  {
+                    "id": "C"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Observed",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.",
+            "nodes": [
+              {
+                "id": "C",
+                "label": "Observed",
+                "logo": "mdiEye",
+                "links": [
+                  {
+                    "id": "F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.",
+            "title": "Third Party",
+            "nodes": [
+              {
+                "logo": "mdiBank",
+                "id": "D",
+                "label": "Third parties",
+                "links": [
+                  {
+                    "id": "E"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "left"
+          },
+          {
+            "title": "Acquired",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.",
+            "nodes": [
+              {
+                "id": "E",
+                "label": "Acquired",
+                "logo": "mdiEmailReceive",
+                "links": [
+                  {
+                    "id": "F"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "left"
+          },
+          {
+            "title": "Target",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.",
+            "nodes": [
+              {
+                "id": "F",
+                "label": "Target",
+                "logo": "mdiBullseyeArrow",
+                "links": [
+                  {
+                    "id": "G",
+                    "config": {
+                      "path": "arc",
+                      "startSocketGravity": -1,
+                      "endPlug": "behind",
+                      "startSocket": "right",
+                      "endSocket": "right"
+                    }
+                  },
+                  {
+                    "id": "H",
+                    "config": {
+                      "dash": true,
+                      "startSocket": "left",
+                      "endSocket": "top"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.",
+            "title": "Derived",
+            "nodes": [
+              {
+                "id": "G",
+                "label": "Derived",
+                "logo": "mdiArrowDecision",
+                "links": [
+                  {
+                    "id": "F",
+                    "config": {
+                      "path": "arc",
+                      "startSocket": "left",
+                      "endSocket": "left"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.",
+            "title": "Metadata",
+            "nodes": [
+              {
+                "id": "H",
+                "logo": "mdiFileDocumentMultiple",
+                "label": "Metadata",
+                "links": [
+                  {
+                    "id": "I"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "left"
+          },
+          {
+            "title": "Infrastructure",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.",
+            "nodes": [
+              {
+                "id": "I",
+                "label": "Infrastructure",
+                "logo": "mdiHome"
+              }
+            ],
+            "nodesAlign": "left"
+          }
+        ]
+      }
+    ]
+  },
+  "fr": {}
+}
