@@ -1,5 +1,7 @@
 # Netlify cms
 
+[CMS guidelines](https://github.com/hestiaAI/data-stories/blob/master/CMS-HowTo.md)
+
 The cms is configured in **static/admin/config.yml**. 
 
 It writes data in **static/cms-data**
