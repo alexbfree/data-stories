@@ -1,0 +1,347 @@
+{
+  "en": {
+    "id": "test-story",
+    "title": "This is a test story",
+    "buildingBlocks": [
+      {
+        "type": "blocks/RailBlock",
+        "list": [
+          {
+            "title": "H6",
+            "nodes": [
+              {
+                "id": "H6L",
+                "label": "H6L",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H5L"
+                  }
+                ]
+              },
+              {
+                "id": "H6C",
+                "label": "H6C",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H5C"
+                  }
+                ]
+              },
+              {
+                "id": "H6R",
+                "label": "H6R",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H5R"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "right"
+          },
+          {
+            "title": "H5",
+            "nodes": [
+              {
+                "id": "H5L",
+                "label": "H5L",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H4L"
+                  }
+                ]
+              },
+              {
+                "id": "H5C",
+                "label": "H5C",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H4C"
+                  }
+                ]
+              },
+              {
+                "id": "H5R",
+                "label": "H5R",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H4R"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "right"
+          },
+          {
+            "title": "H4",
+            "nodes": [
+              {
+                "id": "H4L",
+                "label": "H4L",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H3L"
+                  }
+                ]
+              },
+              {
+                "id": "H4C",
+                "label": "H4C",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H3C"
+                  }
+                ]
+              },
+              {
+                "id": "H4R",
+                "label": "H4R",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H3R"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "right"
+          },
+          {
+            "title": "H3",
+            "nodes": [
+              {
+                "id": "H3L",
+                "label": "H3L",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H2L"
+                  }
+                ]
+              },
+              {
+                "id": "H3C",
+                "label": "H3C",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H2C"
+                  }
+                ]
+              },
+              {
+                "id": "H3R",
+                "label": "H3R",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H2R"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "right"
+          },
+          {
+            "title": "H2",
+            "nodes": [
+              {
+                "id": "H2L",
+                "label": "H2L",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H1L"
+                  }
+                ]
+              },
+              {
+                "id": "H2C",
+                "label": "H2C",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H1C"
+                  }
+                ]
+              },
+              {
+                "id": "H2R",
+                "label": "H2R",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "H1R"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "right"
+          },
+          {
+            "title": "H1",
+            "nodes": [
+              {
+                "id": "H1L",
+                "label": "H1L",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "X"
+                  }
+                ]
+              },
+              {
+                "id": "H1C",
+                "label": "H1C",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "X"
+                  }
+                ]
+              },
+              {
+                "id": "H1R",
+                "label": "H1R",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "X"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "right",
+            "leftText": "text-on-the-left",
+            "content": "This is test content in H1"
+          },
+          {
+            "title": "X",
+            "nodes": [
+              {
+                "id": "X",
+                "label": "X",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "T1L"
+                  },
+                  {
+                    "id": "T1C"
+                  },
+                  {
+                    "id": "T1L"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "center"
+          },
+          {
+            "title": "T1",
+            "nodes": [
+              {
+                "id": "T1L",
+                "label": "T1L",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "T2L"
+                  }
+                ]
+              },
+              {
+                "id": "T1C",
+                "label": "T1C",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "T2C"
+                  }
+                ]
+              },
+              {
+                "id": "T1R",
+                "label": "T1R",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "T2R"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "right"
+          },
+          {
+            "title": "T2",
+            "nodes": [
+              {
+                "id": "T2L",
+                "label": "T2L",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "T3L"
+                  }
+                ]
+              },
+              {
+                "id": "T2C",
+                "label": "T2C",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "T3C"
+                  }
+                ]
+              },
+              {
+                "id": "T2R",
+                "label": "T2R",
+                "logo": "mdiHome",
+                "links": [
+                  {
+                    "id": "T3R"
+                  }
+                ]
+              }
+            ],
+            "nodesAlign": "right"
+          },
+          {
+            "title": "T3",
+            "nodes": [
+              {
+                "id": "T3L",
+                "label": "T3L",
+                "logo": "mdiHome"
+              },
+              {
+                "id": "T3C",
+                "label": "T3C",
+                "logo": "mdiHome"
+              },
+              {
+                "id": "T3R",
+                "label": "T3R",
+                "logo": "mdiHome"
+              }
+            ],
+            "nodesAlign": "right"
+          }
+        ]
+      }
+    ]
+  },
+  "fr": {}
+}
