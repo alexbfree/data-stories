@@ -3,7 +3,10 @@
     "id": "alex-bowyer",
     "name": "Alex Bowyer",
     "profilePicture": "/media/alexb.jpeg",
-    "description": "I'm Alex Bowyer, I lead the #digipower project for Hestia.ai, the data expertise company Sitra has contracted to run the investigation. For the last 5 years I've been researching Human Data Relations for my PhD at Open Lab, Newcastle University, UK. I've worked with individuals in both a social care context and a commercial service context to explore how they make sense of their personal data and how they can gain access to it. As part of that research, I've developed a model that can help us to understand personal data, which I will explain in this article. Don't hesitate to contact me if you would like to know more."
+    "description": "I'm Alex Bowyer, I lead the #digipower project for Hestia.ai, the data expertise company Sitra has contracted to run the investigation. For the last 5 years I've been researching Human Data Relations for my PhD at Open Lab, Newcastle University, UK. I've worked with individuals in both a social care context and a commercial service context to explore how they make sense of their personal data and how they can gain access to it. As part of that research, I've developed a model that can help us to understand personal data, which I will explain in this article. Don't hesitate to contact me if you would like to know more.",
+    "mystories": [
+      {"id": "alex5", "title": "What is my personal data? And how do companies get it?", "description": "There are many different types of personal data that might exist about you, from the more obvious types like your address, phone number and social media posts, to more hidden ones like location history, access logs or marketing profiles. Some examples are shown in this diagram, with types becoming less evident as you move from left to right"}
+    ]
   },
   "fr": {}
 }
