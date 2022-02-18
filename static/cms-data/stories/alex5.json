@@ -1,14 +1,15 @@
 {
   "en": {
     "id": "alex5",
-    "title": "Alex5",
+    "title": "What is my personal data? And how do companies get it?",
     "buildingBlocks": [
       {
         "type": "blocks/ProfileBlock",
         "title": "Alex Bowyer",
         "jobTitle": "Human Data Researcher and #digipower Project Leader",
         "description": "I'm Alex Bowyer, I lead the ***\\#digipower*** project for Hestia.ai, the data expertise company Sitra has contracted to run the investigation. For the last 5 years I've been researching Human Data Relations for my PhD at Open Lab, Newcastle University, UK. I've worked with individuals in both a social care context and a commercial service context to explore how they make sense of their personal data and how they can gain access to it. As part of that research, I've developed a model that can help us to understand personal data, which I will explain in this article. Don't hesitate to contact me if you would like to know more.",
-        "profilePicture": "/media/alexb.jpeg"
+        "profilePicture": "/media/alexb.jpeg",
+        "profileID": "alex-bowyer"
       },
       {
         "type": "blocks/ParagraphBlock",
@@ -126,7 +127,9 @@
           "Apple"
         ]
       }
-    ]
+    ],
+    "image": "/media/icon.png",
+    "description": " As part of that research, I’ve developed a model that can help us to understand personal data, which I will explain in this article. It’s important in this investigation to have a clear understanding of what we are talking about when we refer to ‘your personal data’. At the most basic level, personal data is information stored digitally. But ‘your’ does not just mean ‘in your possession’. We are not just referring to the files on your phone or hard drive but to all the information about you, no matter where it exists."
   },
   "fr": {}
 }

@@ -8,7 +8,8 @@
         "title": " Miapetra Kumpula-Natri",
         "jobTitle": "Finnish MEP",
         "description": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-        "profilePicture": "/media/mkn.jpeg"
+        "profilePicture": "/media/mkn.jpeg",
+        "profileID": "mkn"
       },
       {
         "type": "blocks/ParagraphBlock",
@@ -121,7 +122,9 @@
       {
         "type": "blocks/ReadAlsoBlock"
       }
-    ]
+    ],
+    "image": "/media/icon.png",
+    "description": "Gigantti, like many supermarket chains, collects vast amounts of data. I want to show some of the data I have recovered from them through the SAR process , to illustrate the different kinds of collection methods used."
   },
   "fr": {}
 }

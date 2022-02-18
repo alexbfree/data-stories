@@ -5,7 +5,16 @@
       dark
       color="primary"
     >
-      <div class="d-flex flex-row" style="align-items: center">
+      <v-row v-if="!loaded" align="center" justify="center" class="text-center">
+        <v-col>
+          <VProgressCircular
+            :size="150"
+            color="primary"
+            indeterminate
+          />
+        </v-col>
+      </v-row>
+      <div v-else class="d-flex flex-row" style="align-items: center">
         <VAvatar class="ma-4" color="#F0F0F0" size="170">
           <VAvatar
             color="grey"
@@ -35,22 +44,32 @@ export default {
     TextBlock: () => import('@/components/blocks/TextBlock.vue')
   },
   props: {
-    title: {
+    profileID: {
       type: String,
-      default: () => 'John Doe'
-    },
-    jobTitle: {
-      type: String,
-      default: () => 'Journalist at LeTemps.ch'
-    },
-    profilePicture: {
-      type: String,
-      default: () => 'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'
-    },
-    description: {
-      type: String,
-      default: () => 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes'
+      default: () => ''
     }
+  },
+  data(){
+    return {
+      loaded: false,
+      title: '',
+      jobTitle: '',
+      profilePicture: '',
+      description: ''
+    }
+  },
+  async fetch(){
+    const resp = await fetch('/cms-data/persons/' + this.profileID + '.json')
+    if (resp.ok) {
+      const data = await resp.json()
+      // TODO choose correct language ???
+      const manifest = data.en
+      this.title = manifest.name
+      this.jobTitle = manifest.jobTitle
+      this.profilePicture = manifest.profilePicture
+      this.description = manifest.description
+    }
+    this.loaded = true
   }
 }
 </script>
