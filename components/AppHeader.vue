@@ -16,14 +16,36 @@
           <VIcon>$vuetify.icons.mdiHome</VIcon>
         </VBtn>
         <VSpacer />
+        
         <a
-          href="https://hestialabs.org/"
+          href="https://www.sitra.fi/"
           target="_blank"
           rel="noreferrer noopener"
           class="ml-2"
         >
-          <LogoImg width="100" />
+          <VImg
+            width="100"
+            src="/media/sitra-logo.png"
+            lazy-src="/media/sitra-logo.png"
+            alt="SITRA logo"
+            contain
+          />
         </a>
+        <a
+          href="https://hestia.ai/"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="ml-2"
+        >
+          <VImg
+            width="100"
+            src="/media/logo-hestia.svg"
+            lazy-src="/media/logo-hestia.svg"
+            alt="Hestia.ai logo"
+            contain
+          />
+        </a>
+
       </VToolbarTitle>
     </VAppBar>
     <VNavigationDrawer
@@ -45,16 +67,20 @@
         </div>
       </template>
       <div class="mt-6">
-        <LogoImg width="250" />
+        <VImg
+            width="250"
+            src="/media/logo-hestia.svg"
+            lazy-src="/media/logo-hestia.svg"
+            alt="Hestia.ai logo"
+            contain
+          />
       </div>
     </VNavigationDrawer>
   </div>
 </template>
 
 <script>
-import LogoImg from '~/components/base/LogoImg.vue'
 export default {
-  components: { LogoImg },
   data() {
     return {
       drawer: false,

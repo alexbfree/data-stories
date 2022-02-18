@@ -31,7 +31,7 @@
                 {{ jobTitle }}
           </div>
           <p class="text-subtitle-2 mt-4">
-            <TextBlock :text="description" />
+            <MarkdownText :text="description" />
           </p>
         </div>
       </div>
@@ -41,7 +41,7 @@
 export default {
   name: 'ProfileBlock',
   components: {
-    TextBlock: () => import('@/components/blocks/TextBlock.vue')
+    MarkdownText: () => import('@/components/widgets/MarkdownText')
   },
   props: {
     profileID: {

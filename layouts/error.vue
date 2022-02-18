@@ -2,18 +2,21 @@
   <VContainer fluid>
     <VRow align="center" justify="center" class="flex-column">
       <h1 class="h1">{{ title }}</h1>
-      <LogoImg max-width="300" class="my-12" />
-
+      <VImg
+        width="300"
+        src="/media/logo-hestia.svg"
+        lazy-src="/media/logo-hestia.svg"
+        alt="Hestia.ai logo"
+        contain
+      />
       <BaseButton nuxt to="/" icon="mdiHome" text="Home page" />
     </VRow>
   </VContainer>
 </template>
 
 <script>
-import LogoImg from '~/components/base/LogoImg.vue'
 export default {
   name: 'ErrorLayout',
-  components: { LogoImg },
   layout: 'empty',
   props: {
     error: {

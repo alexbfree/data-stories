@@ -9,15 +9,15 @@
       <template #activator="{ on, attrs }">
         <AnimatedLink v-bind="{text, link, attrs}" v-on="on" />
       </template>
-      <PagePreviewBlock image-height="100px" />
+      <PagePreview image-height="100px" />
     </v-menu>
 </template>
 
 <script>
 import AnimatedLink from './AnimatedLink.vue'
-import PagePreviewBlock from '@/components/blocks/PagePreviewBlock.vue'
+import PagePreview from '@/components/base/PagePreview.vue'
 export default {
-  components: { PagePreviewBlock, AnimatedLink },
+  components: { PagePreview, AnimatedLink },
   props: {
     text: {
       type: String,

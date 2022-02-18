@@ -27,7 +27,7 @@ import 'prismjs/components/prism-json'
 import 'prismjs/themes/prism-tomorrow.css' // import syntax highlighting styles
 
 export default {
-  name: 'CodeBlock',
+  name: 'CodeWidget',
   components: {
     PrismEditor
   },

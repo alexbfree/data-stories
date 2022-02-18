@@ -6,7 +6,7 @@
 <script>
 import FlowBlock from '@/components/blocks/FlowBlock.vue'
 export default {
-  name: 'QuoteBlock',
+  name: 'RailBlock',
   components: {
     FlowBlock
   },
