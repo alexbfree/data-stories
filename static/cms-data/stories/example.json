@@ -21,7 +21,7 @@
         "list": [
           {
             "title": "Chat Bubble",
-            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='ChatBlock' data-props='{\"linkTxt\":\"POD\",\"position\":\"left\",\"text\":\"Lorem John Doe ipsum dolor sit amet, no nam oblique veritus.\"}'></span>\n\n<span data-component data-name='ChatBlock' data-props='{\"linkTxt\":\"Alex Bowyer\",\"position\":\"right\",\"text\":\"ok\"}'></span>",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='ChatWidget' data-props='{\"linkTxt\":\"POD\",\"position\":\"left\",\"text\":\"Lorem John Doe ipsum dolor sit amet, no nam oblique veritus.\"}'></span>\n\n<span data-component data-name='ChatWidget' data-props='{\"linkTxt\":\"Alex Bowyer\",\"position\":\"right\",\"text\":\"ok\"}'></span>",
             "nodes": [
               {
                 "id": "chat",
@@ -29,7 +29,7 @@
                 "logo": "mdiEye",
                 "links": [
                   {
-                    "id": "codeblock",
+                    "id": "CodeWidget",
                     "config": {
                       "dash": true
                     }
@@ -43,12 +43,12 @@
             "leftText": "JULY 18, 2021"
           },
           {
-            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='CodeBlock' data-props='{\"beforeLinkTxt\":\"created by \",\"language\":\"javascript\",\"linkTxt\":\"Paul-Olivier Dehaye\",\"text\":\"console.log(“Hello World”);\\nconst test = true\\nconsole.log(\\\"Test: “, test)\",\"title\":\"Code Block Pretty Example\"}'></span>",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='CodeWidget' data-props='{\"beforeLinkTxt\":\"created by \",\"language\":\"javascript\",\"linkTxt\":\"Paul-Olivier Dehaye\",\"text\":\"console.log(“Hello World”);\\nconst test = true\\nconsole.log(\\\"Test: “, test)\",\"title\":\"Code Block Pretty Example\"}'></span>",
             "title": "Code Block",
             "nodes": [
               {
                 "logo": "mdiBank",
-                "id": "codeblock",
+                "id": "CodeWidget",
                 "label": "Code Block",
                 "links": [
                   {
@@ -61,7 +61,7 @@
           },
           {
             "title": "Image Example",
-            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='ImageBlock' data-props='{\"caption\":\"An alternative text\",\"imageSrc\":\"/media/hestialabs-logo.svg\",\"linkTxt\":\"A source\",\"maxHeight\":\"500\",\"maxWidth\":\"500\",\"text\":\"Example of Image block pretty\"}'></span>",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='ImageWidget' data-props='{\"caption\":\"An alternative text\",\"imageSrc\":\"/media/hestialabs-logo.svg\",\"linkTxt\":\"A source\",\"maxHeight\":\"500\",\"maxWidth\":\"500\",\"text\":\"Example of Image block pretty\"}'></span>",
             "nodes": [
               {
                 "id": "image",
@@ -74,7 +74,7 @@
           },
           {
             "title": "List with icons example",
-            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='ListBlock' data-props='{\"items\": [{\"icon\":\"mdiEye\",\"text\":\"mdiEye\"},{\"icon\":\"mdiHome\",\"text\":\"mdiHome\"},{\"icon\":\"mdiAccount\",\"text\":\"mdiAccount\"},{\"icon\":\"mdiArrowDecision\",\"text\":\"mdiArrowDecision\"}], \"text\": \"Example of icons list\"}'></span>",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='IconsListWidget' data-props='{\"items\": [{\"icon\":\"mdiEye\",\"text\":\"mdiEye\"},{\"icon\":\"mdiHome\",\"text\":\"mdiHome\"},{\"icon\":\"mdiAccount\",\"text\":\"mdiAccount\"},{\"icon\":\"mdiArrowDecision\",\"text\":\"mdiArrowDecision\"}], \"text\": \"Example of icons list\"}'></span>",
             "nodes": [
               {
                 "id": "icons1",
@@ -121,7 +121,7 @@
           },
           {
             "title": "Long Quote Block",
-            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='LongQuoteBlock' data-props='{\"linkTxt\":\"Paul-Olivier Dehaye\",\"text\":\"Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit,Lorem John Doe ipsum.\"}'></span>",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='LongQuoteWidget' data-props='{\"linkTxt\":\"Paul-Olivier Dehaye\",\"text\":\"Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit,Lorem John Doe ipsum.\"}'></span>",
             "nodes": [
               {
                 "id": "longquote",
@@ -149,7 +149,7 @@
           {
             "title": "Quote Block",
             "leftText": "",
-            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. \n\n<span data-component data-name='QuoteBlock' data-props='{\"linkTxt\":\"Paul-Olivier Dehaye\",\"text\":\"Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\"}'></span>",
+            "content": "Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. \n\n<span data-component data-name='QuoteWidget' data-props='{\"linkTxt\":\"Paul-Olivier Dehaye\",\"text\":\"Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\"}'></span>",
             "nodes": [
               {
                 "id": "quote",
@@ -167,7 +167,7 @@
             ]
           },
           {
-            "content": "<span data-component data-name='VoiceBlock' data-props='{\"color\":\"#58539d\",\"linkTxt\":\"Alex Bowyer\",\"position\":\"right\",\"text\":\"Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nob\",\"width\":\"50%\"}'></span>\n\nLorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='VoiceBlock' data-props='{\"color\":\"#1ba39c\",\"linkTxt\":\"Paul-Olivier Dehaye\",\"text\":\"Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at.\",\"width\":\"100%\"}'></span>",
+            "content": "<span data-component data-name='VoiceWidget' data-props='{\"color\":\"#58539d\",\"linkTxt\":\"Alex Bowyer\",\"position\":\"right\",\"text\":\"Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nob\",\"width\":\"50%\"}'></span>\n\nLorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.\n\n<span data-component data-name='VoiceWidget' data-props='{\"color\":\"#1ba39c\",\"linkTxt\":\"Paul-Olivier Dehaye\",\"text\":\"Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at.\",\"width\":\"100%\"}'></span>",
             "title": "Voice Block",
             "nodes": [
               {

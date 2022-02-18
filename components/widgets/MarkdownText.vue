@@ -7,17 +7,17 @@ import Vue from 'vue'
 import Vuetify from "vuetify"
 import vuetifyOptions from '@/vuetify.options'
 
-import ChatBlock from '@/components/blocks/ChatBlock.vue'
-import CodeBlock from '@/components/blocks/CodeBlock.vue'
-import ImageBlock from '@/components/blocks/ImageBlock.vue'
-import ListBlock from '@/components/blocks/ListBlock.vue'
-import LongQuoteBlock from '@/components/blocks/LongQuoteBlock.vue'
+import ChatWidget from '@/components/widgets/ChatWidget.vue'
+import CodeWidget from '@/components/widgets/CodeWidget.vue'
+import ImageWidget from '@/components/widgets/ImageWidget.vue'
+import IconsListWidget from '@/components/widgets/IconsListWidget.vue'
+import LongQuoteWidget from '@/components/widgets/LongQuoteWidget.vue'
 import PagePreviewLink from '@/components/base/button/PagePreviewLink.vue'
-import QuoteBlock from '@/components/blocks/QuoteBlock.vue'
-import VoiceBlock from '@/components/blocks/VoiceBlock.vue'
+import QuoteWidget from '@/components/widgets/QuoteWidget.vue'
+import VoiceWidget from '@/components/widgets/VoiceWidget.vue'
 
 export default {
-  name: 'TextBlock',
+  name: 'MarkdownText',
   components: {
     VueMarkdown
   },
@@ -50,29 +50,29 @@ export default {
         const props = JSON.parse(el.getAttribute('data-props'))
         let ComponentClass = null
         switch (name) {
-          case 'ChatBlock': 
-            ComponentClass = Vue.extend(ChatBlock)
+          case 'ChatWidget': 
+            ComponentClass = Vue.extend(ChatWidget)
             break
-          case 'CodeBlock': 
-            ComponentClass = Vue.extend(CodeBlock)
+          case 'CodeWidget': 
+            ComponentClass = Vue.extend(CodeWidget)
             break
-          case 'ImageBlock': 
-            ComponentClass = Vue.extend(ImageBlock)
+          case 'ImageWidget': 
+            ComponentClass = Vue.extend(ImageWidget)
             break
-          case 'ListBlock': 
-            ComponentClass = Vue.extend(ListBlock)
+          case 'IconsListWidget': 
+            ComponentClass = Vue.extend(IconsListWidget)
             break
-          case 'LongQuoteBlock': 
-            ComponentClass = Vue.extend(LongQuoteBlock)
+          case 'LongQuoteWidget': 
+            ComponentClass = Vue.extend(LongQuoteWidget)
             break
           case 'PagePreviewLink': 
             ComponentClass = Vue.extend(PagePreviewLink)
             break
-          case 'QuoteBlock': 
-            ComponentClass = Vue.extend(QuoteBlock)
+          case 'QuoteWidget': 
+            ComponentClass = Vue.extend(QuoteWidget)
             break
-          case 'VoiceBlock': 
-            ComponentClass = Vue.extend(VoiceBlock)
+          case 'VoiceWidget': 
+            ComponentClass = Vue.extend(VoiceWidget)
             break
         }
         const instance = new ComponentClass({

@@ -1,6 +1,6 @@
 <template>
-    <div class="quoteBlock pa-3 ma-3 font-italic">
-      <TextBlock :text="text" />
+    <div class="QuoteWidget pa-3 ma-3 font-italic">
+      <MarkdownText :text="text" />
       <div class="link">
         <a :href="linkSrc"> {{ linkTxt }} </a>
       </div>
@@ -8,9 +8,9 @@
 </template>
 <script>
 export default {
-  name: 'LongQuoteBlock',
+  name: 'LongQuoteWidget',
   components: {
-    TextBlock: () => import('@/components/blocks/TextBlock.vue')
+    MarkdownText: () => import('@/components/widgets/MarkdownText')
   },
   props: {
     text: {
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 <style scoped>
-.quoteBlock {
+.QuoteWidget {
   border: 0.3rem #58539E solid;
   border-radius: 1rem;
   position: relative;

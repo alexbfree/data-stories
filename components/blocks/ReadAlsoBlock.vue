@@ -9,7 +9,7 @@
             :key="page"
             :cols="4"
           >
-            <PagePreviewBlock
+            <PagePreview
               class="ma-3" flat
             />
           </v-col>
@@ -19,10 +19,10 @@
   </div>
 </template>
 <script>
-import PagePreviewBlock from '~/components/blocks/PagePreviewBlock.vue'
+import PagePreview from '~/components/base/PagePreview.vue'
 export default {
   name: 'ReadAlsoBlock',
-  components: { PagePreviewBlock },
+  components: { PagePreview },
   props: {
     pages: {
       type: Array,

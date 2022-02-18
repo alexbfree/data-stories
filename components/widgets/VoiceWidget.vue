@@ -1,6 +1,6 @@
 <template>
     <div class="ma-3 pa-3" :class="classes" :style="`width: ${ width }; float:${ position }; border-left: 1rem solid ${ color }; background-color:${ hexToRgbA }`">
-      <TextBlock :text="text" />
+      <MarkdownText :text="text" />
       <div class="link">
         <a :href="linkSrc"> {{ linkTxt }} </a>
       </div>
@@ -8,9 +8,9 @@
 </template>
 <script>
 export default {
-  name: 'VoiceBlock',
+  name: 'VoiceWidget',
   components: {
-    TextBlock: () => import('@/components/blocks/TextBlock.vue')
+    MarkdownText: () => import('@/components/widgets/MarkdownText')
   },
   props: {
     text: {

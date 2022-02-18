@@ -17,7 +17,7 @@
 </template>
 <script>
 export default {
-  name: 'ImageBlock',
+  name: 'ImageWidget',
   props: {
     text: {
       type: String,

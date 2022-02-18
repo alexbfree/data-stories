@@ -1,15 +1,15 @@
 <template>
     <div class="py-4 mt-4">
       <h2 class="headline font-weight-light mb-4 primary--text">{{ title }}</h2>
-      <TextBlock :text="content" />
+      <MarkdownText :text="content" />
     </div>
 </template>
 <script>
 export default {
   name: 'ParagraphBlock',
   components: { 
-    TextBlock: () => import('@/components/blocks/TextBlock.vue')
-   },
+    MarkdownText: () => import('@/components/widgets/MarkdownText')
+  },
   props: {
     title: {
       type: String,

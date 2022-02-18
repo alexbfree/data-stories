@@ -7,7 +7,7 @@
         </VIcon>
       </VRow>
       <blockquote class="blockquote font-italic">
-        <TextBlock :text="text" />
+        <MarkdownText :text="text" />
       </blockquote>
       <VRow dense style="justify-content: end">
         <VIcon large right color="primary">
@@ -29,9 +29,9 @@
 </template>
 <script>
 export default {
-  name: 'QuoteBlock',
+  name: 'QuoteWidget',
   components: {
-    TextBlock: () => import('@/components/blocks/TextBlock.vue')
+    MarkdownText: () => import('@/components/widgets/MarkdownText')
   },
   props: {
     text: {

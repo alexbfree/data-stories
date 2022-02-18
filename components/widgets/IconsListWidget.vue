@@ -18,7 +18,7 @@
 </template>
 <script>
 export default {
-  name: 'ListBlock',
+  name: 'IconsListWidget',
   props: {
     text: {
       type: String,

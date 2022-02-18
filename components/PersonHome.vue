@@ -1,14 +1,14 @@
 <template>
   <VContainer v-if="manifest">
-    <ProfileBlock :profileID="manifest.id"/>
+    <ProfileBlock :profile-i-d="manifest.id"/>
     <h2 class="headline font-weight-light mb-4 primary--text mt-10 text-center"> My Stories </h2>
     <VContainer>
       <VRow>
-        <VCol cols="12" v-if="!manifest.mystories.length">
+        <VCol v-if="!manifest.mystories.length" cols="12">
           <h3 class="text-caption text-center text-h3"> No stories yet</h3>
         </VCol>
-        <VCol cols="12" v-for="story in stories" :key="story.id">
-          <VCard hover class="card-outer" tile>
+        <VCol v-for="story in stories" :key="story.id" cols="12">
+          <VCard hover class="card-outer" tile :to="`/${story.id}`">
             <div class="d-flex flex-no-wrap">
               <div>
                 <VAvatar 
@@ -16,7 +16,7 @@
                   tile
                 >
                   <VImg
-                    src="/media/icon.png"
+                    :src="story.image"
                   ></VImg>
                 </VAvatar>
               </div>
@@ -60,7 +60,7 @@ export default {
         const data = await resp.json()
         // TODO choose correct language ???
         const manifest = data.en
-        this.stories.push({id: manifest.id, title: manifest.title, description: manifest.description})
+        this.stories.push({id: manifest.id, title: manifest.title, description: manifest.description, image: manifest.image})
       }
     }
   }

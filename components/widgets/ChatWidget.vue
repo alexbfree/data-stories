@@ -1,7 +1,7 @@
 <template>
     <div class="message">
       <p :class="position">
-        <TextBlock :text="text" />
+        <MarkdownText :text="text" />
       </p>
       <span :class="position">
         <a :href="linkSrc">{{ linkTxt }}</a>
@@ -10,9 +10,9 @@
 </template>
 <script>
 export default {
-  name: 'ChatBlock',
+  name: 'ChatWidget',
   components: {
-    TextBlock: () => import('@/components/blocks/TextBlock.vue')
+    MarkdownText: () => import('@/components/widgets/MarkdownText')
   },
   props: {
     text: {
