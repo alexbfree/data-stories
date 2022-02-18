@@ -1,5 +1,5 @@
 <template>
-  <VueMarkdown :linkify="false" html :postrender="postRender" :prerender="preRender">{{ text }}</VueMarkdown>
+  <VueMarkdown :linkify="false" html :postrender="postRender" :prerender="preRender" :source="text"></VueMarkdown>
 </template>
 <script>
 import VueMarkdown from 'vue-markdown'
@@ -27,45 +27,11 @@ export default {
       default: () => ''
     }
   },
+  watch: { 
+    text() { this.parseText() }
+  },
   mounted(){
-    const vuetify = new Vuetify(vuetifyOptions)
-    this.$el.querySelectorAll('span[data-component]').forEach(el => {
-      const name = el.getAttribute('data-name')
-      const props = JSON.parse(el.getAttribute('data-props'))
-      let ComponentClass = null
-      switch (name) {
-        case 'ChatBlock': 
-          ComponentClass = Vue.extend(ChatBlock)
-          break
-        case 'CodeBlock': 
-          ComponentClass = Vue.extend(CodeBlock)
-          break
-        case 'ImageBlock': 
-          ComponentClass = Vue.extend(ImageBlock)
-          break
-        case 'ListBlock': 
-          ComponentClass = Vue.extend(ListBlock)
-          break
-        case 'LongQuoteBlock': 
-          ComponentClass = Vue.extend(LongQuoteBlock)
-          break
-        case 'PagePreviewLink': 
-          ComponentClass = Vue.extend(PagePreviewLink)
-          break
-        case 'QuoteBlock': 
-          ComponentClass = Vue.extend(QuoteBlock)
-          break
-        case 'VoiceBlock': 
-          ComponentClass = Vue.extend(VoiceBlock)
-          break
-      }
-      const instance = new ComponentClass({
-          vuetify,
-          propsData: props
-      })
-      instance.$mount() // pass nothing
-      el.appendChild(instance.$el)
-    });
+    this.parseText()
   },
   methods: {
     postRender(html){
@@ -76,6 +42,46 @@ export default {
     preRender(markdown){
       // console.log(markdown)
       return markdown
+    },
+    parseText(){
+      const vuetify = new Vuetify(vuetifyOptions)
+      this.$el.querySelectorAll('span[data-component]').forEach(el => {
+        const name = el.getAttribute('data-name')
+        const props = JSON.parse(el.getAttribute('data-props'))
+        let ComponentClass = null
+        switch (name) {
+          case 'ChatBlock': 
+            ComponentClass = Vue.extend(ChatBlock)
+            break
+          case 'CodeBlock': 
+            ComponentClass = Vue.extend(CodeBlock)
+            break
+          case 'ImageBlock': 
+            ComponentClass = Vue.extend(ImageBlock)
+            break
+          case 'ListBlock': 
+            ComponentClass = Vue.extend(ListBlock)
+            break
+          case 'LongQuoteBlock': 
+            ComponentClass = Vue.extend(LongQuoteBlock)
+            break
+          case 'PagePreviewLink': 
+            ComponentClass = Vue.extend(PagePreviewLink)
+            break
+          case 'QuoteBlock': 
+            ComponentClass = Vue.extend(QuoteBlock)
+            break
+          case 'VoiceBlock': 
+            ComponentClass = Vue.extend(VoiceBlock)
+            break
+        }
+        const instance = new ComponentClass({
+            vuetify,
+            propsData: props
+        })
+        instance.$mount() // pass nothing
+        el.appendChild(instance.$el)
+      });
     }
   }
 

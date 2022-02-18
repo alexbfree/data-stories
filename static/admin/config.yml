@@ -41,7 +41,9 @@ collections:
           widget: string,
           hint: 'At creation, the id will determine the name of the file where the story is stored.',
         }
-      - { label: 'Title', name: 'title', widget: 'string', i18n: true }
+      - { label: 'Preview Title', name: 'title', widget: 'string', i18n: true }
+      - { label: 'Preview Image', name: 'image', widget: 'image', i18n: true }
+      - { label: 'Preview Description', name: 'description', widget: 'text', i18n: true }
       - label: 'Building blocks'
         name: 'buildingBlocks'
         widget: 'list'
@@ -52,60 +54,15 @@ collections:
             name: blocks/ProfileBlock
             fields:
               - {
-                  label: 'Type',
-                  name: type,
-                  required: false,
-                  i18n: true,
-                  widget: 'hidden',
-                  default: blocks/ProfileBlock,
+                  name: profileID,
+                  label: Profile (If not present you must create one in the Persons collection),
+                  widget: relation,
+                  collection: persons,
+                  value_field: id,
+                  display_fields: ['name'],
+                  search_fields: ['name'],
+                  multiple: false
                 }
-              - {
-                  label: 'Name',
-                  name: title,
-                  required: false,
-                  i18n: true,
-                  widget: 'string',
-                }
-              - {
-                  label: 'JobTitle',
-                  name: jobTitle,
-                  required: false,
-                  i18n: true,
-                  widget: 'string',
-                }
-              - {
-                  label: 'Description',
-                  name: description,
-                  required: false,
-                  i18n: true,
-                  widget: 'markdown',
-                }
-              - {
-                  label: 'Profile picture',
-                  name: profilePicture,
-                  required: false,
-                  i18n: true,
-                  widget: image,
-                }
-          - label: 'Link profile block'
-            name: blocks/LinkProfileBlock
-            fields:
-              - {
-                  label: 'Type',
-                  name: type,
-                  required: false,
-                  i18n: true,
-                  widget: 'hidden',
-                  default: blocks/ProfileBlock,
-                }
-              - name: title
-                label: 'Person'
-                widget: relation
-                collection: persons
-                value_field: id
-                display_fields: ['name']
-                search_fields: ['name']
-                multiple: false
           - label: 'Paragraph block'
             name: blocks/ParagraphBlock
             fields:
@@ -130,32 +87,6 @@ collections:
                   required: true,
                   i18n: true,
                   widget: 'markdown',
-                }
-          - label: 'Horizontal bar chart'
-            name: blocks/HorizontalBarChart
-            fields:
-              - {
-                  label: 'Type',
-                  name: type,
-                  required: false,
-                  i18n: true,
-                  widget: 'hidden',
-                  default: blocks/HorizontalBarChart,
-                }
-              - {
-                  label: 'Title',
-                  name: title,
-                  required: false,
-                  i18n: true,
-                  widget: 'string',
-                }
-              - {
-                  label: 'Text',
-                  name: text,
-                  required: false,
-                  i18n: true,
-                  widget: 'hidden',
-                  default: 'Graph',
                 }
           - label: 'Rail'
             name: blocks/RailBlock
@@ -815,3 +746,20 @@ collections:
           i18n: true,
           widget: image,
         }
+      -
+        name: mystories
+        label: 'Stories'
+        widget: 'list'
+        summary: '{{fields.title}}'
+        fields:
+          - {
+              name: story,
+              label: Story,
+              widget: relation,
+              collection: stories,
+              value_field: id,
+              display_fields: ['title'],
+              search_fields: ['title'],
+              multiple: false
+          }
+

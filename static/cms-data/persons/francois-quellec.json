@@ -4,7 +4,12 @@
     "name": "François Quellec",
     "jobTitle": "colleague at hestia",
     "description": "friendly",
-    "mystories": []
+    "mystories": [
+      {
+        "story": "example"
+      }
+    ],
+    "profilePicture": "/media/icon.png"
   },
   "fr": {
     "name": "François Quellec"

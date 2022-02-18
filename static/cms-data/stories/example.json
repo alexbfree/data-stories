@@ -8,7 +8,8 @@
         "title": "John Doe",
         "jobTitle": "IT boy",
         "description": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes",
-        "profilePicture": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
+        "profilePicture": "https://cdn.vuetifyjs.com/images/profiles/marcus.jpg",
+        "profileID": "john-dowe"
       },
       {
         "type": "blocks/ParagraphBlock",
@@ -182,7 +183,9 @@
       {
         "type": "blocks/ReadAlsoBlock"
       }
-    ]
+    ],
+    "image": "/media/icon.png",
+    "description": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes"
   },
   "fr": {}
 }
