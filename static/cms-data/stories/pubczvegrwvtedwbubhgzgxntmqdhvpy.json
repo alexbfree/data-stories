@@ -120,7 +120,18 @@
         "content": "Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes"
       },
       {
-        "type": "blocks/ReadAlsoBlock"
+        "type": "blocks/ReadAlsoBlock",
+        "pages": [
+          {
+            "story": "example"
+          },
+          {
+            "story": "example"
+          },
+          {
+            "story": "example"
+          }
+        ]
       }
     ],
     "image": "/media/icon.png",

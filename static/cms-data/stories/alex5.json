@@ -14,12 +14,12 @@
       {
         "type": "blocks/ParagraphBlock",
         "title": "What is my personal data? And how do companies get it?",
-        "content": "<span data-component data-name='VoiceWidget' data-props='{\"classes\":\"ml-15\",\"color\":\"#f7eaa6\",\"linkSrc\":\"https://gdpr-info.eu/art-4-gdpr/\",\"linkTxt\":\"Article 4, EU General Data Protection Regulation (GDPR), 2018\",\"text\":\"Personal data means any information relating to an identified or identifiable natural person.. one who can be identified, directly or indirectly ... by an identifier such as a name, number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.\",\"width\":\"60%\"}'></span>\n\nIt's important in this investigation to have a clear understanding of what we are talking about when we refer to 'your personal data'. At the most basic level, personal data is information stored digitally. But 'your' does not just mean 'in your possession'. We are not just referring to the files on your phone or hard drive but to all the information about you, no matter where it exists."
+        "content": "<span data-component data-name='VoiceWidget' data-props='{\"classes\":\"ml-15\",\"color\":\"#f7eaa6\",\"linkSrc\":\"https://gdpr-info.eu/art-4-gdpr/\",\"linkTxt\":\"Article 4, EU General Data Protection Regulation (GDPR), 2018\",\"text\":\"Personal data means any information relating to an identified or identifiable natural person.. one who can be identified, directly or indirectly ... by an identifier such as a name, number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.\\n\",\"width\":\"60%\"}'></span>\n\nIt's important in this investigation to have a clear understanding of what we are talking about when we refer to 'your personal data'. At the most basic level, personal data is information stored digitally. But 'your' does not just mean 'in your possession'. We are not just referring to the files on your phone or hard drive but to all the information about you, no matter where it exists."
       },
       {
         "type": "blocks/ParagraphBlock",
         "title": "Examples of Personal Data",
-        "content": "There are many different types of personal data that might exist about you, from the more obvious types like your address, phone number and social media posts, to more hidden ones like location history, access logs or marketing profiles. Some examples are shown in this diagram, with types becoming less evident as you move from left to right:\n\n<span data-component data-name='ImageWidget' data-props='{\"imageSrc\":\"/media/alexb_diagram.png\"}'></span>\n\nNow that you have a clear picture in your mind of what sorts of thing might count as personal data, I can tell you about the different ways that a business you interact with might obtain that data. Through my PhD research looking at GDPR regulations and company privacy policies, I has identified five different types of data that companies collect:\n\n<span data-component data-name='IconsListWidget' data-props='{\"items\": [{\"text\":\"Volunteered Data\",\"icon\":\"mdiHandExtended\"},{\"text\":\"Observed Data\",\"icon\":\"mdiEye\"},{\"text\":\"Derived Data\",\"icon\":\"mdiArrowDecision\"},{\"text\":\"Acquired Data\",\"icon\":\"mdiEmailReceive\"},{\"text\":\"Metadata\",\"icon\":\"mdiFileDocumentMultiple\"}], \"text\": \"Top Five types of Personal Data\"}'></span>\n\nWhen you make a <span data-component data-name='PagePreviewLink' data-props='{\"link\":\"gdpr\",\"text\":\"GDPR data access request\"}'></span>, you have a right to see all five types of data. In this page, I'll explain to you what those five types of data are, and how they come about."
+        "content": "There are many different types of personal data that might exist about you, from the more obvious types like your address, phone number and social media posts, to more hidden ones like location history, access logs or marketing profiles. Some examples are shown in this diagram, with types becoming less evident as you move from left to right:\n\n<span data-component data-name='ImageWidget' data-props='{\"imageSrc\":\"/media/alexb_diagram.png\"}'></span>\n\nNow that you have a clear picture in your mind of what sorts of thing might count as personal data, I can tell you about the different ways that a business you interact with might obtain that data. Through my PhD research looking at GDPR regulations and company privacy policies, I has identified five different types of data that companies collect:\n\n<span data-component data-name='IconsListWidget' data-props='{\"items\": [{\"text\":\"Volunteered Data\",\"icon\":\"mdiHandExtended\"},{\"text\":\"Observed Data\",\"icon\":\"mdiEye\"},{\"text\":\"Derived Data\",\"icon\":\"mdiArrowDecision\"},{\"text\":\"Acquired Data\",\"icon\":\"mdiEmailReceive\"},{\"text\":\"Metadata\",\"icon\":\"mdiFileDocumentMultiple\"}], \"text\": \"Top Five types of Personal Data\"}'></span>\n\nWhen you make a <span data-component data-name='PagePreviewLink' data-props='{\"page\":\"example\",\"text\":\"GDPR data access request\"}'></span>, you have a right to see all five types of data. In this page, I'll explain to you what those five types of data are, and how they come about."
       },
       {
         "type": "blocks/RailBlock",
@@ -66,7 +66,7 @@
           },
           {
             "title": "Acquired Data",
-            "content": "Sometimes your service provider tries to find out more about you, and will usually pass on some data about you in return for a more detailed set of information about you, which then gets added to your record. This might involve routine civic lookups such as electoral record checks, criminal record checks, financial checks such as anti-fraud checks or credit checks. Often data is exchanged with <span data-component data-name='PagePreviewLink' data-props='{\"text\":\"data brokers\"}'></span>, companies that specialise in gathering data about us and our probable interests, or with sibling companies, suppliers, partners or advertisers. Sometimes data about you is provided by individuals, such as reviews, complaints, or friends recommending you to the service.",
+            "content": "Sometimes your service provider tries to find out more about you, and will usually pass on some data about you in return for a more detailed set of information about you, which then gets added to your record. This might involve routine civic lookups such as electoral record checks, criminal record checks, financial checks such as anti-fraud checks or credit checks. Often data is exchanged with <span data-component data-name='PagePreviewLink' data-props='{\"page\":\"example\",\"text\":\"data brokers\"}'></span>, companies that specialise in gathering data about us and our probable interests, or with sibling companies, suppliers, partners or advertisers. Sometimes data about you is provided by individuals, such as reviews, complaints, or friends recommending you to the service.",
             "nodes": [
               {
                 "id": "acquired",
@@ -117,14 +117,20 @@
       {
         "type": "blocks/ParagraphBlock",
         "title": "What did we learn?",
-        "content": "As you can see, once you exist in a company's database, your personal data is used to generate more and more data, and to influence business decisions such as what type of service to offer you, what type of content to recommend to you or what products to market to you. To see some examples of what these 5 types of data mean for our participants, please read <span data-component data-name='PagePreviewLink' data-props='{\"link\":\"wdwdw\",\"text\":\"Miapetra Kumpula-Natri&apos;s Data Types\"}'></span>."
+        "content": "As you can see, once you exist in a company's database, your personal data is used to generate more and more data, and to influence business decisions such as what type of service to offer you, what type of content to recommend to you or what products to market to you. To see some examples of what these 5 types of data mean for our participants, please read <span data-component data-name='PagePreviewLink' data-props='{\"page\":\"example\",\"text\":\"Miapetra Kumpula-Natri&apos;s Data Types\"}'></span>."
       },
       {
         "type": "blocks/ReadAlsoBlock",
         "pages": [
-          "Twitter",
-          "Facebook",
-          "Apple"
+          {
+            "story": "example"
+          },
+          {
+            "story": "example"
+          },
+          {
+            "story": "example"
+          }
         ]
       }
     ],

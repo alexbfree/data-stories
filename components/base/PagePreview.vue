@@ -10,7 +10,7 @@
     </VImg>
     <VCardTitle>{{ title }}</VCardTitle>
     <VCardText class="text--primary">
-      <div> {{ description }} <a> [Read more] </a></div>
+      <div> {{ description.slice(0, truncateText) }} {{ description.length > truncateText ? ' (...)': ''}} <a :href="`/${pageID}`">[Read more]</a></div>
     </VCardText>
   </VCard>
 </template>
@@ -19,21 +19,35 @@
 export default {
   name: 'PagePreviewBlock',
   props: {
-    title: {
+    pageID: {
       type: String,
-      default: 'Lorem ipsum'
-    },
-    description: {
-      type: String,
-      default: 'Lorem John Doe ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipi'
-    },
-    image: {
-      type: String,
-      default: '/hestialabs-logo.svg'
+      required: true
     },
     imageHeight: {
       type: String,
       default: '200px'
+    },
+    truncateText: {
+      type: Number,
+      default: 200
+    } 
+  },
+  data(){
+    return {
+      title: '',
+      description: '',
+      image: ''
+    }
+  },
+  async fetch(){
+    const resp = await fetch('/cms-data/stories/' + this.pageID + '.json')
+    if (resp.ok) {
+      const data = await resp.json()
+      // TODO choose correct language ???
+      const manifest = data.en
+      this.title = manifest.title
+      this.description = manifest.description
+      this.image = manifest.image
     }
   }
 }

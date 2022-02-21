@@ -14,7 +14,7 @@
       {
         "type": "blocks/ParagraphBlock",
         "title": "Full width paragraph and Markdown example",
-        "content": "*Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod* **convenire principes at. Est et** nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes: \n\n* Lorem ipsum dolor\n* Lorem ipsum dolor\n* Lorem ipsum dolor\n\nLorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes\n\n### Heading test\n\nLorem ipsum dolor sit amet, no nam <span data-component data-name='PagePreviewLink' data-props='{\"text\":\"Link with Preview\"}'></span> Lorem ipsum dolor sit amet, no nam oblique veritus.\n\nLorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes \n\n**Lorem ipsum dolor sit amet, no nam Lorem ipsum dolor sit amet, no nam Lorem ipsum dolor sit amet, no namLorem ipsum dolor sit amet, no nam Lorem ipsum dolor sit amet, no nam:**"
+        "content": "*Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod* **convenire principes at. Est et** nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes: \n\n* Lorem ipsum dolor\n* Lorem ipsum dolor\n* Lorem ipsum dolor\n\nLorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes\n\n### Heading test\n\nLorem ipsum dolor sit amet, <span data-component data-name='PagePreviewLink' data-props='{\"page\":\"example\",\"text\":\"Page Preview Link\"}'></span> no nam Lorem ipsum dolor sit amet, no nam oblique veritus.\n\nLorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix ansalutandi sententiae. Lorem ipsum dolor sit amet, no nam oblique veritus. Commune imperdiet nec ut, sed euismod convenire principes \n\n**Lorem ipsum dolor sit amet, no nam Lorem ipsum dolor sit amet, no nam Lorem ipsum dolor sit amet, no namLorem ipsum dolor sit amet, no nam Lorem ipsum dolor sit amet, no nam:**"
       },
       {
         "type": "blocks/RailBlock",
@@ -181,7 +181,18 @@
         ]
       },
       {
-        "type": "blocks/ReadAlsoBlock"
+        "type": "blocks/ReadAlsoBlock",
+        "pages": [
+          {
+            "story": "example"
+          },
+          {
+            "story": "example"
+          },
+          {
+            "story": "example"
+          }
+        ]
       }
     ],
     "image": "/media/icon.png",
