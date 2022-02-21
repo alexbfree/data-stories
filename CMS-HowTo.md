@@ -1,4 +1,7 @@
 # CMS guidelines
+
+- [(other general CMS notes & links here)](https://github.com/hestiaAI/private-stories/blob/main/README.md#cms-links-and-notes)
+
 ## Creating a new story
 - First go to [https://data-stories.netlify.app/admin](https://data-stories.netlify.app/admin) and connect with your netlify identity credentials.
 - Next, make sure you are in the `Stories` collection (top left panel) and click on `New Stories`.
