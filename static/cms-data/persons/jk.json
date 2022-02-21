@@ -11,5 +11,11 @@
       }
     ]
   },
-  "fr": {}
+  "fr": {
+    "mystories": [
+      {
+        "story": "example"
+      }
+    ]
+  }
 }
