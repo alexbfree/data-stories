@@ -7,9 +7,9 @@
       max-width="300px"
     >
       <template #activator="{ on, attrs }">
-        <AnimatedLink v-bind="{text, link, attrs}" v-on="on" />
+        <AnimatedLink v-bind="{text, page, attrs}" v-on="on" />
       </template>
-      <PagePreview image-height="100px" />
+      <PagePreview :page-i-d="page" image-height="100px" />
     </v-menu>
 </template>
 
@@ -23,9 +23,9 @@ export default {
       type: String,
       default: 'See also'
     },
-    link: {
+    page: {
       type: String,
-      default: 'true'
+      required: true
     }
   }
 }

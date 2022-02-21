@@ -3,7 +3,7 @@
     v-bind="$attrs"
     class="link"
     title=""
-    :href="link"
+    :href="`/${page}`"
     v-on="$listeners"
   >
     {{ text }}
@@ -17,7 +17,7 @@ export default {
       type: String,
       default: 'See also'
     },
-    link: {
+    page: {
       type: String,
       default: '#'
     }

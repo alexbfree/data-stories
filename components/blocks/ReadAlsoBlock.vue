@@ -6,11 +6,11 @@
         <v-row dense>
           <v-col
             v-for="page in pages"
-            :key="page"
+            :key="page.story"
             :cols="4"
           >
             <PagePreview
-              class="ma-3" flat
+              class="ma-3" flat :page-i-d="page.story"
             />
           </v-col>
         </v-row>

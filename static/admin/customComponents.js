@@ -269,24 +269,30 @@ CMS.registerEditorComponent({
 CMS.registerEditorComponent({
   id: "PagePreviewLink",
   label: "Link with preview",
-  fields: [{
-    name: "link",
-    label: "link",
-    widget: "string",
-    required: false,
-    i18n: true
-  },
-  {
-    name: "text",
-    label: "text",
-    widget: "string",
-    required: false,
-    i18n: true
-  }],
-  pattern: /<span data-component data-name='PagePreviewLink' data-props='{"link":"(.*)","text":"(.*)"}'><\/span>/,
+  fields: [
+    {
+      name: 'page',
+      label: 'Page',
+      widget: 'relation',
+      collection: 'stories',
+      value_field: 'id',
+      display_fields: ['title'],
+      search_fields: ['title'],
+      multiple: false,
+      required: true,
+    },
+    {
+      name: "text",
+      label: "text",
+      widget: "string",
+      required: false,
+      i18n: true
+    }
+  ],
+  pattern: /<span data-component data-name='PagePreviewLink' data-props='{"page":"(.*)","text":"(.*)"}'><\/span>/,
   fromBlock (match) {
     return {
-      link: match[1],
+      page: match[1],
       text: match[2]
     };
   },

@@ -679,8 +679,24 @@ collections:
                   name: type,
                   required: false,
                   i18n: true,
-                  widget: 'string',
+                  widget: 'hidden',
+                  default: 'blocks/ReadAlsoBlock'
                 }
+              - name: pages
+                label: 'Stories to read (choose 3)'
+                widget: 'list'
+                min: 3
+                max: 3
+                summary: '{{fields.title}}'
+                fields:
+                  - name: story
+                    label: Story
+                    widget: relation
+                    collection: stories
+                    value_field: id
+                    display_fields: ['title']
+                    search_fields: ['title']
+                    multiple: false
 
   - name: 'configuration'
     label: 'Configuration'
